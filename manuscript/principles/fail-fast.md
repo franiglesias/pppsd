@@ -1,18 +1,18 @@
-# Falla rápido
+# Falla pronto
 
-Fail Fast (falla pronto) como principio de diseño de software puede parecer contra-intuitivo. Es un principio que he visto atribuido a Jim Gray y que viene a decir: un módulo que falla rápido detecta y comunica errores y deja que el módulo inmediato superior los gestione.
+_Fail Fast_ (falla pronto) como principio de diseño de software puede parecer contra-intuitivo. Es un principio que he visto atribuido a Jim Gray y que viene a decir: un módulo que falla rápido detecta y comunica errores y deja que el módulo inmediato superior los gestione.
 
-Fallar rápido quiere decir que en cuanto se detecta algo que no está bien no tratamos de arreglarlo en el punto de detección, ni fallar "silenciosamente". Al contrario, tiramos una excepción o error que "suba" por la pila de llamadas hasta encontrar quién sabe gestionarlo.
+Fallar rápido quiere decir que en cuanto se detecta algo que no está bien no tratamos de arreglarlo en el punto de detección, ni fallar _silenciosamente_. Al contrario, tiramos una excepción o error que _suba_ por la pila de llamadas hasta encontrar quién sabe gestionarlo.
 
-Imagina: un método requiere un parámetro integer en el rango de 5 a 27. Si el valor es menor o mayor... excepción.  Quien haya llamado a ese método con el valor incorrecto, será quien tenga que gestionar ese error. Nada de intentar "arreglarlo" u ocultarlo bajo la alfombra.
+Imagina: un método requiere un parámetro integer en el rango de 5 a 27. Si el valor es menor o mayor... excepción.  Quien haya llamado a ese método con el valor incorrecto, será quien tenga que gestionar ese error. Nada de intentar _arreglarlo_ u ocultarlo bajo la alfombra.
 
-Esto tiene sentido. El objeto que haya hecho la llamada debería tener más contexto para resolver el problema y decidir si puede usar otro valor (p.ej, si ha pasado uno mayor podría usar el límite superior) o si tiene que fallar igualmente y "hacer subir el error" un nivel más.
+Esto tiene sentido. El objeto que haya hecho la llamada debería tener más contexto para resolver el problema y decidir si puede usar otro valor (p.ej, si ha pasado uno mayor podría usar el límite superior) o si tiene que fallar igualmente y _hacer subir el error_ un nivel más.
 
 El objeto en el que se detecta el error carece del contexto necesario para tomar decisiones. Por tanto, es mejor fallar y hacerlo sonoramente.
 
 A veces, el lenguaje lo hace por nosotras. Por ejemplo, con el tipado estricto de parámetros, el compilador/intérprete fallará si llega un valor de tipo incorrecto. El tipado de retorno, lo mismo.
 
-Por supuesto, hay condiciones que son del negocio, como el ejemplo de que hay un rango de valores admisible. Estas reglas pueden considerarse "pre-condiciones", y cuanto antes las evaluemos, mejor. Para esto, podemos usar cláusulas de guarda o asserts.
+Por supuesto, hay condiciones que son del negocio, como el ejemplo de que hay un rango de valores admisible. Estas reglas pueden considerarse _pre-condiciones_, y cuanto antes las evaluemos, mejor. Para esto, podemos usar cláusulas de guarda o asserts.
 
 Que los asserts no son solo para los tests. Los asserts nos permiten verificar que un valor cumple ciertas condiciones y lanza una excepción si no es así. Si no tienes Asserts, puedes usar cláusulas de guarda: if algo_esta_mal then lanza excepción.
 

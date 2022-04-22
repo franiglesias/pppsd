@@ -14,9 +14,9 @@ Eso se previene haciendo TDD.
 
 En fin. Como se ha dicho muchas veces TDD no es testing, sino desarrollo y diseño, aunque la herramienta que utilizamos sea la misma (los tests automaticos). Y lo que debe hacer un test de TDD es mostrar un ejemplo del comportamiento.
 
-En este punto se plantea el problema de cómo tienen que ser esos ejemplos. Y aquí viene la típica historia de "empezar por el caso más sencillo". En realidad, lo correcto sería decir algo así como "el ejemplo más sencillo". "Caso" es terminología de testing.
+En este punto se plantea el problema de cómo tienen que ser esos ejemplos. Y aquí viene la típica historia de _empezar por el caso más sencillo_. En realidad, lo correcto sería decir algo así como _el ejemplo más sencillo_. _Caso_ es terminología de testing.
 
-Tampoco tengo claro que decir "el más sencillo" sea un buen consejo. A decir verdad, cualquier ejemplo nos valdría para el primer test porque nuestro primer código de producción va a ser devolver una constante. Los siguientes ejemplos son los que moverán el desarrollo.
+Tampoco tengo claro que decir _el más sencillo_ sea un buen consejo. A decir verdad, cualquier ejemplo nos valdría para el primer test porque nuestro primer código de producción va a ser devolver una constante. Los siguientes ejemplos son los que moverán el desarrollo.
 
 Sin embargo, si prevemos que ciertos ejemplos van a ser más fáciles de desarrollar puede ser buena idea empezar con ellos. Pero en realidad, lo que nos interesa es desarrollar el siguiente comportamiento que nos interese más, por razones de negocio/dominio.
 
@@ -26,7 +26,7 @@ La primera es el test que falla. Esta fase define el comportamiento que queremos
 
 El test adecuado debería construirse de una forma trivial: instanciar el componente bajo test y ejecutarlo con la
 
-La siguiente fase es añadir el código de producción necesario para que el test que fallaba, pase. Esta fase busca establecer la "línea base" de comportamiento hasta ese momento. No implica implementar el algoritmo completo. solo lo suficiente para tener el nuevo comportamiento...
+La siguiente fase es añadir el código de producción necesario para que el test que fallaba, pase. Esta fase busca establecer la _línea base_ de comportamiento hasta ese momento. No implica implementar el algoritmo completo. solo lo suficiente para tener el nuevo comportamiento...
 
 a la vez que se mantiene el que ya existía. Es decir, se trata de poner el test en verde cuando antes y establecer la red de seguridad para la fase de refactor. En este punto nos bastaría devolver la respuesta esperada tal cual o abrir una condicional solo para un ejemplo.
 
@@ -42,7 +42,7 @@ Así que en resument, TDD o especificación mediante ejemplos es:
 
 * Eliminar los code smells refactorizando.
 
-  Decimos muchas veces que TDD no es testing. Es que no lo es, pues forma parte del proceso de diseño.
+Decimos muchas veces que TDD no es testing. Es que no lo es, pues forma parte del proceso de diseño.
 
 Sin embargo, tiene un side-effect interesante al proporcionarnos una batería de tests base. Esta batería necesita cierta limpieza ya que tras el proceso de TDD pueden quedar...
 

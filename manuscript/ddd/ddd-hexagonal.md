@@ -36,7 +36,7 @@ Para mí una arquitectura limpia cumple tres criterios muy sencillos:
 
 * Inversión de control: los detalles dependen de abstracciones
 
-  Una arquitectura contiene tres grandes grupos de elementos:
+Una arquitectura contiene tres grandes grupos de elementos:
 
 * Un modelo del mundo (la representación del dominio)
 
@@ -44,7 +44,7 @@ Para mí una arquitectura limpia cumple tres criterios muy sencillos:
 
 * Las implementaciones técnicas que la hacen funcionar
 
-  Que coinciden con las capas de:
+Que coinciden con las capas de:
 
 * Dominio (el modelo del mundo)
 
@@ -52,11 +52,11 @@ Para mí una arquitectura limpia cumple tres criterios muy sencillos:
 
 * Infrastructure (las implementaciones, que no tienen dependencias cruzadas)
 
-  La Arquitectura Hexagonal me permite tener todo esto. Algo que funciona bien para una aplicación _pequeña_, como para un bounded context en DDD (ya hablaremos más de esto en algún 🧻, porque cada bounded context puede tener su propia _arquitectura_)
+La Arquitectura Hexagonal me permite tener todo esto. Algo que funciona bien para una aplicación _pequeña_, como para un bounded context en DDD (ya hablaremos más de esto en algún 🧻, porque cada bounded context puede tener su propia _arquitectura_)
 
-  Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es DDD, sí que es una opción muy válida para la implementación.
+Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es DDD, sí que es una opción muy válida para la implementación.
 
-  Y Arq. Hex. no es la única cosa que se identifica erróneamente con DDD. Ojo:
+Y Arq. Hex. no es la única cosa que se identifica erróneamente con DDD. Ojo:
 
-  Preview
+Preview
 

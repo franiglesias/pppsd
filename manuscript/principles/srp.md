@@ -2,21 +2,18 @@
 
 Single Responsibility Principle es uno de los principios de diseño orientado a objetos que más discusiones provoca.
 
-🧻👇
-
-Básicamente todo gira en torno a la idea de Responsibility: ¿qué significa?
+Todo gira en torno a la idea de Responsibility: ¿qué significa?
 
 El principio dice que las unidades de software (normalmente clases) solo deberían tener una responsabilidad.
 
-A veces esto se interpreta como "las clases solo deberían hacer una cosa". Pero este camino es una vía muerta porque:
+A veces esto se interpreta como _las clases solo deberían hacer una cosa_. Pero este camino es una vía muerta porque:
 
-* no define cual es el alcance de esa "cosa"
-
+* no define cual es el alcance de esa _cosa_
 * puede llevar a diseños super complicados
 
 El SRP está modulado por otros principios. En realidad todos los principios de diseño OO se modulan mutuamente.
 
-El SRP "extiende" del más general "separation of concerns" (partes distintas del software se ocupan de asuntos distintos). Pero la magnitud de la separación depende del principio de cohesión (lo que cambia junto permanece junto y se separa lo que no cambia)
+El SRP _extiende_ del más general _separation of concerns_ (partes distintas del software se ocupan de asuntos distintos). Pero la magnitud de la separación depende del principio de cohesión (lo que cambia junto permanece junto y se separa lo que no cambia)
 
 Una de las claves del SRP está en mantener ese equilibrio, pero la otra clave es cómo se define la responsabilidad de una clase.
 
@@ -24,7 +21,7 @@ La definición de @unclebobmartin es que responsabilidad es una única razón pa
 
 Obviamente esto no zanja el problema: ¿Qué es tener una única razón para cambiar?
 
-En realidad, habría que pensar más en "agentes de cambio". Un ejemplo sería una clase que pueda esperar cambios por parte de varios equipos en una empresa (como podría ser Finanzas y Clientes, o Adquisición y Ventas).
+En realidad, habría que pensar más en _agentes de cambio_. Un ejemplo sería una clase que pueda esperar cambios por parte de varios equipos en una empresa (como podría ser Finanzas y Clientes, o Adquisición y Ventas).
 
 Los cambios originados en uno de los equipos podrían ser indeseables para el otro. Cuando estamos en esta situación lo apropiado sería repartir las responsabilidades/razones de cambio en diferentes clases.
 
@@ -34,15 +31,15 @@ Claro que lo anterior puede ocurrir en el caso del diseño de la capa de dominio
 
 Por ejemplo, es buena idea separar la obtención del contenido de un archivo y su procesamiento. De hecho el primer paso es muy genérico, mientras que el segundo es específico de nuestra aplicación y cambian por razones diferentes (unas técnicas, otras de dominio).
 
-A su vez, la obtención del archivo puede tener varias razones para cambiar. P.ej, será distinto si usa el sistema de archivos local, S3, FTP... Con SRP en lugar de una clase que "lea" cualquier tipo de sistema, tendríamos clases diferentes, seleccionadles por su consumidor.
+A su vez, la obtención del archivo puede tener varias razones para cambiar. P.ej, será distinto si usa el sistema de archivos local, S3, FTP... Con SRP en lugar de una clase que _lea_ cualquier tipo de sistema, tendríamos clases diferentes, seleccionadles por su consumidor.
 
-Esto es separo obtención y procesamiento, pero también separo distintas estrategias de obtención (😉😉). La cuestión es que el principio actúa a la vez sobre distintos niveles de abstracción:
+Esto es separo obtención y procesamiento, pero también separo distintas estrategias de obtención. La cuestión es que el principio actúa a la vez sobre distintos niveles de abstracción:
 
 El servicio que se ocupa de obtener el resultado final tiene la responsabilidad de procesar un archivo. Y para ellos usa como colaboradores un módulo que obtiene archivos y otro que los procesa.
 
 El módulo de obtención tiene la responsabilidad de obtener una representación procesable del archivo físico, para lo que usa distintos adaptadores y (posiblemente una factoría para escoger el adecuado)
 
-A su vez, cada adaptador es responsable de entenderse con el sistema "físico" que almacena los archivos. La factoría sabe como montar cada adaptador.
+A su vez, cada adaptador es responsable de entenderse con el sistema _físico_ que almacena los archivos. La factoría sabe como montar cada adaptador.
 
 El módulo de procesamiento tiene la responsabilidad de convertir la representación recibida en lo que sea que es importante para el dominio de la aplicación.
 
@@ -58,4 +55,4 @@ Otra forma de verlo es que al aplicar el SRP podemos usar varias estrategias. A 
 
 El SRP, bien aplicado, ayuda a que el software sea más mantenible al delimitar las fuentes de cambio de una clase. Pero hacer que las clases sean SRP compliant puede hacer que los diseños ganen cierta complejidad.
 
-Obviamente es un compromiso, pero diseñar es básicamente decidir qué compromisos estamos dispuestas a aceptar.
+Obviamente, es un compromiso, pero diseñar es básicamente decidir qué compromisos estamos dispuestas a aceptar.

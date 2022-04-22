@@ -10,7 +10,7 @@ Perdón por el rant, pero en general hay muy poco rigor. Va más allá de interp
 
 (Y por sencilla no digo una chambonada hecha en dos tardes con el magic framework de turno. Eso igual vale para un prototipo, para un spike, una prueba de concepto...).
 
-Lo que quiero decir es que debemos usar nuestro propio lenguaje con propiedad y rigor porque terminamos abusando de las palabras y vaciándolas de significado de tanto hacer "mi interpretación" de lo que he leído en un post que dijo en una charla no se quién citando tal libro.
+Lo que quiero decir es que debemos usar nuestro propio lenguaje con propiedad y rigor porque terminamos abusando de las palabras y vaciándolas de significado de tanto hacer _mi interpretación_ de lo que he leído en un post que dijo en una charla no se quién citando tal libro.
 
 (El teléfono estropeado, vaya. Ya sabes como termina eso.)
 

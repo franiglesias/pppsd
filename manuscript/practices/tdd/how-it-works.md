@@ -1,6 +1,6 @@
 # Cómo funciona TDD
 
-Voy a intentar explicar por qué funciona Test Driven Development. No cómo se hace, sino más bien los mecanismos que hacen que partiendo de un test, se pueda desarrollar código de producción. 🧻👇🏽
+Voy a intentar explicar por qué funciona Test Driven Development. No cómo se hace, sino más bien los mecanismos que hacen que partiendo de un test, se pueda desarrollar código de producción. 
 
 Como sabemos TDD consiste en escribir primero un test que describa un comportamiento que deseamos implementar en software. Un test, en realidad, no es otra cosa que un programa que invoca una unidad de software y verifica que se ha generado un resultado específico.
 
@@ -18,9 +18,9 @@ Los tests pueden fallar por dos tipos de motivos:
 
 * errores relacionados con el comportamiento: el código puede ejecutarse pero no realizar el comportamiento deseado.
 
-  Los errores relacionados con la compilación tienen que ver con todo lo que es la sintaxis del lenguaje, pero también podrían tener que ver con detalles de uso de frameworks, configuraciones, etc (esto si estamos haciendo outside-in tdd, por ej., testeando contra un endpoint, etc)
+Los errores relacionados con la compilación tienen que ver con todo lo que es la sintaxis del lenguaje, pero también podrían tener que ver con detalles de uso de frameworks, configuraciones, etc (esto si estamos haciendo outside-in tdd, por ej., testeando contra un endpoint, etc)
 
-  Tenemos que corregir esos errores hasta hacer que el test falle por la razón correcta: que el código de producción no implementa el comportamiento.
+Tenemos que corregir esos errores hasta hacer que el test falle por la razón correcta: que el código de producción no implementa el comportamiento.
 
 Este es el punto clave de todo. En TDD un test debe fallar solo porque aún no existe un código en producción que lo haga pasar.
 
@@ -54,14 +54,14 @@ Como el test falla, la hipótesis no se verifica y tienes que cambiar el código
 
 * todos los tests anteriores siguen pasando
 
-  Cuando el nuevo test pasa (junto los anteriores) se ha establecido una nueva línea base de comportamiento. La unidad bajo test es capaz de cubrir más casos. Esto te permite refactorizar ya que el comportamiento (hasta ahora) está definido y eres libre de cambiar el código siempre
+Cuando el nuevo test pasa (junto los anteriores) se ha establecido una nueva línea base de comportamiento. La unidad bajo test es capaz de cubrir más casos. Esto te permite refactorizar ya que el comportamiento (hasta ahora) está definido y eres libre de cambiar el código siempre
 
-  que se mantengan los test funcionando. Los test que pasan garantizan el comportamiento, si dejan de pasar, es que has _eliminado_ parte de ese comportamiento. (los test de TDD se convierten en tests de regresión una vez los haces pasar).
+que se mantengan los test funcionando. Los test que pasan garantizan el comportamiento, si dejan de pasar, es que has _eliminado_ parte de ese comportamiento. (los test de TDD se convierten en tests de regresión una vez los haces pasar).
 
-  El ciclo se repite hasta que no puedes imaginar un nuevo test que pueda cuestionar la implementación existente.
+El ciclo se repite hasta que no puedes imaginar un nuevo test que pueda cuestionar la implementación existente.
 
-  Esto es posible también porque los tests son especificaciones replicables: puedes ejecutarlos una y otra vez obteniendo los mismos resultados.
+Esto es posible también porque los tests son especificaciones replicables: puedes ejecutarlos una y otra vez obteniendo los mismos resultados.
 
-  Así que, en resumen, se podría decir que TDD consiste en someter a prueba una unidad de software para ver en qué falla, de modo que el test nos diga exactamente qué es lo que necesitamos hacer.
+Así que, en resumen, se podría decir que TDD consiste en someter a prueba una unidad de software para ver en qué falla, de modo que el test nos diga exactamente qué es lo que necesitamos hacer.
 
-  Incluso aunque no exista código.
+Incluso aunque no exista código.

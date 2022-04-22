@@ -18,17 +18,17 @@ Sin pedir permiso quiere decir que no es una tarea planificada, ni importa quié
 
 Pero Fran, ¿qué salvajada es esa?
 
-Todo esto se relaciona con la "regla del campamento" y el "WTF factor". Vamos por partes:
+Todo esto se relaciona con la _regla del campamento_ y el _WTF factor_. Vamos por partes:
 
-La "regla del campamento" es "deja el código por el que pases mejor de lo que estaba".
+La _regla del campamento_ es _deja el código por el que pases mejor de lo que estaba_.
 
 Pasamos la mayor parte del tiempo leyendo código. Para implementar cualquier cosa nueva o para solucionar un problema tenemos que leer código. Incluso después de escribir código tenemos que releerlo.
 
 Si encontramos algo que no se entiende dedicamos un rato a pensar en ello. Ese rato puede ser muy largo. Puede que no haya nadie a quién preguntarle. O sí, pero ya se ha olvidado. Puede que ese código lo escribiésemos nosotras mismas.
 
-Ese es el "WTF factor": ese trocito de código que nos parece raro, incomprensible, contradictorio...
+Ese es el _WTF factor_: ese trocito de código que nos parece raro, incomprensible, contradictorio...
 
-Al llegar el momento "ajá!" y entender aquello tenemos dos opciones:
+Al llegar el momento _ajá!_ y entender aquello tenemos dos opciones:
 
 a) seguir adelante, dejarlo como está y quedarnos con ese conocimiento en la memoria.
 
@@ -48,31 +48,31 @@ Para hacer esto, son necesarias algunas condiciones. Estos refactorings tienen q
 
 * Tener scope limitado (ej: interno a una función)
 
-  Si lo que cambia son interfaces públicas el riesgo aumenta un poco, pero teniendo tests que cubran ese cambio, no deberías tener problemas, aunque es posible que el volumen de cambios sea grande. En ese caso, hay estrategias para ir progresivamente, de modo que...
+Si lo que cambia son interfaces públicas el riesgo aumenta un poco, pero teniendo tests que cubran ese cambio, no deberías tener problemas, aunque es posible que el volumen de cambios sea grande. En ese caso, hay estrategias para ir progresivamente, de modo que...
 
-  reduces el riesgo. Por ejemplo, añade un nuevo método con la nueva signatura y úsalo solo en el lugar que provocó el cambio, haciendo que el viejo lo llame "por debajo". Luego podrás cambiar los usos del viejo por el nuevo progresivamente.
+reduces el riesgo. Por ejemplo, añade un nuevo método con la nueva signatura y úsalo solo en el lugar que provocó el cambio, haciendo que el viejo lo llame _por debajo_. Luego podrás cambiar los usos del viejo por el nuevo progresivamente.
 
-  Aparte, necesitas un compromiso por parte del equipo: ¿cómo es vuestro workflow? ¿Puedes garantizar que el cambio estará en "main/trunk" lo antes posible? ¿O habrá un PR de dos líneas languideciendo durante días o semanas?
+Aparte, necesitas un compromiso por parte del equipo: ¿cómo es vuestro workflow? ¿Puedes garantizar que el cambio estará en _main/trunk_ lo antes posible? ¿O habrá un PR de dos líneas languideciendo durante días o semanas?
 
-  Otro punto es la propiedad del código. En un equipo, el código es del equipo o no es de nadie. Si hay que pedir permiso para hacer un cambio así al autor de la línea tienes un smell en el equipo.
+Otro punto es la propiedad del código. En un equipo, el código es del equipo o no es de nadie. Si hay que pedir permiso para hacer un cambio así al autor de la línea tienes un smell en el equipo.
 
-  Por supuesto, esto no pasa por Jira. Faltaría más.
+Por supuesto, esto no pasa por Jira. Faltaría más.
 
-  Estos pequeños cambios acumulados nos llevan progresivamente a un código en mejor estado. En un momento dado, nos pueden facilitar un cambio de mayor calado que será más evidente y más fácil de hacer.
+Estos pequeños cambios acumulados nos llevan progresivamente a un código en mejor estado. En un momento dado, nos pueden facilitar un cambio de mayor calado que será más evidente y más fácil de hacer.
 
-  Este refactor cotidiano, o refactor oportunista, debería ocurrir constantemente. Contribuye a mantener la "deuda técnica" bajo control al mejorar la representación del negocio en código, pero también contribuye a un mejor conocimiento del código por parte del equipo.
+Este refactor cotidiano, o refactor oportunista, debería ocurrir constantemente. Contribuye a mantener la _deuda técnica_ bajo control al mejorar la representación del negocio en código, pero también contribuye a un mejor conocimiento del código por parte del equipo.
 
-  Pero es muy importante entender que este tipo de refactor, como señalaba al principio, se hace en unidades muy pequeñas, pero muy frecuentes: varias veces al día, todos los días.
+Pero es muy importante entender que este tipo de refactor, como señalaba al principio, se hace en unidades muy pequeñas, pero muy frecuentes: varias veces al día, todos los días.
 
-  "Piri is qui isí ni si siqui nidi i pridicciín..." Nope. Todo esto se aplica mientras trabajas para sacar las historias de usuario a producción.
+_Piri is qui isí ni si siqui nidi i pridicciín..._ Nope. Todo esto se aplica mientras trabajas para sacar las historias de usuario a producción.
 
-  Buenos recursos para iniciar a los equipos en Refactor Mercilessly:
+Buenos recursos para iniciar a los equipos en Refactor Mercilessly:
 
-  Aparte de leerse Extreme Programming Explained:
+Aparte de leerse Extreme Programming Explained:
 
-  Preview
+Preview
 
-  Esta charla de Martin Fowler:
+Esta charla de Martin Fowler:
 
 Si libro clásico:
 

@@ -2,7 +2,7 @@
 
 Otro de los patrones GRASP es Polimorfismo. Es la propiedad de la programación orientada a objetos que nos permite enviar mensajes sintácticamente iguales a objetos de tipos distintos. Esto nos permite gestionar variantes de comportamiento basadas en tipos.
 
-🧻👇🏽
+
 
 ¿Y todo eso qué significa? Vayamos por partes. Primero: ¿Cuál es el caso de aplicación del patrón? Imaginemos que ofreces un Service con tres niveles: free, premium, proffesional. Una forma típica de modelar esto que Service tiene la propiedad tier (o type, o category…)
 

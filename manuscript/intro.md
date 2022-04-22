@@ -8,7 +8,7 @@ Sin embargo, lo que llamamos Arquitectura en Software se ocupa más bien de cóm
 
 Por esa razón, personalmente me gusta más el término Diseño de Software, más que arquitectura. Porque creo que, dentro de sus limitaciones, captura mejor la idea de lo que representa para mí.
 
-En este libro hablo de diseño de software. De principios, patrones y prácticas, por ser más preciso. La mayor parte de su contenido nació como hilos en Twitter. Durante una temporada usé este medio para exponer algunas ideas. Para mi sorpresa, esta iniciativa tuvo buena acogida y cierto éxito. Hasta el punto de que hay quien me reconoce "por tus hilos de Twitter", lo cual no sé si será bueno o malo, pero es lo que hay.
+En este libro hablo de diseño de software. De principios, patrones y prácticas, por ser más preciso. La mayor parte de su contenido nació como hilos en Twitter. Durante una temporada usé este medio para exponer algunas ideas. Para mi sorpresa, esta iniciativa tuvo buena acogida y cierto éxito. Hasta el punto de que hay quien me reconoce _por tus hilos de Twitter_, lo cual no sé si será bueno o malo, pero es lo que hay.
 
 Obviamente, con esos orígenes, no puedes esperar que este libro sea un manual recomendable sobre diseño de software. Es más bien una colección no muy organizada de ideas que he ido aprendiendo o desarrollando a lo largo de los años como desarrollador. No pretendo que sea una obra de referencia, ni mucho menos. En todo caso, puede ser una introducción, más o menos afortunada, a una serie de temas que como desarrolladoras deberíamos considerar.
 

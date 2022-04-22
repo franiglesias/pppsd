@@ -18,7 +18,7 @@ Si ese código sale a producción y aparece un error, ¿qué significa? Pues bá
 
 Este espacio de no conocimiento es donde viven los bugs. Pero ¿dónde reside ese conocimiento completo que nos permite afirmar que un código contiene errores?
 
-El caso es que ese conocimiento (más) completo puede existir o no. A veces tal conocimiento es algo así como "vox populi" y nadie se preocupa de hacerlo explícito hasta que pasa algo (el bug) y se nos enciende la bombilla.
+El caso es que ese conocimiento (más) completo puede existir o no. A veces tal conocimiento es algo así como _vox populi_ y nadie se preocupa de hacerlo explícito hasta que pasa algo (el bug) y se nos enciende la bombilla.
 
 A veces es conocimiento que alguien tiene pero no comunica. Y otras veces es conocimiento que es completamente nuevo y que solo ha surgido como consecuencia de desplegar un código y encontrarse con ese caso que hace aflorar la laguna.
 

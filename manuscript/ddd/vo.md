@@ -20,7 +20,7 @@ Pero, ¿cómo nace un VO? Imagina que tienes que modelar el Precio. El Precio pu
 
 * La representación no es completa sin la unidad monetaria. Así que un precio…
 
-  … necesitaría dos variables.
+… necesitaría dos variables.
 
 O sea que en realidad tenemos un float limitado + un string. Así que los juntamos en un objeto que tendrá dos propiedades (Por ejemplo: amount y currency) y unas reglas de construcción (amount >= 0, decimales…), y con eso tendremos un VO Price.
 
@@ -50,22 +50,22 @@ como VO. Como reglas prácticas:
 
 * Un concepto que requiere más de una variable para su representación.
 
-  Decimos que los VO atraen comportamiento. Entre otras razones, es porque también son responsables de mantener sus propias invariantes y, aplicando Tell, don’t ask, las entidades no deben preguntar al VO por su estado para hacer algo, sino que más bien delegan en el VO todo lo que
+Decimos que los VO atraen comportamiento. Entre otras razones, es porque también son responsables de mantener sus propias invariantes y, aplicando Tell, don’t ask, las entidades no deben preguntar al VO por su estado para hacer algo, sino que más bien delegan en el VO todo lo que
 
-  tenga que ver con el VO. Puedes ver un ejemplo en este artículo (al hablar de TaskStatus)
+tenga que ver con el VO. Puedes ver un ejemplo en este artículo (al hablar de TaskStatus)
 
-  Preview
+Preview
 
-  En fin, podría hablar de VO y ejemplos de modelado con VO de aquí a final de año, así que lo dejo por ahora. En este artículo de @slaimer tienes un buen resumen
+En fin, podría hablar de VO y ejemplos de modelado con VO de aquí a final de año, así que lo dejo por ahora. En este artículo de @slaimer tienes un buen resumen
 
-  Preview
+Preview
 
-  Por cierto, que refactorizar a VO es un muy buen primer paso para mejorar un código existente
+Por cierto, que refactorizar a VO es un muy buen primer paso para mejorar un código existente
 
-  Preview
+Preview
 
-  Y dentro de los VO me gustaría señalar también las virtudes de los Enumerables, que serían un tipo de VO también:
+Y dentro de los VO me gustaría señalar también las virtudes de los Enumerables, que serían un tipo de VO también:
 
-  Preview
+Preview
 
-  Y ahora sí, hasta otro 🧻 sobre DDD😅
+Y ahora sí, hasta otro 🧻 sobre DDD😅

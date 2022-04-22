@@ -20,19 +20,19 @@ Un comando (command) produce un efecto en el estado del sistema. Por ejemplo: cr
 
 * En el nivel unitario, usamos mock para verificar que se ha enviado el mensaje que produce el efecto.
 
-  – ¿Y si devuelve OK o true o algo para indicar que ha ido todo bien?
+– ¿Y si devuelve OK o true o algo para indicar que ha ido todo bien?
 
-  – ¿Qué tiene de malo tirar una excepción? De otro modo tienes que esperar una respuesta y comprobarlo. Eso te lo da el try/catch y es bastante más bonito.
+– ¿Qué tiene de malo tirar una excepción? De otro modo tienes que esperar una respuesta y comprobarlo. Eso te lo da el try/catch y es bastante más bonito.
 
-  Y no te confundes con las queries.
+Y no te confundes con las queries.
 
-  Las preguntas (queries) por su parte devuelven una respuesta informando sobre el estado del sistema: ¿me das el registro con id 1234? ¿Cuánto suman 2 y 3,45? ¿Cuál es el sentido del universo y todo lo demás?
+Las preguntas (queries) por su parte devuelven una respuesta informando sobre el estado del sistema: ¿me das el registro con id 1234? ¿Cuánto suman 2 y 3,45? ¿Cuál es el sentido del universo y todo lo demás?
 
-  El problema que tienen las queries es que "ya que estamos" podríamos hacer algo, además de preguntar. Pues oye, NO. Porque ese hacer algo es producir un cambio en el sistema y si al hacer una pregunta cambias el estado: ¿cómo te puedes fiar de la respuesta?
+El problema que tienen las queries es que _ya que estamos_ podríamos hacer algo, además de preguntar. Pues oye, NO. Porque ese hacer algo es producir un cambio en el sistema y si al hacer una pregunta cambias el estado: ¿cómo te puedes fiar de la respuesta?
 
-  Imagina un sistema de coche autónomo que al preguntar las rpm del motor también las cambia. Por ejemplo, las aumenta un 5%… ¿qué te indica la respuesta de las rpm? ¿Antes o después de del cambio? ¿Qué consecuencias tiene eso? Básicamente que no puedes confiar en la respuesta.
+Imagina un sistema de coche autónomo que al preguntar las rpm del motor también las cambia. Por ejemplo, las aumenta un 5%… ¿qué te indica la respuesta de las rpm? ¿Antes o después de del cambio? ¿Qué consecuencias tiene eso? Básicamente que no puedes confiar en la respuesta.
 
-  Por eso deben separarse las acciones que cambian el sistema (command) de las acciones que obtienen información sobre el sistema (query).
+Por eso deben separarse las acciones que cambian el sistema (command) de las acciones que obtienen información sobre el sistema (query).
 
 Por cierto, testear las queries es bastante sencillo ya que solo tenemos que verificar la respuesta que devuelven.
 

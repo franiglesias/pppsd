@@ -1,12 +1,6 @@
 # Acoplamiento al estado global
 
-Pues llevo todo el día peleándome con una variable estática (que no una propiedad) en una clase PHP usada para evitar un acceso a disco. Un ejemplo de optimización prematura violando principios OOP… TODO MAL. Lo que unido al 🧻 sobre acoplamiento me da excusa para hacer otro 🧻
-
-Esta vez sobre el acoplamiento al estado global.
-
-El 🧻 es de papel Elefante.
-
-🧻👇🏿
+Pues llevo todo el día peleándome con una variable estática (que no una propiedad) en una clase PHP usada para evitar un acceso a disco. Un ejemplo de optimización prematura violando principios OOP… TODO MAL. Lo que unido al capítulo sobre acoplamiento me da excusa para hacer otro, esta vez sobre el acoplamiento al estado global.
 
 ¿A qué me refiero con estado global? Pues no a la ONU precisamente, sino a aquello que es visible o accesible desde cualquier lugar del código de la aplicación. Y esto en OOP es un NO.
 
@@ -16,7 +10,7 @@ Aún más, el estado global puede estar definido y ser cambiado por la propia m�
 
 Estado global es por ejemplo el reloj del sistema. Cada vez que instancias un objeto de hora o fecha estás usando una dependencia global. Lo mismo si usas el generador de números (pseudo)aleatorios, o algo que esté en el sistema de archivos. Aparte de posibles variables o …
 
-…parámetros globales de tu programa, y cualquier cosa _compartida_, como una base de datos para tests _compartida_ (😱)…
+…parámetros globales de tu programa, y cualquier cosa _compartida_, como una base de datos para tests _compartida_.
 
 En general, esto hace que el comportamiento de la aplicación sea impredecible o, cuando menos, que no puedas confiar 100% en ella.
 
@@ -38,9 +32,7 @@ Y cuando necesites un objeto de Tiempo pídeselo solo a ese servicio. De este mo
 
 No hay problema que _dentro_ uses la implementación nativa del lenguaje, pero tampoco hay problema en que uses otras implementaciones: patrón Adapter y a tirar. Esto no te evita posibles problemas de tu máquina, pero evita el acoplamiento directo entre objetos dispares.
 
-Así que, en general, es recomendable que cualquier estado global tenga una representación en un objeto de tu aplicación en lugar de acceder directamente a él. De hecho, extendiendo la idea podría decirse que cualquier cosa que no sea tu aplicación y te proporcione información es
-
-… estado global (hum… ¿son las usuarias estado global?)
+Así que, en general, es recomendable que cualquier estado global tenga una representación en un objeto de tu aplicación en lugar de acceder directamente a él. De hecho, extendiendo la idea podría decirse que cualquier cosa que no sea tu aplicación y te proporcione información es estado global (hum… ¿Son las usuarias estado global?)
 
 En cualquier caso, representándolo en objetos y usándolos de forma rigurosa tu aplicación será más confiable y más fácil de poner bajo test. De hecho, será más fácil llegar a cambiar en algún momento su implementación por mejores soluciones.
 
@@ -50,7 +42,7 @@ Por supuesto. Recuerda que no puede haber acoplamiento cero. Pero en OOP si le d
 
 El resto de objetos no se acopla al estado global sino indirectamente (indirection). Puedes reemplazar ese objeto con otro que cumpla el mismo contrato y la aplicación no se verá afectada. Ejemplo: un doble de test, pero podría ser otra cosa.
 
-En la introducción de este paper  Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
+En la introducción de este paper Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
 
 https://c2.com/doc/oopsla89/paper.html
 

@@ -2,7 +2,7 @@
 
 Protected variations es un patrón GRASP y es una consecuencia de la aplicación de otros patrones y principios. En muchos sentidos se encuentra en la base de lo que es la orientación a objetos. Consiste en proteger a unos elementos de los cambios en otros.
 
-🧻👇🏽
+
 
 Si hay algo que podemos dar por seguro es que las cosas cambiarán. El diseño de software tiene que tener en cuenta esto. Pero el objetivo no es prever cualquier cambio posible y tener una respuesta para cada uno de ellos. El objetivo es gestionar el cambio.
 
