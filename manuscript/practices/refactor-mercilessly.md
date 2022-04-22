@@ -1,6 +1,6 @@
 # Refactor (sin piedad)
 
-Hablemos de Refactor Mercilessly o Merciless Refactoring. Una de las prácticas de Extreme Programming  🧻👇
+Hablemos de Refactor Mercilessly o Merciless Refactoring. Una de las prácticas de Extreme Programming 🧻👇
 
 Para empezar, creo que muchos equipos confunden refactor con reescritura. Vale, que sí, que son bastante sinónimos...
 

@@ -6,7 +6,7 @@ juanmacias 🏳️‍🌈
 
 ・9h
 
-Otra duda DDD para @talkingbit1  (y el que quiera responder)
+Otra duda DDD para @talkingbit1 (y el que quiera responder)
 
 Tienes un caso de uso: Mostrar todos los pedidos que han caducado.
 

@@ -52,7 +52,7 @@ Si vamos moviendo un concepto entre los distintos contextos podremos percibir es
 
 Por otro lado, los contextos mantienen relaciones entre ellos. Algunos son más próximos, otros se superponen en cierta medida, otros tienen una relación de dependencia. Este análisis busca obtener un _Context map_ o mapa de contextos, que nos dice cómo se regula la relación.
 
-Todo esto merece  detallados.
+Todo esto merece detallados.
 
 También merecen 🧻 los llamados _building blocks_. El dominio se expresa en código usando una serie de elementos: entidades, value object, servicios y agregados.
 

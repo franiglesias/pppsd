@@ -6,7 +6,7 @@ Otro de los patrones GRASP es Polimorfismo. Es la propiedad de la programación 
 
 ¿Y todo eso qué significa? Vayamos por partes. Primero: ¿Cuál es el caso de aplicación del patrón? Imaginemos que ofreces un Service con tres niveles: free, premium, proffesional. Una forma típica de modelar esto que Service tiene la propiedad tier (o type, o category…)
 
-Eso implica que en ciertas situaciones necesitarás preguntar a Service por su tier para saber qué precio cobrar, o qué límites de acceso tiene, etc. etc. Eso son muchos  if o switch en muchos lugares del código. Incluso respetando tell, don’t ask. Por ejemplo, Service.price
+Eso implica que en ciertas situaciones necesitarás preguntar a Service por su tier para saber qué precio cobrar, o qué límites de acceso tiene, etc. etc. Eso son muchos if o switch en muchos lugares del código. Incluso respetando tell, don’t ask. Por ejemplo, Service.price
 
 incluiría if /else o switches para decidir el precio del servicio, y así cualquier otro comportamiento asociado al tier.
 

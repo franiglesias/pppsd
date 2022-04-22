@@ -24,7 +24,7 @@ En este ejemplo, la indirección consiste en introducir un objeto intermediario 
 
 ¿Y qué hace MyHTTPClient? Pues:
 
-* Proporciona una interfaz estable para que APIClient  esté protegido de los cambios en VendorHTTPClient. Los cambios serán para MyHTTPClient, por supuesto.
+* Proporciona una interfaz estable para que APIClient esté protegido de los cambios en VendorHTTPClient. Los cambios serán para MyHTTPClient, por supuesto.
 
 * Nos permite reemplazar VendorHTTPClient por OtroVendorHTTPClient simplemente cambiando…
 
@@ -32,7 +32,7 @@ En este ejemplo, la indirección consiste en introducir un objeto intermediario 
 
 O para tests podemos crear HTTPClients dummies, stubs o lo que nos haga falta.
 
-Lo importante es que no tenemos que tocar APIClient para nada en caso de que tengamos que cambiar o actualizar el Vendor. Podrías decir _es que tienes que cambiar el mediador igualmente_.  Claro…
+Lo importante es que no tenemos que tocar APIClient para nada en caso de que tengamos que cambiar o actualizar el Vendor. Podrías decir _es que tienes que cambiar el mediador igualmente_. Claro…
 
 … pero la función del mediador es justamente regular la relación entre los otros objetos, de modo que protege a cada objeto de los cambios del otro. Ambos pueden evolucionar a su aire.
 

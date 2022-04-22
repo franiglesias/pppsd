@@ -54,7 +54,7 @@ Dicho esto, las CR se supone que sirven para garantizar la calidad del código, 
 
 No he entrado en ese punto particular, aunque mi opinión es que las CR no tienen mucho sentido en el contexto de equipos dentro de una empresa (sí en open source y tal).¿Por qué digo esto?
 
-Porque todas las ventajas que se señalan aumentan su eficacia si se hacen antes, no a posteriori.  Como ha mencionado @javisan81 , las PR/CR aumentan el WIP. De hecho, son constraints de libro. La _definition of done_ debería ser _feature que el usuario puede usar_.
+Porque todas las ventajas que se señalan aumentan su eficacia si se hacen antes, no a posteriori. Como ha mencionado @javisan81 , las PR/CR aumentan el WIP. De hecho, son constraints de libro. La _definition of done_ debería ser _feature que el usuario puede usar_.
 
 La asunción básica que estamos haciendo es que las PR se hacen porque trabajamos individualmente. Hablamos de equipos, pero en muchos casos el trabajo concreto se realiza en soledad y es después de _finalizado_ cuando se hace la review. Esto tiene varios problemas.
 

@@ -10,7 +10,7 @@ Hace tiempo comenté que había tres tipos de mensajes:
 
 * enunciativos (eventos): informan de algo que ha pasado en el sistema
 
-Los tres mensajes se pueden modelar con un patrón message/handler.  Message es un objeto inmutable que contiene la información interesante y Handler es un objeto que recibe Message como parámetro y hace lo que tenga que hacer.
+Los tres mensajes se pueden modelar con un patrón message/handler. Message es un objeto inmutable que contiene la información interesante y Handler es un objeto que recibe Message como parámetro y hace lo que tenga que hacer.
 
 Tanto los command como las queries tienen un único handler o destinatario (1:1). Sin embargo, los events pueden tener un número indefinido de destinatarios (1:n).
 

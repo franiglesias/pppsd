@@ -40,7 +40,7 @@ Y con otros patrones la cosa mejora más o menos, porque tus entidades de domini
 
 [— Insertar aquí meme Anakin-Padmé —]
 
-Esto es un follón de narices porque finalmente tenemos que aceptar algún tipo de compromiso. @matthiasnoback  propone algunas soluciones aquí
+Esto es un follón de narices porque finalmente tenemos que aceptar algún tipo de compromiso. @matthiasnoback propone algunas soluciones aquí
 
 Preview
 

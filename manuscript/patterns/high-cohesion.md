@@ -50,7 +50,7 @@ Por supuesto. Recuerda que no puede haber acoplamiento cero. Pero en OOP si le d
 
 El resto de objetos no se acopla al estado global sino indirectamente (indirection). Puedes reemplazar ese objeto con otro que cumpla el mismo contrato y la aplicación no se verá afectada. Ejemplo: un doble de test, pero podría ser otra cosa.
 
-En la introducción de este paper  Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
+En la introducción de este paper Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
 
 https://c2.com/doc/oopsla89/paper.html
 

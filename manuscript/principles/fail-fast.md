@@ -4,7 +4,7 @@ _Fail Fast_ (falla pronto) como principio de diseño de software puede parecer c
 
 Fallar rápido quiere decir que en cuanto se detecta algo que no está bien no tratamos de arreglarlo en el punto de detección, ni fallar _silenciosamente_. Al contrario, tiramos una excepción o error que _suba_ por la pila de llamadas hasta encontrar quién sabe gestionarlo.
 
-Imagina: un método requiere un parámetro integer en el rango de 5 a 27. Si el valor es menor o mayor... excepción.  Quien haya llamado a ese método con el valor incorrecto, será quien tenga que gestionar ese error. Nada de intentar _arreglarlo_ u ocultarlo bajo la alfombra.
+Imagina: un método requiere un parámetro integer en el rango de 5 a 27. Si el valor es menor o mayor... excepción. Quien haya llamado a ese método con el valor incorrecto, será quien tenga que gestionar ese error. Nada de intentar _arreglarlo_ u ocultarlo bajo la alfombra.
 
 Esto tiene sentido. El objeto que haya hecho la llamada debería tener más contexto para resolver el problema y decidir si puede usar otro valor (p.ej, si ha pasado uno mayor podría usar el límite superior) o si tiene que fallar igualmente y _hacer subir el error_ un nivel más.
 

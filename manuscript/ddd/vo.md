@@ -30,9 +30,9 @@ En cierto modo, los VO nos sirven para extender el sistema de tipos con aquellos
 
 Igualdad por valor: como hemos dicho, dos VO son iguales si tienen los mismos valores. Normalmente tendremos que introducir un método equals (que recibe otro VO) que nos permite chequear esa igual conforme a las reglas relevantes en cada caso…
 
-… a veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación (ejemplo, no puedes decir que  10 USD = 10 EUR, tienes que convertirlos primero).
+… a veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación (ejemplo, no puedes decir que 10 USD = 10 EUR, tienes que convertirlos primero).
 
-Inmutabilidad: Los VO representan un valor (simple o compuesto). Si ese valor cambia, se debe cambiar la instancia por otra con el nuevo valor.  Si cambia la propiedad precio de un producto, no cambiamos el objeto Price, sino la propiedad con una instancia distinta de Price.
+Inmutabilidad: Los VO representan un valor (simple o compuesto). Si ese valor cambia, se debe cambiar la instancia por otra con el nuevo valor. Si cambia la propiedad precio de un producto, no cambiamos el objeto Price, sino la propiedad con una instancia distinta de Price.
 
 De este modo, si el objeto Price tiene métodos _mutator_ (ejemplo: para subir o bajar el precio un porcentaje) en realidad serán métodos factoría que nos devuelven una nueva instancia con el valor resultado de la operación.
 

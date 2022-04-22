@@ -39,7 +39,7 @@ http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/
 Preview
 * Nunca, pero nunca, inyectes el contenedor de inyección de dependencias. Nunca, never, ni se te ocurra.
 ¿En qué nos beneficia el bajo acoplamiento? El código con bajo acoplamiento es fácil de testear, ya que todos los colaboradores de una clase son fácilmente reemplazables por dobles en tests unitarios o fakes en tests de integración.
-Es fácil de extender por las mismas razones. Hay pocos puntos en los que tocar en caso de necesitar introducir nuevos comportamientos. Es más posible que sólo tengas que añadir código, en lugar de tener que borrar o modificar. (El bajo acoplamiento facilita el open/close)
+Es fácil de extender por las mismas razones. Hay pocos puntos en los que tocar en caso de necesitar introducir nuevos comportamientos. Es más posible que solo tengas que añadir código, en lugar de tener que borrar o modificar. (El bajo acoplamiento facilita el open/close)
 Es incluso más fácil detectar los errores y dónde se producen porque si se produce un fallo seguramente podrás identificar la pieza de software que falla o aquella que controla esa fallo. En una situación de acoplamiento, el error se produce en Consumer aunque sea de Service.
 El acoplamiento es especialmente peligroso cuando la dependencia es con módulos de software que no controlamos (particularmente vendos). Para usar vendors deberías aplicar siempre inversión de dependencia, introduciendo patrones de indirección.
 Si te acoplas a vendors, en caso de que estos cambien tu aplicación se verá afectada. Es posible que para evitar esos efectos decidas quedarte en una versión concreta de ese veedor, lo cual introduce riesgos de seguridad, de finalización de mantenimiento, de performance… es MAL.

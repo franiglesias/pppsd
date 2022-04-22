@@ -6,7 +6,7 @@ Fran Iglesias
 
 ・3h
 
-Hoy me ha dado por practicar un poco el flujo _test && commit || revert_ y me lo estoy pasando muy bien.   https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864 …
+Hoy me ha dado por practicar un poco el flujo _test && commit || revert_ y me lo estoy pasando muy bien. https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864 …
 
 El flujo de trabajo TCR (Test && Commit || Revert) consiste en que tras cada cambio en el código de producción se lanzan los tests. Si los test pasan, se ejecuta un commit con los cambios.
 
