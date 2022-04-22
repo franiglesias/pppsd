@@ -19,5 +19,7 @@ Desarrollar software, por su parte, requiere considerar más cosas. Es una activ
 Para conseguir esto no basta con saber programar. Es necesario considerar muchas más cosas. Por eso, este libro recoge algunas de ellas:
 
 * Principios que nos ayudan a tomar decisiones.
+
 * Patrones que nos ayudan a resolver problemas comunes.
+
 * Prácticas que resultan útiles para desarrollar software de forma sostenible.
