@@ -41,8 +41,8 @@ Incluyendo objetos que puedan ser entregados por otros objetos.
 
 Esto último suena rarísimo, porque básicamente obliga a que:
 
-1. El Consumer pase el objeto recibido como parámetro a otro objeto o método y actúa como intermediario. Esto puede llevar a cadenas de indirección largas como días sin pan.
-2. Si el Consumer solo necesita una respuesta o acción del objeto recibido, Service tendría que entregar esa respuesta o ejecutar la acción sin exponer su estructura interna. Esto puede generar interfaces con muchos métodos.
+1. `Consumer` pase el objeto recibido como parámetro a otro objeto o método y actúa como intermediario. Esto puede llevar a cadenas de indirección largas como días sin pan.
+2. Si `Consumer` solo necesita una respuesta o acción del objeto recibido, `Service` tendría que entregar esa respuesta o ejecutar la acción sin exponer su estructura interna. Esto puede generar interfaces con muchos métodos.
 
 Por tanto, hay que combinar el principio con otros. Ya hemos mencionado el de sustitución, pero también tendríamos que fijarnos en el de Segregación de Interfaces.
 
@@ -52,6 +52,6 @@ Sin embargo, este principio ayuda mucho a reducir el acoplamiento. Una regla muy
 
 Si hay más de un punto,(`object.method1.method2`) es que posiblemente estamos rompiendo el principio de mínimo conocimiento. No confundir esto con las interfaces fluidas, que devuelven la misma instancia del objeto.
 
-Así que, en resumen, el principio de mínimo conocimiento nos dice que los objetos solo deberían interactuar con otros objetos del que tengan conocimiento directo y no basarse en el conocimiento de su estructura interna.
+Así que, en resumen, el principio de mínimo conocimiento nos dice que los objetos solo deberían interactuar con otros objetos de los que tengan conocimiento directo a través de su interfaz pública y no basarse en lo que sepan de su estructura interna, que debería ser exactamente nada.
 
-En OOP los objetos son cajas negras que exponen una manera de interactuar con ellos y no tenemos que saber nada de su estructura interna (y mucho menos usarla fuera del objeto).
+En Programación Orientada a Objetos, los objetos son cajas negras que exponen una manera de interactuar con ellos y no tenemos que saber nada de su estructura interna, y mucho menos usarla fuera del objeto.

@@ -1,21 +1,21 @@
 # Abierto para extensión, cerrado para modificación
 
-Open-Closed es la O de SOLID. Se refiere a situaciones en las que un cambio de funcionalidad podría suponer un cambio en un código en producción, como por ejemplo, en una clase, para simplificar.
+Open-Closed es la O de SOLID. Se refiere a situaciones en las que un cambio de funcionalidad podría suponer un cambio en un código en producción, como por ejemplo, en una clase, por simplificar.
 
 Obviamente no aplica cuando estamos desarrollando o diseñando. Por tanto, insisto en que nos estamos refiriendo a código en producción.
 
-Esto es un problema si:
+Esto es un problema si para modificar la funcionalidad:
 
-* tienes que volver compilar todos los módulos que usan esa clase. Ahora igual no es tan importante, hace unos años podía ser un marrón.
-* El cambio de funcionalidad no se aplica a todos los usos de esa clase (esto siempre es problemático)
+* Tienes que volver compilar todos los módulos que usan esa clase. Ahora igual no es tan importante, hace unos años podía ser un marrón.
+* El cambio de funcionalidad no se aplica a todos los usos de esa clase, lo cual es problemático, porque podría introducir efectos indeseados en lugares que no esperamos.
 
-En lenguajes interpretados tampoco supone mucho problema, pero la posibilidad de introducir errores o cambio indeseado de comportamiento afecta igualmente.
+En lenguajes interpretados tampoco supone mucho problema pues no tienen tiempo de compilación, pero la posibilidad de introducir errores o cambio indeseado de comportamiento afecta igualmente.
 
 Para prevenir eso se aplica el principio de que las clases sean abiertas a extensión y cerradas a modificación
 
 De este modo, aprovechas la clase extendiéndola sin perjudicar los usos de la clase que no están afectados por el cambio.
 
-Como no se puede predecir el futuro y lo más posible es que YAGNI, tampoco habría que agobiarse en diseñar cada clase para que sea _open-close certified_.
+Como no se puede predecir el futuro y lo más posible es que YAGNI (no lo necesitarás), tampoco habría que agobiarse en diseñar cada clase para que sea _open-close certified_.
 
 Si, llegado el caso, la clase no está abierta a extensión... pues lo suyo es hacer un refactor preparatorio que la _abra_, manteniendo su comportamiento actual.
 
