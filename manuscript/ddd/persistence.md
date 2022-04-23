@@ -2,8 +2,6 @@
 
 Hay un temilla relacionado con DDD sobre el que me han preguntado varias veces, aunque no es exclusivo de DDD, sino de cualquier tipo de arquitectura limpia, incluyendo la Hexagonal… LA PERSISTENCIA.
 
-🧻👇🏿
-
 O incluso diría que más que la persistencia, el tema es: cómo tratar la relación entre Entidades de dominio y bases de datos. Si sí, si no o si todo lo contrario.
 
 Porque cómo va a ser que una aplicación no tenga base de datos, dónde va a parar. Que una aplicación sin base de datos no es nada, es una mindundi de las aplicaciones, el nivel más bajo del escalafón.
@@ -12,7 +10,7 @@ Pues todo se resume en una frase sencilla: la base de datos es un detalle de imp
 
 Y ya.
 
-Veamos. La cuestión clave es que DDD define la capa de dominio como agnóstica del mecanismo de persistencia. En otro 🧻 mencioné que un repositorio no es más que un espacio en memoria en donde _guardamos_ las entidades/agregados para cuando necesitemos usarlas.
+Veamos. La cuestión clave es que DDD define la capa de dominio como agnóstica del mecanismo de persistencia. En otro capítulo mencioné que un repositorio no es más que un espacio en memoria en donde _guardamos_ las entidades/agregados para cuando necesitemos usarlas.
 
 Y, de hecho, un repositorio no tiene más métodos que los necesarios para guardar o recuperar entidades individuales o grupos de entidades que cubran un criterio.
 
@@ -20,23 +18,21 @@ Desde el punto de vista del dominio eso es lo único que sabemos. El cómo se la
 
 En esencia, lo que se pretende decir es que el dominio se debe modelar sin pensar en que la información se persistirá con una tecnología concreta. De hecho, entidades y agregados exponen comportamientos que podemos invocar enviándoles mensajes. No sabemos nada de sus propiedades.
 
-Las propiedades de entidades/agregados/de cualquier objetos son SU problema. Orientación a objetos: information hiding, de los information hiding de toda la vida.
+Las propiedades de entidades, de agregados o de cualquier objeto son SU problema. Orientación a objetos: _information hiding_, de los _information hiding_ de toda la vida.
 
-El problema viene porque, por lo general, los mecanismos de almacenamiento requieren acceder a la estructura interna de las entidades/agregados, acceder a sus propiedades de alguna manera. Incluso bbdd orientadas a objetos tienen que serializarlos en forma de documentos o algo.
+El problema viene porque, por lo general, los mecanismos de almacenamiento requieren acceder a la estructura interna de las entidades/agregados, acceder a sus propiedades de alguna manera. Incluso bases de datos orientadas a objetos tienen que serializarlos en forma de documentos o algo.
 
-En fins. Veámoslo ahora desde otro prisma. Con frecuencia usamos alguna librería o framework que nos ofrece un patrón para lidiar con una tecnología de base de datos. Lo típico sería una base de datos relacional con SQL. Así que se han inventado patrones como Active Record, etc.
+En fins. Veámoslo ahora desde otro prisma. Con frecuencia usamos alguna librería o _framework_ que nos ofrece un patrón para lidiar con una tecnología de base de datos. Lo típico sería una base de datos relacional con SQL. Así que se han inventado patrones como Active Record, etc.
 
 O librerías de ORM, que gestionan por nosotras las transformaciones entre objetos del lenguaje y su representación en un sistema de base de datos. Y aquí es donde empieza el lío porque estas librerías nos van a ofrecer extender sus modelos para crear los nuestros (active récord).
 
 O bien nos van a dar ciertos requisitos para crear nuestras entidades de modo que sean _persistibles_, o que se puedan mapear de alguna manera (verbigracia, con annotations o así).
 
-Esto presenta algunos problemas bastante gordos. Con Active Record tenemos una violación del SRP: toda entidad tendrá dos responsabilidades/razones para cambiar: la suya propia y las derivadas de saber persistirse….
+Esto presenta algunos problemas bastante gordos. Con Active Record tenemos una violación del SRP: toda entidad tendrá dos responsabilidades/razones para cambiar: la suya propia y las derivadas de saber persistirse esto es porque en Active Record un objeto es como un _proxy_ a una fila de una tabla de una bd y a sus relacionadas. Si hay que cambiar algo para la persistencia la entidad tendrá que cambiar. Aparte seguramente no podrás testear estas entidades aisladamente y necesitarás…
 
-… esto es porque en Active Record un objeto es como un _proxy_ a una fila de una tabla de una bd y a sus relacionadas. Si hay que cambiar algo para la persistencia la entidad tendrá que cambiar. Aparte seguramente no podrás testear estas entidades aisladamente y necesitarás…
+… ¡tachán! una bbdd activa para poder hacer un test. Esto pinta bastante mal.
 
-… ¡tachán! una bbdd activa para poder hacer un tests. Esto pinta bastante mal.
-
-Y con otros patrones la cosa mejora más o menos, porque tus entidades de dominio pueden verse _contaminadas_ por necesidades del ORM, como tener que exponer getters/setters o propiedades públicas. Y no queremos eso en nuestras entidades de dominio, right?
+Y con otros patrones la cosa mejora más o menos, porque tus entidades de dominio pueden verse _contaminadas_ por necesidades del ORM, como tener que exponer getters/setters o propiedades públicas. No queremos eso en nuestras entidades de dominio, ¿verdad?
 
 [— Insertar aquí meme Anakin-Padmé —]
 
