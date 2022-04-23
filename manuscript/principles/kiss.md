@@ -2,9 +2,9 @@
 
 KISS… no es la banda de rock, ni un beso. Es un principio de diseño formulado por Kelly Johnson, ingeniero de la Lockheed. Allí participó en el diseño de una buena lista de aviones militares, muchos de los cuales son hitos de esa industria. Su enunciado:
 
-Keep it simple stupid (sin coma)
+Keep it simple stupid (sin coma).
 
-Efectivamente, la forma original no lleva coma y pierde ese “matiz de bordería “mantenlo simple, estúpido”. La estupidez se refería al diseño.
+Efectivamente, la forma original no lleva coma y pierde ese matiz borde de “mantenlo simple, estúpido”. La estupidez se refería al diseño.
 
 ¿En qué sentido debería ser estúpido un diseño?
 

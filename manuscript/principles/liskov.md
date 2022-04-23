@@ -14,7 +14,7 @@ Si puedes intercambiar Customer con User y Administrator con User, entonces podr
 
 Pero… ¿Hasta qué punto? El principio de sustitución se formuló a partir de un artículo titulado: _A Behavioral Notion of Subtyping_. En resumen, lo que dice es que el subtipado no es una cuestión puramente sintáctica, sino también semántica.
 
-https://www.cs.cmu.edu/~wing/publications/LiskovWing94.pdf
+![](images/behavioral-notion-of-subtyping.png)
 
 Las clases de la jerarquía tienen que tener un comportamiento equivalente desde el punto de vista de su consumidor.
 
@@ -37,8 +37,6 @@ Por ejemplo, una empresa proveedora de energía podría tener `Contract` como cl
 Con todo, el principio tiene discusión. ¿Qué pasa si las clases base son abstractas? ¿Aplica esto a familias de clases que implementan una interfaz?
 
 En su formulación original el principio no contempla esto, pero creo que se puede aplicar si lo reformulas de esta manera: los subtipos no deben romper los contratos establecidos por los tipos de los que descienden.
-
-Preview
 
 Una recomendación relacionada es que las jerarquías de clases tampoco deberían ser muy profundas: mejor un nivel que dos. Por otro lado, si sientes que querrías tener herencia múltiple es posible que necesites composición en vez de herencia.
 
