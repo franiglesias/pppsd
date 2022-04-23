@@ -2,9 +2,7 @@
 
 El patrón GRASP que me quedaba por repasar es Pure Fabrication. Es como el patrón de último recurso, o el comodín de la llamada.
 
-🧻👇🏼
-
-El problema que resuelve es el de no poder atribuir una responsabilidad a un clase concreta, fundamentalmente porque no tiene mucho sentido (o ninguno) desde un punto de vista semántico.
+El problema que resuelve es el de no poder atribuir una responsabilidad a una clase concreta, fundamentalmente porque no tiene mucho sentido (o ninguno) desde un punto de vista semántico.
 
 O bien porque la idea que se quiere expresar es, de alguna manera, artificial… pero necesaria.
 

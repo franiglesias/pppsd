@@ -1,11 +1,12 @@
 intro.md
+principles/index.md
 principles/separation-of-concerns.md
-principles/abtraction.md
+principles/abstraction.md
 principles/cqs.md
 principles/dry.md
 principles/fail-fast.md
 principles/kiss.md
-principles/minimum-knowdledge.md
+principles/minimum-knowledge.md
 principles/tell-do-not-ask.md
 principles/srp.md
 principles/open-closed.md
@@ -13,6 +14,7 @@ principles/liskov.md
 principles/interface-segregation.md
 principles/dependency-inversion.md
 principles/yagni.md
+practices/index.md
 practices/tdd/how-it-works.md
 practices/tdd/understanding-tdd.md
 practices/tdd/what-tests-prove.md
@@ -20,6 +22,7 @@ practices/bug.md
 practices/code-review.md
 practices/refactor-mercilessly.md
 practices/tcr.md
+patterns/index.md
 patterns/controller.md
 patterns/grasp.md
 patterns/high-cohesion.md
