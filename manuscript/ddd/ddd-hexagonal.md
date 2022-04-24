@@ -46,4 +46,4 @@ Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es
 
 Y Arquitectura Hexagonal no es la única cosa que se identifica erróneamente con DDD. Ojo:
 
-https://franiglesias.github.io/ddd-is-not-what-they-said/
+![](images/ddd-is-not-what-they-said.png)
