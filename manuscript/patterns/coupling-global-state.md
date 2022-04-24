@@ -8,9 +8,7 @@ Es un NO porque es lo opuesto a la OOP un paradigma en el que básicamente se tr
 
 Aún más, el estado global puede estar definido y ser cambiado por la propia máquina que alberga el programa. No necesariamente por el programa. ¿Nos vamos haciendo una idea de los problemas que esto puede generar?
 
-Estado global es por ejemplo el reloj del sistema. Cada vez que instancias un objeto de hora o fecha estás usando una dependencia global. Lo mismo si usas el generador de números (pseudo)aleatorios, o algo que esté en el sistema de archivos. Aparte de posibles variables o …
-
-…parámetros globales de tu programa, y cualquier cosa _compartida_, como una base de datos para tests _compartida_.
+Estado global es por ejemplo el reloj del sistema. Cada vez que instancias un objeto de hora o fecha estás usando una dependencia global. Lo mismo si usas el generador de números (pseudo)aleatorios, o algo que esté en el sistema de archivos. Aparte de posibles variables o parámetros globales de tu programa, y cualquier cosa _compartida_, como una base de datos para tests _compartida_.
 
 En general, esto hace que el comportamiento de la aplicación sea impredecible o, cuando menos, que no puedas confiar 100% en ella.
 
@@ -44,6 +42,6 @@ El resto de objetos no se acopla al estado global sino indirectamente (indirecti
 
 En la introducción de este paper Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
 
-https://c2.com/doc/oopsla89/paper.html
+![](images/teaching-object-oriented-thinking.png)
 
 Controlar el acoplamiento es uno de los puntos clave de la buena orientación a objetos.

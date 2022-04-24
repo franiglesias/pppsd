@@ -23,9 +23,7 @@ De hecho, Currency también es candidato a VO porque aunque es un string, no tod
 
 En cierto modo, los VO nos sirven para extender el sistema de tipos con aquellos propios de nuestro dominio. Veamos ahora algunas propiedades interesantes que deben tener los VO.
 
-Igualdad por valor: como hemos dicho, dos VO son iguales si tienen los mismos valores. Normalmente, tendremos que introducir un método equals (que recibe otro VO) que nos permite chequear esa igual conforme a las reglas relevantes en cada caso…
-
-… a veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación (ejemplo, no puedes decir que 10 USD = 10 EUR, tienes que convertirlos primero).
+Igualdad por valor: como hemos dicho, dos VO son iguales si tienen los mismos valores. Normalmente, tendremos que introducir un método equals (que recibe otro VO) que nos permite chequear esa igual conforme a las reglas relevantes en cada caso. A veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación (ejemplo, no puedes decir que 10 USD = 10 EUR, tienes que convertirlos primero).
 
 Inmutabilidad: Los VO representan un valor (simple o compuesto). Si ese valor cambia, se debe cambiar la instancia por otra con el nuevo valor. Si cambia la propiedad precio de un producto, no cambiamos el objeto Price, sino la propiedad con una instancia distinta de Price.
 

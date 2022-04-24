@@ -24,11 +24,12 @@ practices/refactor-mercilessly.md
 practices/tcr.md
 patterns/index.md
 patterns/controller.md
-patterns/grasp.md
-patterns/high-cohesion.md
-patterns/coupling-global-state.md
-patterns/indirection.md
+patterns/creator.md
 patterns/information-expert.md
+patterns/low-coupling.md
+patterns/coupling-global-state.md
+patterns/high-cohesion.md
+patterns/indirection.md
 patterns/polymorphism.md
 patterns/protected-variations.md
 patterns/pure-fabrication.md
