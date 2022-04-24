@@ -6,18 +6,20 @@ Incluso diría que es más bien un consejo de refactor. Más o menos dice que: n
 
 La cuestión es que en OOP el estado (propiedades) de un objeto deberían estar ocultas (ocultación de información) y cambiarían como resultado de enviar mensajes a ese objeto (invocando sus métodos). El objeto es responsable de gestionar su estado (encapsulación).
 
-Salvando el caso de los que solo son portadores de datos (DTO), no deberíamos tener acceso directo a las propiedades de los objetos. Las propiedades son privadas (en algunos lenguajes lo son por defecto), ni exponemos getters ni setters, para no exponer la estructura.
+Salvando el caso de los que solo son portadores de datos, no deberíamos tener acceso directo a las propiedades de los objetos. Las propiedades son privadas, de hecho en algunos lenguajes lo son por defecto, ni exponemos getters ni setters, para no exponer la estructura.
 
-Entonces, ¿cómo se cambia el estado de los objetos? Mediante el envío de mensajes (invocación de métodos para entendernos) que cambien las propiedades como corresponda y que tengan valor semántico en el dominio de esa pieza de software.
+Y ahora mismo me pregunto si los DTO deberían ser considerados objetos o más bien tipos (structs) inmutables. Ahí lo dejo.
 
-Los mensajes que un objeto entiende conforman su interfaz pública. Una interfaz pública bien definida o contrato (no hace falta que sea explícita) hace que tengamos total libertad para cambiar la implementación del objeto. Siempre que mantengamos la interfaz.
+Entonces, ¿cómo se cambia el estado de los objetos? Mediante el envío de mensajes, invocación de métodos para entendernos, que produzcan el cambio de propiedades y que tengan valor semántico en el dominio de esa pieza de software.
 
-Este es uno de los cambios de mentalidad más complicados cuando venimos del estilo procedural. En OOP, los objetos nos ocultan información, a cambio de ofrecernos comportamiento y colaboración.
+Los mensajes que un objeto entiende conforman su interfaz pública. Una interfaz pública bien definida o contrato, aunque no hace falta que sea definida explícitamente, hace que tengamos total libertad para cambiar la implementación del objeto. Siempre que mantengamos esa interfaz.
 
-Un problema es que solemos intentar explicar OOP a partir de las propiedades de los objetos, es decir, de cómo convertimos la expresión de ciertos conceptos mediante tipos primitivos en objetos. Y tendemos a verlos como contenedores de datos.
+Este es uno de los cambios de mentalidad más complicados cuando venimos del estilo procedural. En orientación a objetos, estos nos ocultan información, a cambio de ofrecernos comportamiento y colaboración.
 
-Sin embargo, el enfoque sería tratarlos como _information experts_, es decir: cada objeto sabe de los suyo y es a quién tenemos que pedirle cosas. Este entronca con los llamados _patrones GRASP_, de los que ya hablaremos. Pero puedes empezar pensando en que un objeto debería ser el máximo experto del sistema en lo suyo y, por tanto, reunir todos los comportamientos que le correspondan (semánticamente hablando). Esto contribuye al SRP y DRY.
+Un problema es que solemos intentar explicar orientación a objetos a partir de sus propiedades, es decir, de cómo convertimos la expresión de ciertos conceptos mediante tipos primitivos en objetos. Y tendemos a verlos como contenedores de datos.
 
-Otro aspecto es que los objetos deberían crearse consistentes (con toda lo que necesiten para funcionar y cumpliendo las reglas de negocio) de modo que no tengas que _preguntar_ al objeto si está completo o bien formado: si está en el sistema es que puede trabajar.
+Sin embargo, el enfoque sería tratarlos como _information experts_, es decir: cada objeto sabe de los suyo y es a quién tenemos que pedirle cosas. Este entronca con los llamados _patrones GRASP_, de los que ya hablaremos. Pero puedes empezar pensando en que un objeto debería ser el máximo experto del sistema en lo suyo y, por tanto, reunir todos los comportamientos que le correspondan semánticamente hablando. Esto contribuye al SRP y DRY.
+
+Otro aspecto es que los objetos deberían crearse consistentes, con toda lo que necesiten para funcionar y cumpliendo las reglas de negocio, de modo que no tengas que _preguntar_ al objeto si está completo o bien formado: si está en el sistema es que puede trabajar.
 
 Por tanto, si tienes que preguntarle al objeto _cómo estás_ para decirle _cómo deberías estar_, significa que esa operación concreta debería formar parte de las habilidades de ese objeto.

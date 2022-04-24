@@ -20,8 +20,6 @@ Contra lo que pueda parecer, un sistema que falla rápido es muy robusto. En cas
 
 Una aplicación de este principio es la construcción de objetos con validaciones que no permiten instanciar un objeto si no se cumplen las reglas de negocio. De este modo, si un objeto ha podido ser creado, es que es válido y consistente. No necesitas chequearlo cada vez.
 
-Si tienes un módulo que sientes que debería gestionar el error detectado, es posible que tengas un problema con el diseño y debas separar cosas ahí. Típico caso: bucle que lee datos de un archivo y que validas cada línea para poder incluirla o no. En ese caso conviene aplicar...
-
-... la separación entre el bucle y el proceso del ítem, de modo que el bucle gestione los posibles errores de procesar el ítem.
+Si tienes un módulo que sientes que debería gestionar el error detectado, es posible que tengas un problema con el diseño y debas separar cosas ahí. Típico caso: bucle que lee datos de un archivo y que validas cada línea para poder incluirla o no. En ese caso conviene aplicar la separación entre el bucle y el proceso del ítem, de modo que el bucle gestione los posibles errores de procesar el ítem.
 
 Así que, ya sabes, en lo tocante a hacer sistemas robustos: falla pronto y falla sonoramente.

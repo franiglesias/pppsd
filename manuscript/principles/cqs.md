@@ -1,6 +1,6 @@
 # Command-query separation
 
-Hablemos de CQS… No, no de CQRS, sino de CQS: Command Query Separation. Enunciado por Bertrand Meyer, reza más o menos así:
+Hablemos de CQS… No, no de CQRS, sino de CQS: _Command Query Separation_. Enunciado por Bertrand Meyer, reza más o menos así:
 
 Cada método debería ser o bien un comando que ejecuta una acción o bien una pregunta que devuelve información.
 
@@ -19,11 +19,11 @@ Un comando (command) produce un efecto en el estado del sistema. Por ejemplo: cr
 
 – ¿Y si devuelve OK o true o algo para indicar que ha ido todo bien?
 
-– ¿Qué tiene de malo tirar una excepción? De otro modo tienes que esperar una respuesta y comprobarlo. Eso te lo da el try/catch y es bastante más bonito.
+– ¿Qué tiene de malo tirar una excepción? De otro modo tienes que esperar una respuesta y comprobarlo. Eso te lo da el `try/catch` y es bastante más bonito.
 
 Y no te confundes con las _queries_.
 
-Las preguntas, o _queries_, por su parte devuelven una respuesta informando sobre el estado del sistema: ¿me das el registro con Id 1234? ¿Cuánto suman 2 y 3,45? ¿Cuál es el sentido del universo y todo lo demás?
+Las preguntas, o _queries_, por su parte devuelven una respuesta informando sobre el estado del sistema: ¿me das el producto con Id 1234? ¿Cuánto suman 2 y 3,45? ¿Cuál es el sentido del universo y todo lo demás?
 
 El problema que tienen las queries es que _ya que estamos_ podríamos hacer algo, además de preguntar. Pues oye: NO. Porque ese hacer algo es producir un cambio en el sistema y si al hacer una pregunta cambias el estado: ¿cómo te puedes fiar de la respuesta?
 
@@ -37,10 +37,8 @@ Si una query produce algún efecto en el sistema hablamos de _side-effects_ y es
 
 Una clase puede tener tanto commands como queries siempre que respetemos el SRP, claro. El principio CQS se refiere únicamente a que un comando no devuelva respuestas: se ejecuta y confiamos en que irá bien; y a que una query no produzca side-effects poniendo el sistema en estado indeterminado. Y nadie quiere eso.
 
-Llevando eso a objetos-método, como pueden ser los Use Case, tenemos que habría que separar aquellos que son comandos de los que son queries. Y aplica lo mismo y por las mismas razones.
+Llevando eso a objetos-método, como pueden ser los Use Case, tenemos que separar aquellos que son comandos de los que son queries. Y aplica lo mismo y por las mismas razones.
 
-¿Y CQRS? Pues es algo así como llevar CQS hasta las últimas consecuencias, separando los comandos, que implican escrituras, y las queries, que implican lecturas, incluso al nivel de la infraestructura. Pero CQRS es más un patrón, bastante complejo, que un principio.
+¿Y CQRS? CQRS son las siglas de _Command Query Responsibility Segregation_ y es algo así como llevar CQS hasta las últimas consecuencias, separando los _commands_, que implican escrituras, y las _queries_, que implican lecturas, incluso al nivel de la infraestructura. Pero CQRS es más un patrón que un principio.
 
-En cualquier caso, la separación command-query es fundamental para construir sistemas confiables y fáciles de mantener.
-
-No hay nada peor que un side-effect ocurriendo es vaya usted a saber dónde.
+En cualquier caso, la separación command-query es fundamental para construir sistemas confiables y fáciles de mantener. No hay nada peor que un side-effect ocurriendo es vaya usted a saber dónde.

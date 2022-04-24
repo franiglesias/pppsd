@@ -61,22 +61,16 @@ Buenos recursos para iniciar a los equipos en Refactor Mercilessly:
 
 Aparte de leerse Extreme Programming Explained:
 
-Preview
+![](images/extreme-programming-explained.png)
 
 Esta charla de Martin Fowler:
 
+![](images/workflows-of-refactoring.png)
+
 Su libro clásico:
 
-Preview
+![](images/refactoring-second-edition.png)
 
-El libro que recomendé hace poco:
+Y algo propio:
 
-Preview
-
-Shameless auto-promo alert:
-
-Preview
-
-Shameless auto-promo alert:
-
-Preview
+![](images/keeping-code-healthy.png)

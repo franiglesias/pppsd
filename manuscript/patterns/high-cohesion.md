@@ -1,57 +1,38 @@
 # Alta cohesión
 
-Pues llevo todo el día peleándome con una variable estática (que no una propiedad) en una clase PHP usada para evitar un acceso a disco. Un ejemplo de optimización prematura violando principios OOP… TODO MAL. Lo que unido al 🧻 sobre acoplamiento me da excusa para hacer otro 🧻
+El reverso de low coupling es high cohesion, otro patrón GRASP y otro concepto acuñado por Larry Constantine.
 
-Esta vez sobre el acoplamiento al estado global.
+Cohesión nos da una idea de cuan fuertemente relacionados están los elementos de un módulo de software.
 
-El 🧻 es de papel Elefante.
+Nota previa: módulo de software es una medida un tanto flexible. Para el caso de nuestro _estudio_ de la cohesión lo que digamos se puede aplicar a una clase o a un conjunto de ellas que forman un módulo.
 
-🧻👇🏿
+Como tantas otras cosas en el diseño de software una buena forma de analizar la cohesión es ver cómo cambian las cosas. En este caso si cambian juntas o no. Aunque hay algunos matices, porque también depende de lo cercanas que estén las cosas que cambian o si nos perjudica.
 
-¿A qué me refiero con estado global? Pues no a la ONU precisamente, sino a aquello que es visible o accesible desde cualquier lugar del código de la aplicación. Y esto en OOP es un NO.
+Así, las cosas que cambian juntas deberían estar juntas. Es la primera heurística de la cohesión. Esto es: si cuando cambiamos una clase tenemos que cambiar otra, posiblemente ambas pertenecen al mismo módulo. Incluso podría ser que debieran fusionarse.
 
-Es un NO porque es lo opuesto a la OOP un paradigma en el que básicamente se trata de ocultar el estado en los objetos. Por otro lado, si hay acceso al estado global el comportamiento puede ser impredecible, dado que cualquier objeto podría cambiarlo sin que se enteren los demás.
+Por supuesto, siempre respetando otros principios como Single Responsibility, etc. Dicho de otro modo, tienes alta cohesión cuando al realizar cambios en el software estos afectan al menor número de elementos. Idealmente solo a uno.
 
-Aún más, el estado global puede estar definido y ser cambiado por la propia máquina que alberga el programa. No necesariamente por el programa. ¿Nos vamos haciendo una idea de los problemas que esto puede generar?
+Cuando dos cosas alejadas entre sí cambian juntas puede ocurrir que estén acopladas, pero no quiere decir necesariamente que tengan que estar juntas (no son cohesivas). Esto es: tenemos que preguntarnos si el cambio es por acoplamiento (malo) o porque están separadas cosas que van juntas.
 
-Estado global es por ejemplo el reloj del sistema. Cada vez que instancias un objeto de hora o fecha estás usando una dependencia global. Lo mismo si usas el generador de números (pseudo)aleatorios, o algo que esté en el sistema de archivos. Aparte de posibles variables o …
+Obviamente, si un objeto tiene que cambiar porque otro lo hace y pensamos que no debería ser así, es un caso de acoplamiento. Como hemos visto, tendríamos que introducir patrones que reduzcan el acoplamiento directo.
 
-…parámetros globales de tu programa, y cualquier cosa _compartida_, como una base de datos para tests _compartida_ (😱)…
+En el segundo caso, tenemos que refactorizar para incrementar la cohesión.
 
-En general, esto hace que el comportamiento de la aplicación sea impredecible o, cuando menos, que no puedas confiar 100% en ella.
+¿Y si metemos todo el código en un sólo objeto?
 
-También se consideran globales las llamadas estáticas. El patrón Singleton debe su mala fama a sus implementaciones estáticas más conocidas (porque se pueden tener singleton no estáticos).
+Pues no.
 
-Por ejemplo, los tests. ¿Has hecho tests con cosas que usan fechas o números aleatorios? Ha dolido, ¿no? Trucos como poner una fecha muy lejos en el futuro para que ciertos tests pasen (y luego resulta que el futuro llega y hay que cambiar el test)
+Hay dos maneras de lograr alta cohesión:
 
-O los tests sobre el sistema de archivos, que si fallan dejan _sucio_ el entorno de CI, falseando otros tests o bloqueando la build. O tests que pasan si se ejecutan solos y no pasan si se ejecuta la suite.
+* Poniendo juntas las cosas que deberían estar juntas (porque cambian juntas)
+* Separando las cosas que no cambian junto con las otras.
 
-Del mismo modo que los tests tienen estos comportamientos _impredecibles_, la aplicación también los puede tener. El acceso al estado global puede crear dependencias muy difíciles de detectar o errores puntuales muy difíciles de encontrar.
+En cierto modo, la cohesión es también el arte de saber decir no. Si tenemos una clase en la que unos métodos cambian juntos, pero otros no, es muy posible que tengamos varias responsabilidades y que debamos separarlas.
 
-Imagina un objeto que crea un archivo para almacenar una información temporalmente y poder recurrir a ella más tarde, pero hay otro objeto que elimina o escribe ese mismo archivo. Problemas garantizados.
+Es como decir que la alta cohesión y la responsabilidad única van de la mano. 
 
-¿Cómo se soluciona esto? Pues en primer lugar evitando acceder al estado global en cualquier momento y lugar. Si necesitas un parámetro de configuración, pásalo a los objetos en construcción o a través de algún sistema controlado si lo necesitas en otro momento.
+Si tenemos una clase que expone muchos métodos, va contra Segragación de Interfaces (también SRP) y, por tanto, necesitamos “partirla”. Otro principio que va de la mano de la alta cohesión.
 
-Si tienes que acceder a estados globales usa patrones de indirección, de modo que un estado global sea representado por un objeto del sistema. Por ejemplo: un TimeService o ClockService que abstraiga el reloj del sistema.
+Y lo mismo con otros muchos principios: seguirlos nos conduce a tener alta cohesión. Buscar la alta cohesión nos ayuda a respetar los principios de diseño.
 
-Y cuando necesites un objeto de Tiempo pídeselo solo a ese servicio. De este modo, en testing puedes usar un doble y nunca más tener tests que dependan del día o la hora de su ejecución. Lo mismo para un generador de números aleatorios.
-
-No hay problema que _dentro_ uses la implementación nativa del lenguaje, pero tampoco hay problema en que uses otras implementaciones: patrón Adapter y a tirar. Esto no te evita posibles problemas de tu máquina, pero evita el acoplamiento directo entre objetos dispares.
-
-Así que, en general, es recomendable que cualquier estado global tenga una representación en un objeto de tu aplicación en lugar de acceder directamente a él. De hecho, extendiendo la idea podría decirse que cualquier cosa que no sea tu aplicación y te proporcione información es
-
-… estado global (hum… ¿son las usuarias estado global?)
-
-En cualquier caso, representándolo en objetos y usándolos de forma rigurosa tu aplicación será más confiable y más fácil de poner bajo test. De hecho, será más fácil llegar a cambiar en algún momento su implementación por mejores soluciones.
-
-Puede que te preguntes… pero si esos objetos están acoplados al estado global, entonces, ¿en qué quedamos?
-
-Por supuesto. Recuerda que no puede haber acoplamiento cero. Pero en OOP si le damos a un objeto la responsabilidad de proporcionarnos una información específica de ese estado global estamos estableciendo un punto único y controlado de acceso al mismo.
-
-El resto de objetos no se acopla al estado global sino indirectamente (indirection). Puedes reemplazar ese objeto con otro que cumpla el mismo contrato y la aplicación no se verá afectada. Ejemplo: un doble de test, pero podría ser otra cosa.
-
-En la introducción de este paper Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural (pendiente del estado global) a la OOP (no estado global).
-
-https://c2.com/doc/oopsla89/paper.html
-
-Controlar el acoplamiento es uno de los puntos clave de la buena orientación a objetos.
+Lo mismo cuando buscamos reducir al máximo el acoplamiento. Es un círculo virtuoso.
