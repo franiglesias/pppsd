@@ -1,14 +1,14 @@
 # Domain Driven Design y Arquitectura Hexagonal
 
-Es muy común identificar (erróneamente) DDD con la Arquitectura Hexagonal de Alistair Cockburn. A veces le llamamos a eso directory driven development. Eric Evans cita la arquitectura hexagonal como una implementación de un bounded context compatible con DDD.
+Es muy común identificar, erróneamente, DDD con la Arquitectura Hexagonal de Alistair Cockburn. Como si fuesen la misma cosa o estuviesen ligadas de alguna manera. A veces le llamamos a eso directory driven development. Eric Evans cita la arquitectura hexagonal como una implementación de un bounded context compatible con DDD.
 
-¿Y por qué esta identificación? Pues en parte porque hay coincidencias entre Arquitectura Hexagonal y las capas que propone Evans (dominio, aplicación, infraestructura, UI), aunque a decir verdad la Arquitectura hexagonal no postula capas, sino una separación entre la aplicación y los detalles técnicos de implementación. La Arquitectura Hexagonal tiene un objetivo que las implementaciones de DDD también deben cumplir:
+¿Y por qué esta identificación? Pues en parte porque hay coincidencias entre Arquitectura Hexagonal y las capas que propone Evans (dominio, aplicación, infraestructura, UI), aunque a decir verdad la Arquitectura Hexagonal no postula capas, sino una separación entre la aplicación y los detalles técnicos de implementación. La Arquitectura Hexagonal tiene un objetivo que las implementaciones de DDD también deben cumplir:
 
 Aislar el dominio.
 
 En DDD la capa de dominio es donde reside nuestro modelo. El modelo estará escrito en objetos puros del lenguaje, sin más dependencia técnica que el propio lenguaje de programación. El dominio no debe saber nada de los _detalles de implementación_. Si algo necesita una tecnología concreta lo correcto es definir una abstracción en la capa de dominio (dependency inversion) de modo que el detalle de implementación dependa de la abstracción. El ejemplo típico es el patrón repositorio.
 
-Pues esto mismo es lo que nos dice la arquitectura hexagonal. La aplicación, que coincide más o menos con el dominio en DDD, no debe tener contacto directo con el mundo exterior, sino exponer _Puertos_ (básicamente abstracciones -> interfaces) de forma que las dependencias o cualquier comunicación con el mundo exterior (UI, API, whatever) sea representada en el sistema por un _Adaptador_ que cumple esa interfaz. Puertos/Adaptadores es el segundo nombre de la Arquitectura Hexagonal.
+Pues esto mismo es lo que nos dice la arquitectura hexagonal. La aplicación, que coincide más o menos con el dominio en DDD, no debe tener contacto directo con el mundo exterior, sino exponer _Puertos_ (básicamente abstracciones -> interfaces) de forma que las dependencias o cualquier comunicación con el mundo exterior (UI, API, _whatever_) sea representada en el sistema por un _Adaptador_ que cumple esa interfaz. Puertos/Adaptadores es el segundo nombre de la Arquitectura Hexagonal.
 
 De hecho, el concepto de _Puerto_ es algo más amplio que la mera aplicación de la inyección de dependencias. Los puertos se definen más bien por su rol, administración, interfaz de usuario, sincronización, persistencia, que por una tecnología concreta.
 
@@ -36,13 +36,13 @@ Una arquitectura contiene tres grandes grupos de elementos:
 
 Que coinciden con las capas de:
 
-* Dominio (el modelo del mundo)
-* Aplicación (los casos de uso)
-* Infrastructure (las implementaciones, que no tienen dependencias cruzadas)
+* Dominio: el modelo del mundo
+* Aplicación: los casos de uso
+* Infraestructura: las implementaciones, que no tienen dependencias cruzadas
 
-La Arquitectura Hexagonal me permite tener todo esto. Algo que funciona bien para una aplicación _pequeña_, como para un bounded context en DDD, porque cada bounded context puede tener su propia _arquitectura_
+La Arquitectura Hexagonal me permite tener todo esto. Algo que funciona bien tanto para una aplicación _pequeña_, como para un bounded context en DDD, porque cada bounded context puede tener su propia _arquitectura_.
 
-Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es DDD, sí que es una opción muy válida para la implementación.
+Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es DDD, sí que es una opción muy válida para su implementación.
 
 Y Arquitectura Hexagonal no es la única cosa que se identifica erróneamente con DDD. Ojo:
 

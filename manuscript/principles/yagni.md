@@ -1,6 +1,6 @@
 # No lo vas a necesitar
 
-"Your ain't gonna need it" es una expresión acuñada por Ron Jeffreys para indicar que no deberías estar desarrollando prestaciones en el software si nadie te las ha pedido o por si en el futuro resultasen ser valiosas.
+"Your ain't gonna need it" es una expresión acuñada por Ron Jeffries para indicar que no deberías estar desarrollando prestaciones en el software si nadie te las ha pedido o por si en el futuro resultasen ser valiosas.
 
 La dificultad con YAGNI es que muchas personas se vienen arriba creando código _por si acaso_. A veces resulta _tan_ evidente la necesidad de introducir alguna característica, aunque nadie la vaya a usar a corto plazo, que resulta irresistible añadirla. Incluso sin tests, ya puestos.
 
