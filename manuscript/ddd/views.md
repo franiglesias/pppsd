@@ -26,7 +26,7 @@ Para las vistas existe un patrón clásico: Model-View-Controller o MVC. La part
 
 ¿Pero no tenemos ya las entidades persistidas? ¿Para qué otra tabla? ¿No basta con añadir un método al repositorio y obtener las entidades y tal y cual? Hay varios problemas con esto último. El principal es introducir asuntos de persistencia en el dominio. El rol del repositorio es proporcionar persistencia a las entidades, pero no resolver los problemas de las vistas. Tenemos el patrón specification para obtener subconjuntos de las entidades, pero ese patrón no contempla paginación, ordenación o filtrado en el sentido de las vistas.
 
-La solución es tener una tabla que esté asociada a una vista concreta, un ViewModel, pero tenemos el problema de poblarla. También hay otra solución _low-cost_ de la que hablaré más adelante.
+La solución es tener una tabla que esté asociada a una vista concreta, un ViewModel (o ReadModel, si lo prefieres más genérico), pero tenemos el problema de poblarla. También hay otra solución _low-cost_ de la que hablaré más adelante.
 
 Y aquí es donde entran en juego los eventos. Cada vez que se lanza un evento que pueda afectar a esa vista, como que se ha creado un nuevo pedido, o se ha actualizado, un suscriptor se encarga de actualizar el ViewModel si es necesario. Esto se puede considerar una _Proyección_.
 

@@ -32,7 +32,7 @@ Y con otros patrones la cosa mejora más o menos, porque tus entidades de domini
 
 [— Insertar aquí meme Anakin-Padmé —]
 
-Esto es un follón de narices porque finalmente tenemos que aceptar algún tipo de compromiso. @matthiasnoback propone algunas soluciones aquí
+Esto es un follón de narices porque finalmente tenemos que aceptar algún tipo de compromiso. Matthias Noback propone algunas soluciones aquí
 
 ![](images/ddd-and-your-database.png)
 
@@ -58,7 +58,7 @@ Necesitas crear otro tipo de servicios que puedan implementar acceso a la base d
 
 Básicamente se necesita un _ViewModel_ por vista. La implementación del _ViewModelRepository_ si lo quieres llamar así es muy sencilla: es básicamente una query SQL. Además, es muy fácil añadir soporte para filtros o criterios de ordenación, que son _concerns_ de las vistas.
 
-El caso es que con esto estamos aplicando un patrón MVC (o MVVC) el cual no tiene que pasar para nada por el dominio. Los _ViewModelRepository_ puedes _invertirlos_, definiendo interfaces en la capa de aplicación, que se implementan en la infrastructura.
+El caso es que con esto estamos aplicando un patrón MVC (o MVVC) el cual no tiene que pasar para nada por el dominio. Los _ViewModelRepository_ puedes _invertirlos_, definiendo interfaces en la capa de aplicación, que se implementan en la infraestructura.
 
 Oye, que en mi caso no es una vista, que necesito alguna información para que el dominio haga algo, pero está en base de datos, o en un yaml o algo así ¿Qué hago? ¿Tiro de repositorio?
 
