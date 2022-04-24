@@ -54,20 +54,20 @@ Así que, resumiendo mucho, DDD es una manera de abordar el desarrollo de softwa
 
 Más sobre esto aquí, por ejemplo:
 
-![](../resources/images/ddd-intro.png)
+![](images/ddd-intro.png)
 
 La _Biblia_ del DDD es el libro azul:
 
-![](../resources/images/ddd-blue-book.png)
+![](images/ddd-blue-book.png)
 
 Este otro libro, de Scott Millett y Nick Tune es muy recomendable tras leer el original:
 
-![](../resources/images/ppp-ddd.png)
+![](images/ppp-ddd.png)
 
 El de Vaughn Vernon:
 
-![](../resources/images/implementing-ddd.png)
+![](images/implementing-ddd.png)
 
 Y desde aquí os podéis bajar la DDD Reference
 
-![](../resources/images/ddd-reference.png)
+![](images/ddd-reference.png)
