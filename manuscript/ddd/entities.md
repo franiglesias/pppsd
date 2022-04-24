@@ -4,27 +4,27 @@ Toda aplicación, por pequeña que sea, tiene que contener un modelo del mundo. 
 
 Incluso el típico primer programa para sumar dos números contiene un modelo de ese dominio en el que representamos conceptos como sumandos, operación y resultado. Solo que solemos mezclarlo con la presentación y otros.
 
-Por ejemplo: print (a + b) a y b son los sumandos, + representa la suma y (a+b) el resultado. He aquí un modelo de un dominio muy pequeñito y limitado. Pero es un modelo de ese trocito del mundo.
+Por ejemplo: `print (a + b)` _a_ y _b_ son los sumandos, `+` representa la suma y `(a+b)` el resultado. He aquí un modelo de un dominio muy pequeñito y limitado. Pero es un modelo de ese trocito del mundo.
 
 Claro que nosotras solemos trabajar modelando dominios bastante más complicados que ese, que implican diversos conceptos e interacciones entre ellos. Incluso aunque no hagas DDD, ser consciente de esto y expresarlo en código de forma separada es una gran inversión.
 
-Como ya hemos comentado, en DDD la capa de dominio es una representación en código del modelo que no tiene más dependencias que el propio lenguaje de programación. Es decir, el dominio se expresa mediante objetos puros del lenguaje en que se desarrolla.
+Como ya hemos comentado, en DDD la capa de dominio es una representación en código del modelo que no tiene más dependencias que el propio lenguaje de programación. Es decir, el dominio se expresa mediante objetos puros del lenguaje en que se desarrolla[^ddd-functional].
 
-Nota sobre DDD y programación funcional: Eric Evans deja claro que DDD nace en el paradigma de Orientación a Objetos.
+[^ddd-functional]: Nota sobre DDD y programación funcional: Eric Evans deja claro que DDD nace en el paradigma de Orientación a Objetos.
 
-En este punto se introducen los llamados _building blocks_: entidades, value objects, servicios y eventos de dominio. (¿Cabría considerar aquí los agregados?… bueno, ya veremos)
+En este punto se introducen los llamados _building blocks_: entidades, value objects, servicios y agregados. ¿Cabría considerar aquí los eventos de dominio?… bueno, ya veremos.
 
 Estos _building blocks_ también se podrían utilizar aunque no hagas realmente DDD, es decir, si quieres tener una capa de dominio con un modelo rico.
 
-Antes de continuar, una nota superimportante: la capa de dominio es agnóstica acerca de la tecnología de persistencia. Es decir, la capa de dominio no sabe nada acerca de bases de datos o whatever sistema de persistencia… pero me estoy adelantando.
+Antes de continuar, una nota superimportante: la capa de dominio es agnóstica acerca de la tecnología de persistencia. Es decir, la capa de dominio no sabe nada acerca de bases de datos o _whatever_ sistema de persistencia. Pero me estoy adelantando.
 
 En este capítulo quería hablar de las Entidades
 
 Las entidades son la representación de conceptos del dominio que tienen:
 
-* identidad: cada instancia es diferente aunque tenga las mismas propiedades.
-* ciclo de vida: el estado cambia a lo largo de ese ciclo.
-* comportamiento
+* _identidad_: cada instancia es diferente aunque tenga las mismas propiedades.
+* _ciclo de vida_: el estado cambia a lo largo de ese ciclo.
+* _comportamiento_: hacen cosas del dominio.
 
 Estas entidades nos interesan por su identidad.
 
@@ -32,9 +32,9 @@ Identidad es eso tan difícil de definir en la vida real, pero que sin embargo p
 
 Siempre es el mismo río, pero con distinta agua.
 
-Esa identidad la podemos representar con cierta facilidad mediante una propiedad específica, un identificador que es único en el contexto de la aplicación (aunque puede ser único en un contexto más amplio usando identificadores universales UUID)
+Esa identidad la podemos representar con cierta facilidad mediante una propiedad específica, un identificador que es único en el contexto de la aplicación. Aunque puede ser único en un contexto más amplio usando identificadores universales UUID[^uuid].
 
-(Nota, no es obligatorio usar UUID, pero actúa como si lo fuese por el bien de tu salud mental y la de tu aplicación)
+[^uuid]: Nota, no es obligatorio usar UUID, pero actúa como si lo fuese por el bien de tu salud mental y la de tu aplicación.
 
 La identidad de las entidades representa la identidad de los objetos del mundo real. Nos permite trabajar con un ejemplo concreto, por eso la necesitamos.
 
@@ -42,7 +42,7 @@ La identidad persiste en el tiempo… he usado la palabra persiste con intenció
 
 Necesitamos una forma de persistir la identidad en el tiempo. DDD introduce el concepto de repositorio para lograr esto y, ojo a la definición: un repositorio proporciona la ilusión de una colección en memoria en la que se pueden guardar o recuperar entidades.
 
-Una ilusión de colección en memoria.
+Una _ilusión_ de colección en memoria.
 
 No un acceso a una base de datos. Esto es superimportante entenderlo bien. Los repositorios no son la puerta de acceso a la base de datos. Puedes implementarlos con una tecnología concreta de base de datos, pero no es el acceso a ella.
 
@@ -60,6 +60,6 @@ Por ejemplo: solo se pueden añadir 3 productos del mismo tipo. Pues de eso se e
 
 Podríamos decir que `Order` es aquí un agregado, pero me gustaría dedicar un capítulo a eso específicamente. Pero sí, sería un agregado.
 
-Así que ahí tenemos a las entidades, representando conceptos de nuestro dominio con identidad. Como veremos las entidades pueden incluir Value Objects. Además, las entidades generan Eventos de Dominio. Ya tendrán su capítulo también.
+Así que ahí tenemos a las entidades, representando conceptos de nuestro dominio con identidad. Como veremos las entidades pueden incluir _Value Objects_. Además, las entidades generan _Eventos de Dominio_. Ya tendrán su capítulo también.
 
 ¿Qué como persistimos entidades en un repositorio o cómo las buscamos? Lo hablamos en otro capítulo, porque hacerlo realmente bien, sin acoplarse a la tecnología de persistencia completa da cierto trabajo, pero diría que merece la pena.
