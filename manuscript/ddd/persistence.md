@@ -38,9 +38,9 @@ Esto es un follón de narices porque finalmente tenemos que aceptar algún tipo 
 
 Creo que la raíz de las dificultades está en que normalmente consideramos la base de datos como algo _nuestro_ e inherente a la aplicación y nos cuesta mucho entender que lo que guardamos en la base de datos no es otra cosa que una representación de nuestros objetos de dominio.
 
-Por otro lado, esta representación no tiene que ser isomórfica a las entidades, pero sí contener información suficiente como para reconstruirlas. Es decir: no tienes que tener los mismos campos, no todas las entidades en el dominio tienen que tener su propia tabla en la bd…
+Por otro lado, esta representación no tiene que ser isomórfica a las entidades, pero sí contener información suficiente como para reconstruirlas. Es decir: no tienes que tener los mismos campos, no todas las entidades en el dominio tienen que tener su propia tabla en la base de datos…
 
-Toda la clave está en cómo una implementación del repositorio se las arregla para extraer la representación adecuada para guardarla en una bd. Si esa representación usa el patrón Active Record u otro es indiferente porque solo afecta al ámbito del repositorio y no al dominio.
+Toda la clave está en cómo una implementación del repositorio se las arregla para extraer la representación adecuada para guardarla en una base de datos. Si esa representación usa el patrón Active Record u otro es indiferente porque solo afecta al ámbito del repositorio y no al dominio.
 
 Existen patrones que pueden usarse para hacerlo. Por ejemplo, esta sería una idea.
 
