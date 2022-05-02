@@ -1,6 +1,6 @@
 # Domain Driven Design
 
-Larguemos un rato sobre ese ente mítico del desarrollo de software: Domain Driven Design, o DDD para abreviar.
+Extendámonos un rato sobre ese ente mítico del desarrollo de software: Domain Driven Design, o DDD para abreviar.
 
 Con el DDD pasa como con otros muchos conceptos y paradigmas. Muchas veces hablamos sobre ellos de tercera o cuarta mano, o buscamos la receta para usarlo de alguna manera. Se dice que DDD es solo para desarrollos muy grandes y complejos. Sin embargo, mi opinión es que ofrece tantas ideas aplicables a cualquier escala que merece la pena el esfuerzo de estudiarlo.
 
@@ -30,7 +30,7 @@ Otro de los objetivos del DDD estratégico es identificar los distintos subdomin
 
 Eso que hace que tu empresa sea única, que las clientes la elijan, que nadie más sabe hacer como ella, es lo que llamamos el _core domain_ o _dominio principal_. Si le quitas eso a la empresa, deja de existir. El _core domain_ no lo puede hacer nadie por tu empresa, no se puede externalizar, no se debería hacer con aplicaciones de terceras partes. Nadie lo va a hacer como tú. Es donde tienes que poner la potencia de desarrollo.
 
-Para poder realizar el _core domain_, la empresa necesita hacer otras cosas. Muchas de ellas son comunes a otras empresas del mismo sector, pero es posible que tú las hagas de manera especial para dar _soporte_ a tu _core_. Por eso se llaman _subdominio de soporte_. Muchas veces podrás resolver esto con herramientas de terceros que te permitan suficiente personalización. A veces es algo que tendrás que desarrollar en casa. Posiblemente no quieres externalizar esto.
+Para poder realizar el _core domain_, la empresa necesita hacer otras cosas. Muchas de ellas son comunes a otras empresas del mismo sector, pero es posible que tú las hagas de manera especial para dar _soporte_ a tu _core_. Por eso se llaman _subdominio de soporte_. Muchas veces podrás resolver esto con herramientas de terceros que te permitan suficiente personalización. A veces es algo que tendrás que desarrollar en casa. Posiblemente, no quieres externalizar esto.
 
 Cada tipo de negocio tendría distintos subdominios de soporte. Quizá la atención al cliente puede estar ahí.
 
@@ -38,7 +38,7 @@ Después existen toda una serie de subdominios que son comunes a cualquier empre
 
 Por cierto, que lo que para una empresa puede ser un dominio genérico o de soporte, para otra puede ser su _core_.
 
-Este análisis te dice en qué te tienes que focalizar, dónde tienes que poner más esfuerzo y qué cosas debes resolver de la manera más sencilla posible externalizandolas o usando herramientas de terceros.
+Este análisis te dice en qué te tienes que focalizar, dónde tienes que poner más esfuerzo y qué cosas debes resolver de la manera más sencilla posible externalizándolas o usando herramientas de terceros.
 
 El análisis de dominio, en suma, consiste en definir el _espacio del problema_. Los subdominios tienen una representación en el _espacio de la solución_ en forma de _contextos acotados_ o _bounded contexts_.
 
@@ -56,18 +56,18 @@ Más sobre esto aquí, por ejemplo:
 
 ![](images/ddd-intro.png)
 
-La _Biblia_ del DDD es el libro azul:
+La _Biblia_ del DDD es el libro _Domain Driven Design: Tackling complexity in the heart of software_:
 
 ![](images/ddd-blue-book.png)
 
-Este otro libro, de Scott Millett y Nick Tune es muy recomendable tras leer el original:
+Este otro libro, de Scott Millett y Nick Tune es muy recomendable tras leer el original, _Patterns, Principles and Practices of Domain-Driven Design_
 
 ![](images/ppp-ddd.png)
 
-El de Vaughn Vernon:
+El de Vaughn Vernon, _Implementing Domain Driven Design_
 
 ![](images/implementing-ddd.png)
 
-Y desde aquí os podéis bajar la DDD Reference
+Y desde aquí os podéis bajar la _DDD Reference_
 
 ![](images/ddd-reference.png)
