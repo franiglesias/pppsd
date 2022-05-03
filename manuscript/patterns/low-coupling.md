@@ -21,28 +21,28 @@ S. Martín de Fowler llama a esto “inappropriate intimacy”, cuando un objeto
 
 Conocer un tipo concreto de `Service` significa usar una implementación concreta. Para evitar eso aplicamos la Inversión de dependencias, haciendo que `Consumer` dependa de una Interfaz.
 
-Saber instanciar un `Service` ocurre cuando hacemos new de un `Service` dentro de `Consumer`. Este tipo de dependencia puede hacer “intesteable” a `Consumer`. Para evitarlo, usamos el patrón de Inyección de dependencias (vía constructor o vía setter).
+Saber instanciar un `Service` ocurre cuando hacemos new de un `Service` dentro de `Consumer`. Este tipo de dependencia puede hacer no testeable a `Consumer`. Para evitarlo, usamos el patrón de Inyección de dependencias, vía constructor o vía setter.
 
-Saber encontrar un `Service` suele implicar que tenemos un smell `Service` Locator. Esto pasa por acoplarnos al contenedor de inversión de dependencias para pedírselas desde cualquier sitio que nos venga en gana. De nuevo, aplicar la inyección de dependencias correctamente es la solución.
+Saber encontrar un `Service` suele implicar que tenemos un smell _Service Locator_. Esto pasa por acoplarnos al contenedor de inversión de dependencias para pedírselas desde cualquier sitio que nos venga en gana. De nuevo, aplicar la inyección de dependencias correctamente es la solución.
 
-La herencia genera el mayor acoplamiento posible, por eso hay que tener mucho cuidado cuando decidimos usar el mecanismo de herencia. Debería limitarse a especializaciones, y no para "compartir" comportamiento.
+La herencia genera el mayor acoplamiento posible, ya que no puedes usar una clase sin sus ancestros, por eso hay que tener mucho cuidado cuando decidimos usar el mecanismo de herencia. Debería limitarse a especializaciones, y no para "compartir" comportamiento.
 
 En resumen, para mantener el acoplamiento bajo entre dos objetos hay que:
 
-* Inyectar las dependencias: no instanciarlas dentro de otros objetos. Ojo a la distinción entre objetos newables e injectables http://misko.hevery.com/2008/09/30/to-new-or-not-to-new/
+* Inyectar las dependencias: no instanciarlas dentro de otros objetos. Ojo a la distinción entre objetos newables e injectables ![](images/to-new-or-not-to-new.png)
 * Aplicar el principio de Inversión de Dependencias y depender de las interfaces, no de las implementaciones.
-* Mantener aisladas las dependencias dentro del objeto que las usa. Básicamente usa métodos privados cuando tengas que delegar en la dependencia, de modo que no aparezcan menciones a ella en ninguna otra parte del código.
-* Nunca, pero nunca, inyectes el contenedor de inyección de dependencias. Nunca, never, ni se te ocurra.
-* 
+* Mantener aisladas las dependencias dentro del objeto que las usa. Utiliza métodos privados cuando tengas que delegar en la dependencia, de modo que no aparezcan menciones a ella en ninguna otra parte del código.
+* Nunca, pero nunca, inyectes el contenedor de inyección de dependencias. Nunca, _never_, ni se te ocurra.
+
 ¿En qué nos beneficia el bajo acoplamiento? El código con bajo acoplamiento es fácil de testear, ya que todos los colaboradores de una clase son fácilmente reemplazables por dobles en tests unitarios o fakes en tests de integración.
 
 Es fácil de extender por las mismas razones. Hay pocos puntos en los que tocar en caso de necesitar introducir nuevos comportamientos. Es más posible que solo tengas que añadir código, en lugar de tener que borrar o modificar. El bajo acoplamiento facilita cumplir open/close.
 
 Es incluso más fácil detectar los errores y dónde se producen porque si se produce un fallo seguramente podrás identificar la pieza de software que falla o aquella que controla esa fallo. En una situación de acoplamiento, el error se produce en `Consumer` aunque sea de `Service`.
 
-El acoplamiento es especialmente peligroso cuando la dependencia es con módulos de software que no controlamos (particularmente vendors). Para usar vendors deberías aplicar siempre inversión de dependencia, introduciendo patrones de indirección, como Adapter.
+El acoplamiento es especialmente peligroso cuando la dependencia es con módulos de software que no controlamos, particularmente _vendors_. Para usarlos deberías aplicar siempre inversión de dependencia, introduciendo patrones de indirección, como _Adapter_.
 
-Si te acoplas a vendors, en caso de que estos cambien tu aplicación se verá afectada. Es posible que para evitar esos efectos decidas quedarte en una versión concreta de ese veedor, lo cual introduce riesgos de seguridad, de finalización de mantenimiento, de performance… es MAL.
+Si te acoplas a _vendors_, en caso de que estos cambien, tu aplicación se verá afectada. Es posible que para evitar esos efectos decidas quedarte en una versión concreta de ese veedor, lo cual introduce riesgos de seguridad, de finalización de mantenimiento, de _performance_… es MAL.
 
 Pero el MAL, ¿eh? Sufrimiento, llanto y rechinar de dientes.
 
