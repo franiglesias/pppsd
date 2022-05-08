@@ -1,34 +1,28 @@
 # Sustitución de Liskov
 
-El principio de sustitución de Liskov es la L de SOLID y se refiere a cómo se definen las jerarquías de herencia. Fue enunciado por Barbara Liskov y Jeannette Wing.
-
-¿Y qué dice el principio? La formulación informal más común es: en una jerarquía de clases, las clases _hijas_ o subclases deben poder ser sustitutas de las clases _madre_ o superclases. Y también al revés.
-
-¿Cómo te quedas?
-
-Una forma de ver esto es que todas las clases de una familia deberían ser intercambiables. Veamos un ejemplo: supongamos una clase User que tiene dos clases _hijas_: Customer y Administrator.
-
-Pues bien, desde el punto de vista de sus consumidores esas clases deberían ser intercambiables. En otras palabras: tendrías que poder usar tanto Customer, como User, como Administrator, sin tener que cambiar el código consumidor.
-
-Si puedes intercambiar Customer con User y Administrator con User, entonces podrías intercambiar Customer con Administrador. En conclusión: las clases de una jerarquía deberían ser intercambiables.
-
-Pero… ¿Hasta qué punto? El principio de sustitución se formuló a partir de un artículo titulado: _A Behavioral Notion of Subtyping_. En resumen, lo que dice es que el subtipado no es una cuestión puramente sintáctica, sino también semántica.
+El principio de sustitución de Liskov es la L de SOLID y se refiere a cómo se definen las jerarquías de herencia. Fue enunciado partir de un artículo de Barbara Liskov y Jeannette Wing, titulado: _A Behavioral Notion of Subtyping_.
 
 ![](images/behavioral-notion-of-subtyping.png)
 
-Las clases de la jerarquía tienen que tener un comportamiento equivalente desde el punto de vista de su consumidor.
+En resumen, lo que dice es que el subtipado, o sea, la creación de tipos de datos derivados de otros, no es una cuestión puramente sintáctica, sino también semántica. En otras palabras: los tipos y sus subtipos derivados representan comportamientos equivalentes.
 
-Nuestro ejemplo de User, Customer y Administrator, puede ser válido porque su comportamiento en un sistema sería equivalente. Eso no quiere decir que sea el mismo, pues tienen distintas capacidades de acción en el programa.
+Una forma de ver esto es que todas las clases de una jerarquía deberían ser intercambiables. Veamos un ejemplo: supongamos una clase `User` que tiene dos clases _hijas_: `Customer` y `Administrator`. Estas subclases son especializaciones de la clase base.
 
-Ahora otro ejemplo: tenemos una clase Logger que escribe logs. También queremos hacer una clase Service que necesita escribir logs, así que hacemos que Service extienda de Logger.
+Pues bien, desde el punto de vista de sus consumidores esas clases deberían ser intercambiables. En otras palabras: tendrías que poder usar tanto `Customer`, como `User`, como `Administrator`, sin tener que cambiar el código consumidor.
+
+Si puedes intercambiar `Customer` con `User` y `Administrator` con `User`, entonces podrías intercambiar `Customer` con `Administrador`. En conclusión: las clases de una jerarquía deberían ser intercambiables. Esto no quiere decir que se tengan que intercambiar realmente, sino que desde el punto de vista del consumidor, da exactamente igual que le pasemos cualquiera de ellas. No depende del tipo concreto que se haya pasado, porque las clases de la jerarquía tienen que tener un comportamiento equivalente desde el punto de vista de su consumidor.
+
+Nuestro ejemplo de `User`, `Customer` y `Administrator`, puede ser válido porque su comportamiento en un sistema sería equivalente. Eso no quiere decir que sea el mismo, pues tienen distintas capacidades de acción en el programa.
+
+Ahora otro ejemplo: tenemos una clase `Logger` que escribe _logs_. También queremos hacer una clase `Service` que necesita escribir _logs_, así que hacemos que `Service` extienda de `Logger`.
 
 ¡Wrong! ¡Todo mal!
 
 Sintácticamente hablando, puedes hacer eso, pero semánticamente no.
 
-La responsabilidad de Service no sería escribir logs aunque necesite poder hacerlo. Semánticamente, nuestro Service no es un Logger. Si cambiamos Service por Logger no tendremos el comportamiento que el consumidor espera.
+La responsabilidad de `Service` no sería escribir _logs_ aunque necesite poder hacerlo. Semánticamente, nuestro `Service` no es un `Logger`. Si cambiamos `Service` por `Logger` no tendremos el comportamiento que el consumidor espera.
 
-Dicho de otra forma: No debes extender una clase para reutilizar funcionalidad a partir de otra no relacionada. En su lugar, utiliza la composición. No hay nada que impida a Service usar a Logger, pero Service no puede ser _hija_ de Logger.
+Dicho de otra forma: No debes extender una clase para reutilizar funcionalidad a partir de otra no relacionada. En su lugar, utiliza la composición. No hay nada que impida a `Service` usar a `Logger`, pero `Service` no puede ser _hija_ de `Logger`.
 
 La herencia no es un mecanismo para _compartir_ comportamiento, sino para _especializar_ comportamiento. La clase base contiene el comportamiento común y las derivadas las versiones especializadas.
 
