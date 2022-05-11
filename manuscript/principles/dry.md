@@ -10,13 +10,11 @@ Toda pieza de conocimiento, ¿lo pillas?
 
 No _de código_. El principio DRY no habla de duplicación de código.
 
-Pero encontrarás cientos de artículos en Internet que dicen algo como _aplicar DRY para eliminar la duplicación de código_ (seguro que yo mismo lo he dicho alguna vez️)
+Pero encontrarás cientos de artículos en Internet que dicen algo como _aplicar DRY para eliminar la duplicación de código. Seguro que yo mismo he incurrido en eso alguna vez.
 
-Y otro trillón de artículos hablando de lo malo que es el principio DRY que te puede llevar a la _abstracción incorrecta_. O del código WET.
+Y otro trillón de artículos hablando de lo malo que es el principio DRY que te puede llevar a la _abstracción incorrecta_. O del código WET: _Write Everything Twice_.
 
-Pero no, DRY aplica ni más ni menos que a la duplicación de conocimiento, lo que se refiere tanto a código como a datos.
-
-Así, por ejemplo, mantener dos fuentes de verdad y tener que sincronizarlas es un problema derivado de la no aplicación de DRY.
+Pero no, DRY aplica ni más ni menos que a la duplicación de conocimiento, lo que se refiere tanto a código como a datos. Así, por ejemplo, mantener dos fuentes de verdad y tener que sincronizarlas es un problema derivado de la no aplicación de DRY.
 
 Tienes un problema de DRY cuando para modificar una misma feature para varios tipos de usuarios aplicas los mismos cambios en varios sitios distintos.
 
