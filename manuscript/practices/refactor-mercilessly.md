@@ -1,22 +1,22 @@
 # Refactor (sin piedad)
 
-Hablemos de Refactor Mercilessly o Merciless Refactoring. Una de las prácticas de Extreme Programming.
+Hablemos de _Refactor Mercilessly_ o *Merciless Refactoring*. Una de las prácticas de Extreme Programming.
 
 Para empezar, creo que muchos equipos confunden refactor con reescritura. Vale, que sí, que son bastante sinónimos...
 
 Yo defino refactor como pequeños cambios inocuos, sin riesgo. Reescritura la entiendo como cambios muy grandes, con frecuencia en nivel de arquitectura.
 
-Refactor mercilessly (refactorizar despiadadamente) consiste en hacerlo frecuentemente, continuamente y sin pedir permiso.
+_Refactor mercilessly_, refactorizar despiadadamente, consiste en hacerlo frecuentemente, continuamente y sin pedir permiso.
 
 * _Frecuentemente_ quiere decir varias veces al día.
 * _Continuamente_ quiere decir todos los días.
 * Sin pedir permiso quiere decir que no es una tarea planificada, ni importa quién escribió la línea a refactorizar.
 
-Pero Fran, ¿qué salvajada es esa?
+– Pero Fran, ¿qué salvajada es esa?
 
-Todo esto se relaciona con la _regla del campamento_ y el _WTF factor_. Pero vayamos por partes:
+Todo esto se relaciona con la _regla del campamento_ y el _WTF factor_. Vayamos por partes:
 
-La _regla del campamento_ es _deja el código por el que pases mejor de lo que estaba_.
+La _regla del campamento_ reza: _deja el código por el que pases mejor de lo que estaba_.
 
 Pasamos la mayor parte del tiempo leyendo código. Para implementar cualquier cosa nueva o para solucionar un problema tenemos que leer código. Incluso después de escribir código tenemos que releerlo.
 
