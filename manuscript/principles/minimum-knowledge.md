@@ -1,12 +1,10 @@
 # El mínimo conocimiento
 
-_No hables con extraños_. 
+_No hables con extraños_. Seguro que más de una vez te dijeron esto las primeras veces que salías de casa sin compañía adulta, aunque solo bajases a la tienda del portal de al lado a buscar el pan. También es una de las formulaciones de un principio de diseño de software.
 
-Seguro que más de una vez te dijeron esto las primeras veces que salías de casa sin compañía adulta, aunque solo bajases a la tienda del portal de al lado a buscar el pan. También es una de las formulaciones de un principio de diseño de software.
+Que no es que aclare mucho, aunque sí algo más que su nombre más popular: **La ley de Demeter**, que formalmente se conoce como _Principio del mínimo conocimiento_.
 
-Que no es que aclare mucho, aunque sí algo más que su nombre más popular: **La ley de Demeter**, que más formalmente se conoce como _Principio del mínimo conocimiento_.
-
-Todo el _clickbait_ de esta introducción es para hablar de uno de los principios que ayuda a reducir el acoplamiento en programación orientada a objetos. Fue introducido por Ian Holland como _regla_ en un proyecto llamado _Demeter_, de ahí su nombre.
+Todo el _clickbait_ de esta introducción es para hablar de uno de los principios que ayuda a reducir el acoplamiento en programación orientada a objetos. Fue introducido por Ian Holland como _regla_ en un proyecto llamado _Demeter_, de donde recibe su nombre.
 
 El principio de mínimo conocimiento viene a decir que los objetos deben tener el mínimo conocimiento posible sobre otros objetos. Exactamente, el que exponen a través de sus API públicas.
 
@@ -14,24 +12,24 @@ Para entendernos, digamos que por conocimiento aquí entenderemos a la capacidad
 
 Imagina que tienes un objeto `Service` y otro `Consumer`. `Consumer` usa `Service` a través de su interfaz pública que expone un método `doServiceThing`. Hasta aquí todo bien.
 
-Resulta que `Consumer` necesita escribir en un log. `Consumer` no tiene logger, pero `Service` sí. Como tú sabes eso, haces que `Service` pueda entregar su `Logger` y lo usas. Todo bien, ¿no? Pues no.
+Resulta que `Consumer` necesita escribir en un _log_. `Consumer` no tiene _logger_, pero `Service` sí. Como tú sabes eso, haces que `Service` pueda entregar su `Logger` y lo usas. Todo bien, ¿no? Pues no.
 
-Para empezar `Consumer` no tendría que saber que `Service` tiene un Logger, ni tú tendrías que exponerlo para que otros objetos puedan usarlo, ya que no es la responsabilidad de `Service`. Service hace `doServiceThing` y eso es todo lo que debería preocuparle a `Consumer`.
+Para empezar `Consumer` no tendría que saber que `Service` tiene un `Logger`, ni tú tendrías que exponerlo para que otros objetos puedan usarlo, ya que no es la responsabilidad de `Service`. `Service` hace `doServiceThing` y eso es todo lo que debería preocuparle a `Consumer`.
 
 Al usar `Logger`, `Consumer` está hablando con un extraño. Sabe algo de `Service` que no debería saber, por lo que su acoplamiento con `Service` aumenta. Me explico:
 
 Si `Consumer` solo usa la interfaz pública de `Service`, podríamos abstraer esta interfaz (`doServiceThing`) de modo que otros `ServicesDoingThings` pudiesen implementarla y, por tanto, `Consumer` podría usar otro más conveniente.
 
-Pero… puesto que Consumer utiliza algo de `Service` que solo tiene `Service` y que `Consumer` _sabe_ que tiene, resulta que `Consumer` está fuertemente acoplado con `Service` y no puede usar otra implementación.
+Pero puesto que `Consumer` utiliza algo de `Service` que solo tiene `Service` y que `Consumer` _sabe_ que tiene, resulta que `Consumer` está fuertemente acoplado con `Service` y no puede usar otra implementación.
 
-Este drama es una de las cosas que intenta evitar el Principio de Mínimo Conocimiento. Que, en este ejemplo, estaría estrechamente relacionado con el Principio de Sustitución de Liskov (del que ya hablamos en otro capítulo)
+Este drama es una de las cosas que intenta evitar el Principio de Mínimo Conocimiento. Que, en este ejemplo, estaría estrechamente relacionado con el Principio de Sustitución de Liskov, del que ya hablamos en otro capítulo.
 
 En la práctica, el Principio se utiliza así: en un método de un objeto solo se puede hablar con objetos conocidos y no puede hablar con extraños. ¿Qué objetos puede conocer un método? A saber:
 
-* El objeto que contiene el método. OK 
-* Objetos que recibe como parámetros en ese método. OK 
-* Objetos que se instancian en el método. OK. 
-* Objetos que son miembros del objeto que tiene el método. OK.
+* El objeto que contiene el método. √ 
+* Objetos que recibe como parámetros en ese método. √ 
+* Objetos que se instancian en el método. √ 
+* Objetos que son miembros del objeto que tiene el método. √.
 
 Pero, ¿quiénes son desconocidos?
 

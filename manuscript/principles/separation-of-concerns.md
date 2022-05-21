@@ -8,7 +8,7 @@ Básicamente, el principio nos dice que los programas no deben escribirse como u
 
 Para ilustrarlo voy a usar un ejemplo exageradamente simplificado.
 
-Consideremos este código en python:
+Consideremos este código en _python_:
 
 ```python
 #!/usr/bin/env python3

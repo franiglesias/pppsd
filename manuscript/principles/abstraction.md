@@ -2,13 +2,13 @@
 
 El principio de abstracción lo introduce Benjamin C. Pierce en el libro _Types and Programming Languages_, y viene a decir que cada pieza significativa de funcionalidad en un programa debería estar implementada en un solo lugar del código. Y cuando hay funciones similares es beneficioso combinarlas en una sola, abstrayendo las partes que varían.
 
-Seguramente este ha removido algo en tu interior y estés pensando: Pero eso, ¿no es el principio de _Don't repeat yourself?_ Y no te falta razón. Ambos principios remiten a la misma idea de que es conveniente tener una única fuente de verdad para todo conocimiento que resida dentro del código.
+Seguramente este ha removido algo en tu interior y estés pensando: Pero eso, ¿no es el principio de _Don't repeat yourself_ de _Pragmatic Programmer_? Y no te falta razón. Ambos principios remiten a la misma idea de que es conveniente tener una única fuente de verdad para todo conocimiento que resida dentro del código. Así que vamos a enfocar cada capítulo en un aspecto diferente.
 
 Hay dos puntos principales por los que tener en cuenta este principio.
 
-Uno tiene que ver con el principio de separación de intereses de Dijsktra y la modularización. Al hacer que distintas partes del código se ocupen de asuntos diferentes, comenzaremos a ver un encaje a la idea de que algunas de ellas puedan reutilizarse. Por ejemplo, si una función realiza determinado cálculo, no tenemos más que invocarla desde cualquier lugar del código en el que necesitemos ese cálculo. Esa función es la fuente de verdad sobre cómo actúa ese comportamiento específico.
+Uno tiene que ver con el principio de separación de intereses de Dijsktra y la modularización. Al hacer que distintas partes del código se ocupen de asuntos diferentes, comenzaremos a ver que algunas de ellas podrían reutilizarse. Por ejemplo, si una función realiza determinado cálculo, no tenemos más que invocarla desde cualquier lugar del código en el que necesitemos ese cálculo. Esa función es la fuente de verdad sobre cómo actúa ese comportamiento específico.
 
-El otro aspecto es que al evitar la duplicación, prevenimos comportamientos incongruentes entre diversas partes del código. Si tenemos un mismo conocimiento expresado en varios lugares distintos del código, es posible que en caso de realizar alguna modificación pasemos por alto alguna de las versiones. Esto generará comportamientos del sistema diferentes según la forma en que se use, los cuales pueden ser difíciles de localizar incluso contando con tests.
+El otro aspecto es que al evitar la duplicación, prevenimos comportamientos incongruentes entre diversas partes del código. Si tenemos un mismo conocimiento expresado en varios lugares distintos del código, es posible que en caso de realizar alguna modificación pasemos por alto alguna de sus versiones. Esto generará comportamientos del sistema diferentes según la forma en que se use, los cuales pueden ser difíciles de localizar incluso contando con tests.
 
 Este principio nos llama a buscar la abstracción que pueda hacer única la fuente de verdad sobre piezas de funcionalidad de un programa y gestionar sus variantes parametrizándola. Como veremos al hablar de DRY es un proceso que entraña algunos riesgos, ya que es importante definir hasta qué punto la duplicidad de código representa realmente una duplicidad de comportamiento.
 
