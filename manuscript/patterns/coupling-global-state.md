@@ -1,6 +1,6 @@
 # Acoplamiento al estado global
 
-Pues llevo todo el día peleándome con una variable estática (ni siquiera una propiedad) en una clase PHP usada para evitar un acceso a disco. Un ejemplo de optimización prematura violando principios OOP… TODO MAL. Lo que unido al capítulo sobre acoplamiento me da excusa para hacer otro, esta vez sobre el acoplamiento al estado global.
+Pues llevaba todo el día peleándome con una variable estática (ni siquiera una propiedad) en una clase PHP usada para evitar un acceso a disco. Un ejemplo de optimización prematura violando principios OOP… TODO MAL. Lo que unido al capítulo sobre acoplamiento me da excusa para hacer otro, esta vez sobre el acoplamiento al estado global.
 
 ¿A qué me refiero con estado global? Pues no a la ONU precisamente, sino a aquello que es visible o accesible desde cualquier lugar del código de la aplicación. Y esto en OOP es un NO.
 

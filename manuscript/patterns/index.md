@@ -1,7 +1,7 @@
 {class: part}
 # Patrones #
 
-En esta sección hablaremos de los patrones GRASP. 
+En esta sección nos centraremos en los patrones GRASP. 
 
 Hablamos mucho de SOLID, pero muy poco de GRASP. Es otro acrónimo que representa un conjunto de patrones o heurísticas para definir el reparto de responsabilidades de un sistema de software orientado a objetos. Nos ayuda a responder a preguntas muchas más básicas que SOLID.
 
