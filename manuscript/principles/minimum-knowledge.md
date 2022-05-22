@@ -8,7 +8,7 @@ Todo el _clickbait_ de esta introducción es para hablar de uno de los principio
 
 El principio de mínimo conocimiento viene a decir que:
 
-> los objetos deben tener el mínimo conocimiento posible sobre otros objetos.
+> Los objetos deben tener el mínimo conocimiento posible sobre otros objetos.
 
 Exactamente, el que exponen a través de sus API públicas. Para entendernos, digamos que por conocimiento aquí entenderemos a la capacidad de interactuar y usar al otro objeto. El problema viene si hacemos trampa.
 

@@ -33,10 +33,10 @@ Por eso deben separarse las acciones que cambian el sistema (_command_) de las a
 
 Si una _query_ produce algún efecto en el sistema hablamos de _side effects_ y es algo que debemos evitar. Por el buen funcionamiento del sistema y porque de este modo podemos testear con confianza.
 
-Una clase puede tener tanto commands como queries siempre que respetemos el SRP, claro. El principio CQS se refiere únicamente a que un comando no devuelva respuestas: se ejecuta y confiamos en que irá bien; y a que una query no produzca _side effects_ poniendo el sistema en estado indeterminado. Y nadie quiere eso.
+Una clase puede tener tanto commands como queries siempre que respetemos el SRP, claro. El principio _CQS_ se refiere únicamente a que un comando no devuelva respuestas: se ejecuta y confiamos en que irá bien; y a que una query no produzca _side effects_ poniendo el sistema en estado indeterminado. Y nadie quiere eso.
 
 Llevando eso a objetos-método, como pueden ser los Casos de Uso, tenemos que separar aquellos que son comandos de los que son queries. Y aplica lo mismo y por las mismas razones.
 
-¿Y _CQRS_? _CQRS_ son las siglas de _Command Query Responsibility Segregation_ y es algo así como llevar _CQS_ hasta las últimas consecuencias, separando los _commands_, que implican escrituras, y las _queries_, que implican lecturas, incluso al nivel de la infraestructura. Por ejemplo, tendrías una base de datos para escritura, pero leerías los datos de una o más réplicas. Pero CQRS es más un patrón que un principio.
+¿Y _CQRS_? _CQRS_ son las siglas de _Command Query Responsibility Segregation_ y es algo así como llevar _CQS_ hasta las últimas consecuencias, separando los _commands_, que implican escrituras, y las _queries_, que implican lecturas, incluso al nivel de la infraestructura. Por ejemplo, tendrías una base de datos para escritura, pero leerías los datos de una o más réplicas. Pero _CQRS_ es más un patrón que un principio.
 
 En cualquier caso, la separación _command-query_ es fundamental para construir sistemas confiables y fáciles de mantener. No hay nada peor que un _side effect_ ocurriendo vaya usted a saber dónde.

@@ -10,7 +10,7 @@ Lo que quiero decir es que debemos usar nuestro propio lenguaje con propiedad y 
 
 El teléfono estropeado, vaya. Ya sabes como termina eso.
 
-Así te encuentras con quien define TDD como hacer test unitarios, que los tests funcionales solo son los end to end, o que DDD es tener carpetas de dominio, aplicación e infraestructura.
+Así te encuentras con quien define _TDD_ como hacer test unitarios, que los tests funcionales solo son los end to end, o que DDD es tener carpetas de dominio, aplicación e infraestructura.
 
 O como los mocks, que le llamamos a todo mocks y hay como 5 clases diferentes.
 
@@ -20,6 +20,6 @@ Aclaro que me parece genial que se coja cualquiera de estos conceptos y se cambi
 
 Tal vez tu problema no necesita eso. Tu trabajo es conocer esas herramientas y averiguar si sirven o no. Y desarrollar la solución que satisface mejor a tus clientes.
 
-Y si crees que establece un patrón o una metodología nueva y útil, dale un nombre y difúndelo. Por ejemplo, BDD viene de hacer evolucionar la idea de TDD acercándola a las necesidades de los clientes. En un nivel de abstracción muy alto se trata de lo mismo, pero en la práctica hay muchas diferencias y es importante que tengamos una denominación distinta.
+Y si crees que establece un patrón o una metodología nueva y útil, dale un nombre y difúndelo. Por ejemplo, BDD viene de hacer evolucionar la idea de _TDD_ acercándola a las necesidades de los clientes. En un nivel de abstracción muy alto se trata de lo mismo, pero en la práctica hay muchas diferencias y es importante que tengamos una denominación distinta.
 
 Que, por supuesto, eres libre de desarrollar metodologías nuevas, descubrir y nombrar patrones nuevos... pero para eso hace falta un mínimo de rigor intelectual y eso empieza por usar los nombres de las cosas con precisión.

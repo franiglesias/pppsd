@@ -1,11 +1,11 @@
 # Inversión de dependencias
 
-Ya tengo ganas de terminar con SOLID, así que hablaremos del principio de inversión de dependencias. Contribuye a que el código sea sostenible y flexible. Y no hay que confundirlo con el patrón Inyección de Dependencias.
+Ya tengo ganas de terminar con SOLID, así que hablaremos del principio de Inversión de Dependencias. Contribuye a que el código sea sostenible y flexible. Y no hay que confundirlo con el patrón Inyección de Dependencias.
 
 Dice así:
 
-* Los módulos de alto nivel no deberían depender de los módulos de bajo nivel. Ambos deberían depender de abstracciones
-* Las abstracciones no deberían depender de los detalles. Los detalles deben depender de abstracciones.
+> Los módulos de alto nivel no deberían depender de los módulos de bajo nivel. Ambos deberían depender de abstracciones  
+> Las abstracciones no deberían depender de los detalles. Los detalles deben depender de abstracciones.
 
 Alto nivel, abstracciones, detalles... Otra forma de enunciarlo es que las dependencias deberían apuntar en el sentido de mayor estabilidad. Las abstracciones serían más estables que las implementaciones.
 

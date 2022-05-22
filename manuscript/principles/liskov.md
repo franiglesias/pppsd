@@ -6,9 +6,11 @@ El principio de sustitución de Liskov es la L de SOLID y se refiere a cómo se 
 
 En resumen, lo que dice es que el subtipado, o sea, la creación de tipos de datos derivados de otros, no es una cuestión puramente sintáctica, sino también semántica. En otras palabras: los tipos y sus subtipos derivados representan comportamientos equivalentes.
 
+> Los subtipos deberían ser sustitutos de sus clases base
+
 Una forma de ver esto es que todas las clases de una jerarquía deberían ser intercambiables. Veamos un ejemplo: supongamos una clase `User` que tiene dos clases _hijas_: `Customer` y `Administrator`. Estas subclases son especializaciones de la clase base.
 
-Pues bien, desde el punto de vista de sus consumidores esas clases deberían ser intercambiables. En otras palabras: tendrías que poder usar tanto `Customer`, como `User`, como `Administrator`, sin tener que cambiar el código consumidor.
+Pues bien, desde el punto de vista de sus consumidores esas clases deberían ser intercambiables. En otras palabras: tendrías que poder usar tanto `Customer` como `Administrator`, sin tener que cambiar el código consumidor.
 
 Si puedes intercambiar `Customer` con `User` y `Administrator` con `User`, entonces podrías intercambiar `Customer` con `Administrador`. En conclusión: las clases de una jerarquía deberían ser intercambiables. Esto no quiere decir que se tengan que intercambiar realmente, sino que desde el punto de vista del consumidor, da exactamente igual que le pasemos cualquiera de ellas. No depende del tipo concreto que se haya pasado, porque las clases de la jerarquía tienen que tener un comportamiento equivalente desde el punto de vista de su consumidor.
 
@@ -18,7 +20,7 @@ Ahora otro ejemplo: tenemos una clase `Logger` que escribe _logs_. También quer
 
 ¡Wrong! ¡Todo mal!
 
-Sintácticamente hablando, puedes hacer eso, pero semánticamente no.
+Estructuralmente hablando, podrías hacer eso, pero semánticamente no.
 
 La responsabilidad de `Service` no sería escribir _logs_ aunque necesite poder hacerlo. Semánticamente, nuestro `Service` no es un `Logger`. Si cambiamos `Service` por `Logger` no tendremos el comportamiento que el consumidor espera.
 
@@ -34,7 +36,7 @@ En su formulación original el principio no contempla esto, pero creo que se pue
 
 Una recomendación relacionada es que las jerarquías de clases tampoco deberían ser muy profundas: mejor un nivel que dos. Por otro lado, si sientes que querrías tener herencia múltiple es posible que necesites composición en vez de herencia.
 
-Recuerda siempre que la herencia es el mayor acoplamiento posible entre clases.
+Recuerda que la herencia es el mayor acoplamiento posible entre clases.
 
 Una limitación que se puede extraer del principio de sustitución es que una clase derivada no puede establecer nuevos contratos. Es decir: no puedes tener métodos en una subclase que no estén en su clase base.
 

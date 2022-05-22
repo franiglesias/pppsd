@@ -26,7 +26,7 @@ Pues a veces no se consigue, lo que viene siendo demostrado por nuestros abultad
 
 Una cobertura suficiente de tests se consigue teniendo una especificación completa de las prestaciones del sistema y que ésta sea _traducida_ a tests.
 
-Esto tiene el problema de que no hay forma de hacer esto sin caer en el waterfall o cosas peores. Solo se me ocurre una manera de hacer esto: usar metodología BDD y TDD y desarrollar el producto de manera iterativa.
+Esto tiene el problema de que no hay forma de hacer esto sin caer en el waterfall o cosas peores. Solo se me ocurre una manera de hacer esto: usar metodología BDD y _TDD_ y desarrollar el producto de manera iterativa.
 
 Pero si haces esto ocurre una cosa curiosa... dejas de tener bugs. Bueno, no exactamente.
 
