@@ -2,9 +2,11 @@
 
 Más que un principio este es un consejo de los pragmáticos Hunt y Thomas, que es muy útil para ayudarnos a mantener los principios de encapsulación y ocultamiento de información. Pura orientación a objetos.
 
-Incluso diría que es más bien un consejo de refactor. Viene a decir que: no deberías tomar decisiones basándote en el estado de un objeto si van a resultar en que cambies el estado del propio objeto. Es una forma un poco liosa de expresarlo.
+Incluso diría que es más bien un consejo de refactor. Viene a decir que: 
 
-La cuestión es que en OOP el estado (propiedades) de un objeto deberían estar ocultas (ocultación de información) y cambiarían como resultado de enviar mensajes a ese objeto (invocando sus métodos). El objeto es responsable de gestionar su estado (encapsulación).
+>No deberías tomar decisiones basándote en el estado de un objeto si van a resultar en que cambies el estado del propio objeto. 
+ 
+Es una forma un poco liosa de expresarlo. La cuestión es que en OOP el estado (propiedades) de un objeto deberían estar oculto (ocultación de información) y cambiaría como resultado de enviar mensajes a ese objeto (invocando sus métodos). El objeto es responsable de gestionar su propio estado (encapsulación).
 
 Salvando el caso de los que solo son portadores de datos, no deberíamos tener acceso directo a las propiedades de los objetos. Las propiedades son privadas, de hecho en algunos lenguajes lo son por defecto, ni exponemos _getters_ ni _setters_, para no exponer la estructura.
 

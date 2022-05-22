@@ -6,9 +6,11 @@ Que no es que aclare mucho, aunque sí algo más que su nombre más popular: **L
 
 Todo el _clickbait_ de esta introducción es para hablar de uno de los principios que ayuda a reducir el acoplamiento en programación orientada a objetos. Fue introducido por Ian Holland como _regla_ en un proyecto llamado _Demeter_, de donde recibe su nombre.
 
-El principio de mínimo conocimiento viene a decir que los objetos deben tener el mínimo conocimiento posible sobre otros objetos. Exactamente, el que exponen a través de sus API públicas.
+El principio de mínimo conocimiento viene a decir que:
 
-Para entendernos, digamos que por conocimiento aquí entenderemos a la capacidad de interactuar y usar al otro objeto. El problema viene si hacemos trampa.
+> los objetos deben tener el mínimo conocimiento posible sobre otros objetos.
+
+Exactamente, el que exponen a través de sus API públicas. Para entendernos, digamos que por conocimiento aquí entenderemos a la capacidad de interactuar y usar al otro objeto. El problema viene si hacemos trampa.
 
 Imagina que tienes un objeto `Service` y otro `Consumer`. `Consumer` usa `Service` a través de su interfaz pública que expone un método `doServiceThing`. Hasta aquí todo bien.
 
@@ -33,11 +35,7 @@ En la práctica, el Principio se utiliza así: en un método de un objeto solo s
 
 Pero, ¿quiénes son desconocidos?
 
-Todos los demás.
-
-Incluyendo objetos que puedan ser entregados por otros objetos.
-
-Esto último suena rarísimo, porque básicamente obliga a que:
+Todos los demás, incluyendo objetos que puedan ser entregados por otros objetos. Esto último suena rarísimo, porque básicamente obliga a que:
 
 1. `Consumer` pase el objeto recibido como parámetro a otro objeto o método y actúa como intermediario. Esto puede llevar a cadenas de indirección largas como días sin pan.
 2. Si `Consumer` solo necesita una respuesta o acción del objeto recibido, `Service` tendría que entregar esa respuesta o ejecutar la acción sin exponer su estructura interna. Esto puede generar interfaces con muchos métodos.

@@ -4,7 +4,9 @@ Edsger W. Dijkstra (1930-2002) es todo un personaje en el campo de las ciencias 
 
 ![](images/on-the-role-of-scientific-thought.png)
 
-Básicamente, el principio nos dice que los programas no deben escribirse como una única pieza que resuelva el problema. En lugar de eso, debe organizarse en partes más pequeñas que se ocupan de tareas especializadas. O dicho de una forma más sencilla: diferentes partes del problema son tratadas por diferentes partes del programa.
+Básicamente, el principio nos dice que los programas no deberían escribirse como una única pieza que resuelva el problema. En lugar de eso, debe organizarse en partes más pequeñas que se ocupan de tareas especializadas. O dicho de una forma más sencilla:
+
+> Diferentes partes del problema son tratadas por diferentes partes del programa.
 
 Para ilustrarlo voy a usar un ejemplo exageradamente simplificado.
 
@@ -29,7 +31,7 @@ Este programa simplemente suma los números que se le pasan como argumento:
 ./main.py 20 30 40   # --> 90
 ```
 
-No parece tener nada incorrecto, ¿verdad? De hecho, este tipo de _one liners_ suele considerarse como especialmente interesante e inteligente. Sin embargo, para este artículo, este código pone de manifiesto un problema.
+No parece tener nada incorrecto, ¿verdad? De hecho, este tipo de _one liners_ suele considerarse como especialmente inteligente. Sin embargo, para este artículo, este código pone de manifiesto un problema.
 
 En primer lugar, cualquier programa básico tiene tres partes, y es la primera separación de intereses que vamos a considerar aquí:
 
@@ -50,7 +52,7 @@ if __name__ == '__main__':
     print(sum_result)
 ```
 
-Ahora hemos separado los tres intereses. Sin embargo, las líneas de código no representan bien las abstracciones que hemos definido anteriormente. Para eso utilizamos unidades como las funciones:
+Ahora hemos separado los tres intereses. Sin embargo, las líneas de código no representan bien las abstracciones que hemos definido. Para eso utilizamos unidades como las funciones:
 
 ```python
 #!/usr/bin/env python3
@@ -85,4 +87,6 @@ Ahora tenemos módulos diferentes que se ocupan de cosas distintas. El programa 
 
 Puedes decir que no hay mucha diferencia. Sin embargo, ahora cada interés está siendo atendido por un módulo diferente del programa. Partes diferentes del programa se ocupan de intereses diferentes, en un mismo nivel de abstracción del proceso completo.
 
-El principio de separación de intereses está en la base de otros muchos principios de diseño, entre ellos el Single Responsibility Principle y Tell, don't ask. Pero de esa relación nos ocuparemos más adelante.
+El principio de separación de intereses está en la base de otros muchos principios de diseño, entre ellos el _Single Responsibility Principle_ y _Tell, don't ask_. De esa relación nos ocuparemos más adelante.
+
+Pero si únicamente pudieses quedarte con una idea de este libro, quédate con este principio.

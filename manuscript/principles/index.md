@@ -7,10 +7,10 @@ Ocasionalmente, pueden entrar en conflicto. Con frecuencia encontrarás que hay 
 
 Por otro lado, es importante recordar que muchas veces estos principios no se refieren a líneas de código concretas, sino al conocimiento que estas representan. Intentar aplicarlos a la literalidad del código puede llevarnos a diseños extremadamente complejos que intentan solucionar problemas que no existen.
 
-Es un poco como el Código de los Piratas: más que nada son unas directrices...
+Es un poco como el Código de los Piratas: _más bien son unas directrices._..
 
 Además, en esta parte veremos que hay vida más allá de los principios SOLID. En serio. Por supuesto, hablamos de ellos, pero también de otros que, o bien los completan, o bien son sus antecedentes.
 
-SOLID es un acrónimo afortunado, muy fácil de recordar y hasta significativo: el software escrito tratando de respetar SOLID parece robusto y confiable. Y, de hecho, lo es. 
+SOLID es un acrónimo afortunado, muy fácil de recordar y hasta significativo: el software escrito tratando de respetar SOLID parece robusto, confiable y sólido. Y, de hecho, lo es. 
 
-Debe su difusión a las publicaciones de Robert C. Martin, aunque es posible que la primera persona que empezó a usar la expresión fuese Michael Feathers.
+Aunque debe su difusión a las publicaciones de Robert C. Martin, aunque es posible que la primera persona que empezó a usar la expresión fuese Michael Feathers.
