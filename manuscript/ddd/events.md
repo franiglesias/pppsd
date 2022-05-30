@@ -26,7 +26,7 @@ Así, cuando ocurre algo interesante se instancia el evento correspondiente y se
 
 Este proceso así explicado es síncrono. Cuando despachamos el evento la ejecución pasa al primer `handler` suscriptor, luego al siguiente, y así hasta acabar la lista, y luego vuelve al punto donde estábamos.
 
-En asíncrono la ejecución de los diferentes `handlers` se hace, teóricamente, en paralelo. Conceptualmente es la misma idea: al lanzar el evento se ejecutan ciertas acciones en respuesta.
+En asíncrono la ejecución de los diferentes `handlers` se hace, teóricamente, en paralelo. Conceptualmente, es la misma idea: al lanzar el evento se ejecutan ciertas acciones en respuesta.
 
 By the way, creo que es buena idea considerar los eventos como si fuesen asíncronos, aunque no lo sean, y todo lo que eso conlleva. Es decir, un evento no puede depender de lo que haga otro antes o después.
 
@@ -36,13 +36,13 @@ Ahora bien, hay que tener cuidado con temas como los límites transaccionales. P
 
 Por eso, aunque _en teoría_ el evento se emite cuando se produce, lo normal es que entidades y agregados instancien y guarden los eventos y que estos se despachen en el caso de uso, una vez que sabemos que todo se ha hecho bien. Así, por ejemplo, hemos creado el agregado y lo hemos pasado al repositorio, que _no se queja_. Por tanto, podemos asumir que el agregado estará disponible. 
 
-Consejo: no uses herencia para tener gestión de eventos en agregados, extendiendo de una clase base AggregateRoot. En su lugar usa traits o composición.
+Consejo: no uses herencia para tener gestión de eventos en agregados, extendiendo de una clase base AggregateRoot. En su lugar emplea traits o composición.
 
 ¿Dónde viven los handlers de los eventos? Pues mi preferencia personal es ponerlos en la capa de aplicación como si fuesen casos de uso. Los eventos en sí en la capa de dominio. En cierto modo, es como si `EventDispatcher` fuese un `Controller`.
 
 Decía que los eventos nos proporcionan SRP para los casos de uso. Así es: tendremos un caso de uso que realiza la acción principal, emitiendo uno o más eventos, y los suscriptores nos permiten añadir acciones (notificación, proyecciones o lo que sea) sin contaminar el caso de uso.
 
-Igualmente nos ayuda con Open/Close, ya que no tenemos que tocar el caso de uso si tenemos que añadir funcionalidades o acciones. Escribimos un nuevo suscriptor y ya.
+Igualmente, nos ayuda con Open/Close, ya que no tenemos que tocar el caso de uso si tenemos que añadir funcionalidades o acciones. Escribimos un nuevo suscriptor y ya.
 
 Por otro lado, es igualmente fácil quitar suscriptores o reemplazar por uno nuevo.
 

@@ -1,6 +1,6 @@
 # Domain Driven Design
 
-Extendámonos un rato sobre ese ente mítico del desarrollo de software: Domain Driven Design, o DDD para abreviar.
+Extendámonos un rato sobre ese ente mítico del desarrollo de software: _Domain Driven Design_, o DDD para abreviar.
 
 Con el DDD pasa como con otros muchos conceptos y paradigmas. Muchas veces hablamos sobre ellos de tercera o cuarta mano, o buscamos la receta para usarlo de alguna manera. Se dice que DDD es solo para desarrollos muy grandes y complejos. Sin embargo, mi opinión es que ofrece tantas ideas aplicables a cualquier escala que merece la pena el esfuerzo de estudiarlo.
 
