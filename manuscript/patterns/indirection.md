@@ -2,14 +2,14 @@
 
 Indirection es uno de los patrones GRASP que más nos puede ayudar en hacer software _a prueba de futuro_. ¿Cómo? Ayudándonos a evitar el acoplamiento directo entre objetos de modo que ambos puedan evolucionar separadamente. Vayamos poco a poco.
 
-Es más fácil ver el valor de este patrón cuando necesitamos implementar algo usando algún vendor específico. Imagina que tienes que acceder a una API externa. Lo típico es usar alguna librería que te ofrezca un cliente HTTP. Así podrías tener un `APIClient` y un `VendorHTTPCLient`.
+Es más fácil ver el valor de este patrón cuando necesitamos implementar algo usando algún vendor específico. Imagina que tienes que acceder a una API externa. Lo típico es emplear alguna librería que te ofrezca un cliente HTTP. Así podrías tener un `APIClient` basado en el cliente de la librería, que llamaremos `VendorHTTPCLient`.
 
 La forma de usar `VendorHTTPClient` con `APIClient`, podría ser:
 
-1. Herencia: Haces que `APIClient` extienda `VendorHTTPClient`. Mal asunto: la herencia es el máximo acoplamiento. Si `VendorHTTPClient` cambia, `APIClient` tiene que cambiar. Si `APIClient` tiene que cambiar, `VendorHttpClient` podría no servirte ya. Un Horror.
-2. Composición: `APIClient` usa `VendorHTTPClient` como colaborador. Si este cambia, `APIClient` es relativamente fácil de cambiar. Si `APIClient` cambia, `VendorHTTPClient` puede ser sustituido, pero… si `OtherVendorHTTPClient` tiene distinta interfaz, sigue siendo un percal. Composición es mejor que herencia, pero si la interfaz está definida por el vendor, `APIClient` sigue estando acoplado. Menos que en la herencia, pero lo bastante como para que sea un trabajo extra de mantenimiento.
+1. _Herencia_: Haces que `APIClient` extienda `VendorHTTPClient`. Mal asunto: la herencia es el máximo acoplamiento. Si `VendorHTTPClient` cambia, `APIClient` tiene que cambiar. Si `APIClient` tiene que cambiar, `VendorHttpClient` podría no servirte ya. Un Horror.
+2. _Composición_: `APIClient` usa `VendorHTTPClient` como colaborador. Si este cambia, `APIClient` es relativamente fácil de cambiar. Si `APIClient` cambia, `VendorHTTPClient` puede ser sustituido, pero… si `OtherVendorHTTPClient` tiene distinta interfaz, sigue siendo un percal. Composición es mejor que herencia, pero si la interfaz está definida por el vendor, `APIClient` sigue estando acoplado. Menos que en la herencia, pero lo bastante como para que sea un trabajo extra de mantenimiento.
 
-La solución es la indirección. Esto quedaría bien en una camiseta.
+La solución es usar indirección. Esto quedaría bien en una camiseta.
 
 En este ejemplo, la indirección consiste en introducir un objeto intermediario entre `APIClient` y `VendorHTTPClient`, llamémosle `MyHTTPClient`. `APIClient` usará `MyHTTPClient` (mediante composición) y `MyHTTPClient` se implementará usando `VendorHTTPClient` (igualmente por composición).
 

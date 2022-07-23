@@ -43,7 +43,7 @@ Parece como que el servicio tiene muchas razones para cambiar al englobar todos 
 
 La responsabilidad del módulo de obtención es cargar el contenido del archivo y delega el entenderse con el sistema físico al adaptador que toque. Su responsabilidad es entregar el contenido, para lo cual coordina varias cosas: elegir el adaptador y entregar su salida.
 
-La responsabilidad de un adaptador entregar el contenido del archivo indicado en la forma que se le pide. Hace varias cosas, como comunicarse con el sistema físico y transformar los datos para el módulo superior los pueda manejar.
+La responsabilidad de un adaptador sería entregar el contenido del archivo indicado en la forma que se le pide. Hace varias cosas, como comunicarse con el sistema físico y transformar los datos para el módulo superior los pueda manejar.
 
 En resumen: cada nivel de abstracción nos proporciona un contexto en el cual interpretar y aplicar el _SRP_.
 

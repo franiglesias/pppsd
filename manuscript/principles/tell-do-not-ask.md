@@ -24,6 +24,6 @@ Un problema es que solemos intentar explicar orientación a objetos a partir de 
 
 Sin embargo, el enfoque sería tratarlos como _information experts_, es decir: cada objeto sabe de los suyo y es a quién tenemos que pedirle cosas. Este entronca con los llamados _patrones GRASP_, de los que ya hablaremos. Pero puedes empezar pensando en que un objeto debería ser el máximo experto del sistema en lo suyo y, por tanto, reunir todos los comportamientos que le correspondan semánticamente hablando. Esto contribuye al SRP y DRY.
 
-Otro aspecto es que los objetos deberían crearse consistentes, con toda lo que necesiten para funcionar y cumpliendo las reglas de negocio, de modo que no tengas que _preguntar_ al objeto si está completo o bien formado: si está en el sistema es que puede trabajar.
+Otro aspecto es que los objetos deberían crearse consistentes, con todo lo que necesiten para funcionar y cumpliendo las reglas de negocio, de modo que no tengas que _preguntar_ al objeto si está completo o bien formado: si está en el sistema es que puede trabajar.
 
-Por tanto, si tienes que preguntarle al objeto _cómo estás_ para decirle _cómo deberías estar_, significa que esa operación concreta debería formar parte de las habilidades de ese objeto.
+Por tanto, si tienes que preguntarle al objeto _cómo estás_ para decirle _cómo deberías estar_, significa que esa operación concreta tendría que formar parte de las habilidades de ese objeto.

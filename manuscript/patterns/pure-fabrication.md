@@ -1,10 +1,10 @@
 # Pura fabricación
 
-El patrón GRASP que me quedaba por repasar es Pure Fabrication. Es como el patrón de último recurso, o el comodín de la llamada.
+El patrón GRASP que me quedaba por repasar es _Pure Fabrication_. Es como el patrón de último recurso, o el comodín de la llamada.
 
-El problema que resuelve es el de no poder atribuir una responsabilidad a una clase concreta, fundamentalmente porque no tiene mucho sentido (o ninguno) desde un punto de vista semántico.
+El problema que resuelve es el de no poder atribuir una responsabilidad a una clase concreta, fundamentalmente porque no tiene mucho sentido, o ninguno, desde un punto de vista semántico. 
 
-O bien porque la idea que se quiere expresar es, de alguna manera, artificial… pero necesaria.
+Esto puede ocurrir porque la clase necesita colaborar con otra. O bien porque la idea que se quiere expresar es, de alguna manera, artificial pero necesaria.
 
 Por lo general, pretendemos que un diseño orientado a objetos exprese un modelo del mundo, o al menos de la parte del mundo en la que se desarrolla nuestro negocio. Por eso, sus conceptos, reglas y procedimientos, se representan con objetos.
 
@@ -12,24 +12,26 @@ Sin embargo, a veces necesitamos incluir alguna idea que no forma parte del nego
 
 Un repositorio no existe en el mundo real (Bueno, puede existir, pero no es un concepto de negocio). Necesitamos un repositorio para guardar entidades de dominio (pienso en el repositorio DDD) y reproducir su persistencia en el tiempo y su ciclo vital.
 
-En DDD un repositorio busca proporcionar _una ilusión de colección en memoria_ de las entidades, de modo que cuando necesitemos manejar alguna tengamos algún lugar de dónde obtenerla. En cierto modo, representa la persistencia de las entidades del mundo real.
+En DDD un repositorio busca proporcionar _una ilusión de colección en memoria_ de las entidades, de modo que cuando necesitemos usar alguna tengamos algún lugar de donde obtenerla. Representaría la persistencia o continuidad de las entidades del mundo real.
 
-Este concepto de repositorio, pues, es _pure fabricación_. Lo introducimos porque no podemos introducir la idea de persistencia en las entidades sin violar unos cuantos principios de diseño (active record, te estamos mirando a ti).
+Este concepto de repositorio, pues, es _pure fabricación_. Lo introducimos porque no podemos introducir la idea de persistencia en las entidades sin violar unos cuantos principios de diseño (_active record_, te estamos mirando a ti).
 
-Algunos objetos que siguen el patrón Mediator entrarían también en esta idea de pure fabrication. Nos ayudan a evitar acoplamientos directos, introduciendo cierta artificialidad en el modelo. En DDD esto viene siendo un Servicio de Dominio.
+Algunos objetos que siguen el patrón _Mediator_ entrarían también en esta idea de _pure fabrication_. Nos ayudan a evitar acoplamientos directos, introduciendo cierta artificialidad en el modelo. En DDD esto viene siendo un Servicio de Dominio.
 
 Otro ejemplo que se me ocurre es un _identity provider_ y cosas así. De nuevo, no forman parte del dominio modelado, pero nos ayudan a mantener un buen diseño.
 
-Esto no debe ser excusa para introducir pure fabrication para resolver cualquier problema. Como decíamos al principio del 🧻 es más bien un recurso cuando hemos agotado otras posibilidades. Voy a intentar poner un ejemplo.
+Esto no debe ser excusa para introducir _pure fabrication_ para resolver cualquier problema. Como decíamos al principio del capítulo es más bien un recurso cuando hemos agotado otras posibilidades. Voy a intentar poner un ejemplo.
 
-En una aplicación bancaria supongamos que vamos a implementar un servicio de transferencia entre cuentas. Imagina que introducimos un TransferManager al que le pasamos las dos cuentas para ejecutar la transferencia.
+En una aplicación bancaria supongamos que vamos a implementar un servicio de transferencia entre cuentas. Imagina que introducimos un `TransferManager` al que le pasamos las dos cuentas para ejecutar la transferencia.
 
-Sin embargo, no tenemos necesidad ya que podríamos tener métodos Account.makeTransfer(DestAccount) y Account.receiveTransfer(OriginAccount). No hace falta un _Manager_ entre ambas.
+Sin embargo, no tenemos necesidad, ya que podríamos tener métodos `Account.makeTransfer(DestAccount)` y `Account.receiveTransfer(OriginAccount)`. No hace falta un _Manager_ entre ambas.
 
-De hecho, es posible que si tiene que nombrar a un servicio como Manager o similar, tengas un problema de diseño por _exceso de fabrication_. Así que conviene revisarlo.
+De hecho, es posible que si tienes que nombrar a un servicio como _Manager_ o similar, tengas un problema de diseño por _exceso de fabrication_. Así que conviene revisarlo.
 
-En realidad, el exceso de _Managers_ o _Services_ puede ser un problema de no tener buenos fundamentos de OOP. Es un tema para otro 🧻y es el _lamento de Alan Kay_ desde hace décadas.
+En realidad, el exceso de _Managers_ o _Services_ puede derivar del hecho de no tener buenos fundamentos de OOP. Es un tema para otro momento y es el _lamento de Alan Kay_ desde hace décadas.
 
-En este canal de Youtube hay alguna explicación (capítulos 10 y 11) https://youtube.com/playlist?list=PLGLfVvz_LVvS5P7khyR4xDp7T9lCk9PgE
+Puedes ver una explicación sobre el asunto en estos vídeos (capítulos 10 y 11):
 
-Así que con este 🧻 se acaban los patrones GRASP.
+![](images/object-oriented-design.png)
+
+Así que con este capítulo se acaban los patrones GRASP.

@@ -14,10 +14,10 @@ Su antipatrón suele estar relacionado con los modelos anémicos: el objeto tien
 
 ¿Te parece un patrón obvio? Pues no veas la cantidad de bases de código que no lo usan o no lo usan suficientemente. Es bastante típico si provienes de un estilo procedural, ya que tiendes a ver los objetos como _tipos_ que contienen datos, que son manipulados por funciones.
 
-Pero la potencia de la programación orientada a objetos reside en que los objetos sean expertos en lo suyo, que solo tengas que pedirles que hagan cosas e interactúen sin tener que supervisarlos (en el sentido de verificar a cada paso que las cosas son correctas).
+Pero la potencia de la programación orientada a objetos reside en que los objetos sean expertos en lo suyo, que solo tengas que pedirles que hagan cosas e interactúen sin tener que supervisarlos, en el sentido de verificar a cada paso que las cosas son correctas.
 
 Ojo. Dar este salto puede ser difícil. En programación procedural importa el conocimiento global del sistema y su control. En programación orientada a objetos el conocimiento está distribuido en objetos que interactúan y colaboran para realizar el trabajo y tienen sus propias parcelas de control. Son dos formas de ver la programación. No son incompatibles, pero parten de puntos de vista diferentes.
 
 Así que, en lo tocante a asignar responsabilidades a los objetos, tienes que dárselas al que sabe y confiar en que lo hará bien.
 
-Por cierto, los information experts suelen ser fáciles de testear unitariamente, así que es muy sencillo y eficaz garantizar que están capacitados para realizar su trabajo.
+Por cierto, los _information experts_ suelen ser fáciles de testear unitariamente, así que es muy sencillo y eficaz garantizar que están capacitados para realizar su trabajo.

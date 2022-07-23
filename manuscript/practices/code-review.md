@@ -26,7 +26,7 @@ Y eso contando con que no se hayan introducido conflictos, que también puede pa
 
 Sirven para mentorizar a personas con menos experiencia, pueden hacer sus propuestas y se discuten en el momento, incluso probándola. Sirven para descubrir y aprender aquellas cosas que no están documentadas, o que lo están en algún lugar que no se actualiza desde hace años.
 
-¿Pero como puedes tener dos personas (o más) trabajando en lo mismo? Qué pérdida de tiempo. Pues en realidad es un ahorro de tiempo. Esto del tiempo me hace gracias porque nunca (o casi nunca) se cuenta el tiempo que se pierde en la revisión y en el ir y volver con los cambios.
+¿Pero como puedes tener dos personas (o más) trabajando en lo mismo? Qué pérdida de tiempo. Pues en realidad es un ahorro de tiempo. Esto del tiempo me hace gracia porque nunca (o casi nunca) se cuenta el tiempo que se pierde en la revisión y en el ir y volver con los cambios.
 
 Es ahorro de tiempo porque en un poco más, y a veces menos, del tiempo en que se completa una historia, se hace con menos problemas y menos frustraciones. Además, todas las personas que participan aprenden más, lo que las hará más productivas en el futuro inmediato.
 

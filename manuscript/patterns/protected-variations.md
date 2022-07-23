@@ -26,4 +26,4 @@ Hay una explicación muy completa aquí:
 
 El riego de _protected variations_ está en la posibilidad de _sobre diseñar_ para prevenir cualquier cambio posible o si se identifica incorrectamente las posibles razones.
 
-Pero básicamente se trata de que los objetos establezcan un contrato estable acerca de lo que hacen: qué mensajes les puedes enviar y que respuesta te pueden dar a ellos.
+Pero básicamente se trata de que los objetos establezcan un contrato estable acerca de lo que hacen: qué mensajes les puedes enviar y que respuesta o efecto puede producir.
