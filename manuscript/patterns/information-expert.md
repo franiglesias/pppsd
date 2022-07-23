@@ -10,7 +10,7 @@ Pienso que es un patrón que podemos vincular a _Tell, don’t ask_: si tienes q
 
 Es muy fácil verlo con el clásico ejemplo de Pedido/Items. ¿A quién le preguntamos sobre el importe total? Pues al Pedido, porque al contener los Items puede sumar los importes de cada ítem. Y cada ítem, por su parte, podrá calcular su importe porque sabe de su precio unitario y de su cantidad. Además, un pedido _sabe_ que necesitará un cliente y dirección de entrega y facturación. También, puede que haya un tope en el número de items que se pueden pedir. O tal vez, los gastos de envío son gratis si se supera un cierto importe lo cual es algo que Pedido puede decidir. Para algo es el experto… en pedidos. Si no tiene toda la información necesaria sabrá que está incompleto o que no es un pedido válido. Saber eso es su trabajo.
 
-Su antipatrón suele estar relacionado con los modelos anémicos: el objeto tiene la información, pero no hace nada con ella porque no tiene comportamientos y son otros objetos los que saben qué hacer con ello. Si separas _Información_ y _experto_ entonces no estás haciendo OOP.
+Su anti-patrón suele estar relacionado con los modelos anémicos: el objeto tiene la información, pero no hace nada con ella porque no tiene comportamientos y son otros objetos los que saben qué hacer con ello. Si separas _Información_ y _experto_ entonces no estás haciendo OOP.
 
 ¿Te parece un patrón obvio? Pues no veas la cantidad de bases de código que no lo usan o no lo usan suficientemente. Es bastante típico si provienes de un estilo procedural, ya que tiendes a ver los objetos como _tipos_ que contienen datos, que son manipulados por funciones.
 

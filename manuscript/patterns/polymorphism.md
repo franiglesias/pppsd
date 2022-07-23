@@ -10,7 +10,7 @@ En lugar de eso: polimorfismo.
 
 Con polimorfismo crearíamos subclases de `Service` basadas en su _tier_: `FreeService`, `PremiumService`, `ProfessionalService`. Todas ellos responderían al mensaje `price`, cada una a su manera. La única decisión basada en el _tier_ sería en el momento de la instanciación, posiblemente en una factoría. Gracias al polimorfismo, los consumidores no tienen que preocuparse de qué servicio concreto se trata. Los objetos derivados son más simples y fáciles de testear. Si en tu negocio se introduce un nuevo _tier_, no hay más que añadir una clase nueva y actualizar la factoría.
 
-Por supuesto, el principio de sustitución de Liskov aplica aquí: Subtipado semántico. También KISS, ya que los componentes serán más simples, manteniendo la complejidad bajo control y eliminando la necesidad de preguntar por el tipo.
+Por supuesto, el principio de sustitución de Liskov aplica aquí: _subtipado semántico_. También KISS, ya que los componentes serán más simples, manteniendo la complejidad bajo control y eliminando la necesidad de preguntar por el tipo.
 
 Las clases base manejarán los mensajes comunes, y las variantes serán manejadas por los subtipos. Esto también podemos hacerlo con interfaces explícitas o implícitas.
 

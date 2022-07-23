@@ -48,7 +48,7 @@ Me dan ganas de repetir esto: si el sistema de persistencia es una base de datos
 
 Esto quiere decir que a la hora de persistir lo que guardamos es una representación del agregado, no el agregado como tal. Para eso nada mejor que una base de datos orientada a documentos. Por ejemplo, en un caso de agregado con más de media docena de entidades podrías necesitar tan solo un par de tablas para persistirlo.
 
-Eso puede suponer algo de desnormalización, lo que seguramente hará más sencillo todo con la base de datos y hasta me atrevería a decir que podría ser bueno en lo que toca a performance.
+Eso puede suponer algo de des-normalización, lo que seguramente hará más sencillo todo con la base de datos y hasta me atrevería a decir que podría ser bueno en lo que toca a performance.
 
 De hecho, el objetivo sería que el agregado y su persistencia pudiesen evolucionar independientemente. Dentro de lo que cabe, por supuesto. Seguramente los Database Administrator del mundo me quieran dar collejas, pero DDD es _code driven_ y es la base de datos la que tiene que adaptarse.
 

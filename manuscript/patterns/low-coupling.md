@@ -1,14 +1,14 @@
 # Bajo acoplamiento
 
-Low Coupling, otro de los patrones GRASP. Y es que este tema del acoplamiento es más que importante, es fundamental.
+_Low Coupling_ es otro de los patrones GRASP. Y es que este tema del acoplamiento es más que importante, es fundamental.
 
 Así que primero hablaremos de qué es el acoplamiento, por qué debería preocuparnos y cómo conseguir bajo acoplamiento.
 
-El término se lo debemos a Larry Constantine, junto con el de cohesión, del que hablamos en otro capítulo. Coupling o acoplamiento es el grado de interdependencia entre dos unidades de software. Por ejemplo, entre dos objetos.
+El término se lo debemos a Larry Constantine, al igual que el de cohesión, comentado en otro capítulo. _Coupling_ o acoplamiento es el grado de interdependencia entre dos unidades de software. Por ejemplo, entre dos objetos.
 
-El acoplamiento es algo inevitable si queremos que dos objetos colaboren. Esto es, si seguimos principios como Single Responsibility, Polimorfismo, etc., tendremos objetos pequeños que colaboran. Para que puedan colaborar, tendrán dependencias unos de otros. No existe el acoplamiento cero. Por esa razón hablamos de alto o bajo acoplamiento (o _tight/loose_ — fuerte/débil). En otras palabras: el problema no está en la existencia de acoplamiento, sino en el grado de acoplamiento y en tenerlo controlado.
+El acoplamiento es algo inevitable si queremos que dos objetos colaboren. Esto es: si seguimos principios como Single Responsibility, Polimorfismo, etc., tendremos objetos pequeños que colaboran. Para que puedan colaborar, tendrán dependencias unos de otros. No existe el acoplamiento cero. Por esa razón hablamos de alto o bajo acoplamiento (o _tight/loose_ — fuerte/débil). En otras palabras: el problema no está en la existencia de acoplamiento, sino en el grado de acoplamiento y en que lo tengamos bajo control.
 
-Si tenemos una clase `Consumer` y otra ``Service``, siendo así que `Consumer` usa `Service` para hacer algo, decimos que `Consumer` tiene una dependencia de `Service` y está, de hecho, acoplada a `Service`. Una forma de medir esto es preguntarse: ¿Cuánto necesita saber `Consumer` para poder utilizar `Service`? Cuantas más cosas, más acoplamiento. Cuantas menos cosas, menos acoplamiento. Así, por ejemplo, lo menos que debería saber `Consumer` son los mensajes que tiene que enviar a `Service` y parámetros. Supongamos que el mensaje en cuestión es `Service::doSomething`.
+Si tenemos una clase `Consumer` y otra `Service`, siendo así que `Consumer` usa `Service` para hacer algo, decimos que `Consumer` tiene una dependencia de `Service` y está, de hecho, acoplada a `Service`. Una forma de medir esto es preguntarse: ¿Cuánto necesita saber `Consumer` para poder utilizar `Service`? Cuantas más cosas, más acoplamiento. Cuantas menos cosas, menos acoplamiento. Así, por ejemplo, lo menos que debería saber `Consumer` son los mensajes que tiene que enviar a `Service` y parámetros. Supongamos que el mensaje en cuestión es `Service::doSomething`.
 
 Menos que eso es no poder usar `Service`. Pero más que eso es incrementar el acoplamiento. ¿De qué conocimiento extra estamos hablando? Pues por ejemplo:
 
@@ -21,7 +21,7 @@ Martin Fowler llama a esto _inappropriate intimacy_, indicando que un objeto sab
 
 Conocer un tipo concreto de `Service` significa usar una implementación concreta. Para evitar eso aplicamos la Inversión de dependencias, haciendo que `Consumer` dependa de una Interfaz.
 
-Saber instanciar un `Service` ocurre cuando hacemos new de un `Service` dentro de `Consumer`. Este tipo de dependencia puede hacer no testeable a `Consumer`. Para evitarlo, usamos el patrón de Inyección de dependencias, vía constructor o vía setter.
+Saber instanciar un `Service` ocurre cuando hacemos new de un `Service` dentro de `Consumer`. Este tipo de dependencia puede hacer no testable a `Consumer`. Para evitarlo, usamos el patrón de Inyección de dependencias, vía constructor o vía setter.
 
 Saber encontrar un `Service` suele implicar que tenemos un smell _Service Locator_. Esto pasa por acoplarnos al contenedor de inversión de dependencias para pedírselas desde cualquier sitio que nos venga en gana. De nuevo, aplicar la inyección de dependencias correctamente es la solución.
 

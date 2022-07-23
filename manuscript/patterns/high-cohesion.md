@@ -1,6 +1,6 @@
 # Alta cohesión
 
-El reverso de low coupling es high cohesion, otro patrón GRASP y otro concepto acuñado por Larry Constantine.
+El reverso de _low coupling_ es _high cohesion_, otro patrón GRASP y otro concepto acuñado por Larry Constantine.
 
 Cohesión nos da una idea de cuan fuertemente relacionados están los elementos de un módulo de software.
 
