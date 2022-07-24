@@ -2,7 +2,8 @@
 
 El principio de sustitución de Liskov es la L de SOLID y se refiere a cómo se definen las jerarquías de herencia. Fue enunciado partir de un artículo de Barbara Liskov y Jeannette Wing, titulado: _A Behavioral Notion of Subtyping_.
 
-![](images/behavioral-notion-of-subtyping.png)
+{float: right}
+![A Behavioral Notion of Subtyping](images/behavioral-notion-of-subtyping.png)
 
 En resumen, lo que dice es que el subtipado, o sea, la creación de tipos de datos derivados de otros, no es una cuestión puramente sintáctica, sino también semántica. En otras palabras: los tipos y sus subtipos derivados representan comportamientos equivalentes.
 

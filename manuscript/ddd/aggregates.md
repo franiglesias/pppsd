@@ -34,13 +34,14 @@ Es decir: cada objeto es responsable de su propia consistencia, y la raíz de un
 
 Aquí una serie de artículos bastante completa acerca de los agregados:
 
-![](images/domain-driven-design-aggregates.png)
+{float: right}(images/domain-driven-design-aggregates.png)
 
 Personalmente, diseñaría los agregados _de arriba hacia abajo_. Es decir, considerando primero los conceptos más generales, que podrían acabar siendo raíces de agregado, y bajando luego a los detalles, guiándome por lo que dicen las reglas de negocio que apliquen.
 
 Acerca de la persistencia de los agregados... En este artículo de Matthias Noback se dice que a la hora de diseñar agregados _te olvides_ de la persistencia.
 
-![](images/doctrine-orm-and-ddd-aggregates.png)
+{float: right}
+![Doctrine ORM and DDD aggregates](images/doctrine-orm-and-ddd-aggregates.png)
 
 Lo dice en el sentido de no dejar que las cuestiones de persistencia, que son de infraestructura, condicionen tu diseño del agregado, que es del dominio. De hecho, un poco más abajo propone otra regla: _actúa como si fuesen a guardarse de una base de datos orientada a documentos_. Un noSQL, cosa que encaja realmente bien con la misma idea de agregado. Para entender mejor esto hay que repetir la idea de que _un repositorio no es la puerta de acceso a la base de datos_ y añadir que la estructura de tablas en una base de datos relacional no tiene que reflejar la estructura del agregado.
 

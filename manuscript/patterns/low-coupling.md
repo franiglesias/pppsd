@@ -34,7 +34,8 @@ En resumen, para mantener el acoplamiento bajo entre dos objetos hay que:
 * Mantener aisladas las dependencias dentro del objeto que las usa. Utiliza métodos privados cuando tengas que delegar en la dependencia, de modo que no aparezcan menciones a ella en ninguna otra parte del código.
 * Nunca, pero nunca, inyectes el contenedor de inyección de dependencias. Nunca, _never_, ni se te ocurra.
 
-[^newables]: ![](images/to-new-or-not-to-new.png)
+[^newables]: {float: right}
+![To new or not to new](images/to-new-or-not-to-new.png)
 
 ¿En qué nos beneficia el bajo acoplamiento? El código con bajo acoplamiento es fácil de testear, ya que todos los colaboradores de una clase son fácilmente reemplazables por dobles en tests unitarios o _fakes_ en tests de integración.
 

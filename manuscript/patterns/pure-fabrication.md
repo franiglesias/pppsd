@@ -34,6 +34,7 @@ En realidad, el exceso de _Managers_ o _Services_ puede derivar del hecho de no 
 
 Puedes ver una explicación sobre el asunto en estos vídeos (capítulos 10 y 11):
 
-![](images/object-oriented-design.png)
+{float: right}
+![Object Oriented Design](images/object-oriented-design.png)
 
 Así que con este capítulo se acaban los patrones GRASP.

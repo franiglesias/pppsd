@@ -41,11 +41,13 @@ Podemos modelar como VO cualquier concepto de dominio que no tenga identidad y n
 Decimos que los VO atraen comportamiento. Entre otras razones, es porque también son responsables de mantener sus propias invariantes y, aplicando _Tell, don’t ask_, las entidades no deben preguntar al VO por su estado para hacer algo, sino que más bien delegan en el VO todo lo que tenga que ver con el VO. Puedes ver un ejemplo en este artículo (al hablar de TaskStatus)
 
 Preview
-![](images/the-way-to-ddd.png)
+{float: right}
+![El camino a DDD](images/the-way-to-ddd.png)
 
 Por cierto, que refactorizar a VO es un muy buen primer paso para mejorar un código existente. Y dentro de los VO me gustaría señalar también las virtudes de los Enumerables, que serían un tipo de VO también.
 
 En fin, podría hablar de VO y ejemplos de modelado con VO de aquí a final de año, así que lo dejo por ahora. En este artículo tienes un buen resumen:
 
-![](images/value-objects.png)
+{float: right}
+![Value Objects](images/value-objects.png)
 

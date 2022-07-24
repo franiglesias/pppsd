@@ -42,6 +42,7 @@ El resto de objetos no se acopla al estado global sino indirectamente. Puedes re
 
 En la introducción de este _paper_, Beck y Cunningham hablan sobre lo difícil que es cambiar de la mentalidad procedural, pendiente del estado global, a la orientación a objetos, que no considera el estado global.
 
-![](images/teaching-object-oriented-thinking.png)
+{float: right}
+![Teaching object oriented thinking](images/teaching-object-oriented-thinking.png)
 
 Controlar el acoplamiento es uno de los puntos clave de la buena orientación a objetos.

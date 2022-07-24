@@ -22,7 +22,8 @@ Para ello el acoplamiento ha de ser el mínimo posible (inversión de dependenci
 
 Hay una explicación muy completa aquí:
 
-![](images/protected-variations.png)
+{float: right}
+![Protected variations](images/protected-variations.png)
 
 El riego de _protected variations_ está en la posibilidad de _sobre diseñar_ para prevenir cualquier cambio posible o si se identifican incorrectamente las posibles razones.
 

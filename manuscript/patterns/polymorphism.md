@@ -16,4 +16,5 @@ Las clases base manejarán los mensajes comunes, y las variantes serán manejada
 
 La clave del polimorfismo está en identificar las variantes de comportamiento y expresarlas como especializaciones, cediendo el control a los propios objetos.
 
-![](images/programar-sin-ifs.png)
+{float: right}
+![Programar sin ifs](images/programar-sin-ifs.png)

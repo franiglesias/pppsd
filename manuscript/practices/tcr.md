@@ -2,7 +2,8 @@
 
 Hoy me ha dado por practicar un poco el flujo _test && commit || revert_ y me lo estoy pasando muy bien.
 
-![](images/test-commit-revert.png)
+{float: right}
+![Test and Commit or Revert](images/test-commit-revert.png)
 
 Por supuesto, es un flujo propuesto por Kent Beck. TCR (Test && Commit || Revert) consiste en que tras cada cambio en el código de producción se lanzan los tests. Si los test pasan, se ejecuta un commit con los cambios.
 

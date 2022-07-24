@@ -51,20 +51,22 @@ Pero es muy importante entender que este tipo de refactor, como señalaba al pri
 
 _Piri is qui isí ni si siqui nidi i pridicciín..._ Nope. Todo esto se aplica mientras trabajas para sacar las historias de usuario a producción.
 
+{aside, float:right}
 Buenos recursos para iniciar a los equipos en Refactor Mercilessly:
 
 Aparte de leerse Extreme Programming Explained:
 
-![](images/extreme-programming-explained.png)
+![Extreme Programming Explained](images/extreme-programming-explained.png)
 
 Esta charla de Martin Fowler:
 
-![](images/workflows-of-refactoring.png)
+![Workflows of Refactoring](images/workflows-of-refactoring.png)
 
 Su libro clásico:
 
-![](images/refactoring-second-edition.png)
+![Refactoring (2nd ed.)](images/refactoring-second-edition.png)
 
 Y algo propio:
 
-![](images/keeping-code-healthy.png)
+![Keeping Code Healthy](images/keeping-code-healthy.png)
+{/aside}
