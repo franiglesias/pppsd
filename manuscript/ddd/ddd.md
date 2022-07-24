@@ -44,7 +44,8 @@ Por otro lado, los contextos mantienen relaciones entre ellos. Algunos son más 
 
 Así que, resumiendo mucho, DDD es una manera de abordar el desarrollo de software en entornos empresariales complejos. Incluye un análisis estratégico en el que se busca desarrollar un modelo del dominio que luego se representará mediante software.
 
-Más sobre esto aquí, por ejemplo:
+{aside}
+Recursos:
 
 ![](images/ddd-intro.png)
 
@@ -63,3 +64,4 @@ El de Vaughn Vernon, _Implementing Domain Driven Design_
 Y desde aquí os podéis descargar la _DDD Reference_
 
 ![](images/ddd-reference.png)
+{/aside}

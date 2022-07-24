@@ -14,7 +14,7 @@ Y es un elemento superimportante. Mathias Verraes decía en un post en su blog q
 
 Pero, ¿cómo nace un VO? Imagina que tienes que modelar el concepto Precio. El Precio puede representarse con un _float_. Dos consideraciones:
 
-* No todos los _float_ pueden ser precios, pues los precios siempre on positivos.
+* No todos los _float_ pueden ser precios, pues los precios siempre son positivos.
 * La representación no es completa sin la unidad monetaria. Así que un precio necesitaría dos variables.
 
 O sea que en realidad tenemos un _float_ limitado y un _string_. Así que los juntamos en un objeto que tendrá dos propiedades, Por ejemplo: `amount` y `currency`, y unas reglas de construcción, `amount` es mayor o igual a 0 y puede tener decimales, `currency` es un string representando una moneda según la norma ISO 4217; y con eso tendremos un VO `Price`.
@@ -23,7 +23,7 @@ De hecho, `Currency` también es candidato a VO porque aunque es un _string_, no
 
 En cierto modo, los VO nos sirven para extender el sistema de tipos con aquellos propios de nuestro dominio. Veamos ahora algunas propiedades interesantes que deben tener los VO.
 
-_Igualdad por valor_: como hemos dicho, dos VO son iguales si tienen los mismos valores. Normalmente, tendremos que introducir un método `equals` (que recibe otro VO) que nos permite chequear esa igual conforme a las reglas relevantes en cada caso. A veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación. Por ejemplo, no puedes decir que 10 USD = 10 EUR, tienes que convertirlos primero.
+_Igualdad por valor_: como hemos dicho, dos VO son iguales si tienen los mismos valores. Normalmente, tendremos que introducir un método `equals` (que recibe otro VO del mismo tipo) que nos permite chequear esa igual conforme a las reglas relevantes en cada caso. A veces no podemos comparar todas las propiedades del VO o tenemos que tener en cuenta más cosas en la comparación. Por ejemplo, no puedes decir que 10 USD = 10 EUR, tienes que convertirlos primero.
 
 _Inmutabilidad_: Los VO representan un valor, simple o compuesto. Si ese valor cambia, se debe cambiar la instancia por otra con el nuevo valor. Si cambia la propiedad precio de un producto, no mutamos el objeto `Price`, sino que reemplazamos la propiedad con una instancia distinta de `Price`.
 
