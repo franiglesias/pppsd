@@ -30,9 +30,9 @@ Para mí una arquitectura limpia cumple tres criterios muy sencillos:
 
 Una arquitectura contiene tres grandes grupos de elementos:
 
-* Un modelo del mundo: la representación del dominio
-* Una representación de las metas o intenciones de las consumidoras de la aplicación: los casos de uso
-* Las implementaciones técnicas que la hacen funcionar
+* **Un modelo del mundo**: la representación del dominio
+* Una representación de las **metas o intenciones** de las consumidoras de la aplicación: los casos de uso
+* Las **implementaciones técnicas** que la hacen funcionar
 
 Que coinciden con las capas de:
 
@@ -44,7 +44,4 @@ La Arquitectura Hexagonal me permite tener todo esto. Algo que funciona bien tan
 
 Así que si bien es completamente incorrecto decir que Arquitectura Hexagonal es DDD, sí que es una opción muy válida para su implementación.
 
-Y Arquitectura Hexagonal no es la única cosa que se identifica erróneamente con DDD. Ojo:
-
-{float: right}
-![DDD no es lo que te han contado](images/ddd-is-not-what-they-said.png)
+Y Arquitectura Hexagonal no es la única cosa que se identifica erróneamente con DDD. Ojo.

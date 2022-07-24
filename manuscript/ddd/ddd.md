@@ -47,10 +47,6 @@ Así que, resumiendo mucho, DDD es una manera de abordar el desarrollo de softwa
 {aside, float: right}
 ### Recursos
 
-Más sobre el tema
-
-![Una introducción a DDD](images/ddd-intro.png)
-
 La _Biblia_ del DDD es el libro _Domain Driven Design: Tackling complexity in the heart of software_:
 
 ![Domain Driven Design](images/ddd-blue-book.png)
