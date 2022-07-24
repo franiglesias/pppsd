@@ -2,7 +2,7 @@
 
 Edsger W. Dijkstra (1930-2002) es todo un personaje en el campo de las ciencias de la computación, no solo por la cantidad y calidad de sus aportaciones, sino también por su particular carácter y algunas frases lapidarias. También es responsable de introducir el principio de la separación de intereses, en su artículo de 1974 _On the role of scientific thought_.
 
-![](images/on-the-role-of-scientific-thought.png)
+I> ![](images/on-the-role-of-scientific-thought.png)
 
 Básicamente, el principio nos dice que los programas no deberían escribirse como una única pieza que resuelva el problema. En lugar de eso, debe organizarse en partes más pequeñas que se ocupan de tareas especializadas. O dicho de una forma más sencilla:
 

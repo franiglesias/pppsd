@@ -45,7 +45,9 @@ Por otro lado, los contextos mantienen relaciones entre ellos. Algunos son más 
 Así que, resumiendo mucho, DDD es una manera de abordar el desarrollo de software en entornos empresariales complejos. Incluye un análisis estratégico en el que se busca desarrollar un modelo del dominio que luego se representará mediante software.
 
 {aside}
-Recursos:
+### Recursos
+
+Más sobre el tema
 
 ![](images/ddd-intro.png)
 
