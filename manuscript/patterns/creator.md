@@ -20,4 +20,4 @@ Normalmente, esto es porque tales objetos agregados no tienen _vida_ fuera de la
 
 Por otro lado, es muy conveniente que haya un solo lugar para la creación de cada tipo de objetos. Más allá de su función constructora, si la creación de un objeto implica algún tipo de lógica que no se puede encapsular en ella, introduce un builder o un factory que lo haga.
 
-En resumen: la responsabilidad de creación de objetos pertenece a sus contenedores o agregadores o aquellos que otros tengan el conocimiento necesario.
+En resumen: la responsabilidad de creación de objetos pertenece a sus contenedores o agregadores o aquellos que tengan el conocimiento necesario.

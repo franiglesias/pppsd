@@ -20,12 +20,12 @@ Una forma de lograr esto, a posteriori, es descomponiendo partes de código muy 
 
 Otra manera de lograrlo es escogiendo soluciones sencillas en primer lugar. Por ejemplo: un test _KISS_ solo probaría una cosa, con un único ejemplo. Una función _KISS_ usaría código simple, tomando pocas decisiones. Para tomar decisiones complejas combinaríamos varias funciones _KISS_.
 
-Es difícil explicar esto último sin un ejemplo, pero toda la idea de _programar sin `if`_ de la orientación a objetos es muy _KISS_. Parece complicada, pero en realidad apuesta por tener pequeños elementos que son muy fáciles de entender aisladamente. La clave es tomar primero la decisión de quó objeto simple deberá realizar un trabajo, en lugar de tener objetos complejos que toman decisiones. 
+Es difícil explicar esto último sin un ejemplo, pero toda la idea de _programar sin `if`_ de la orientación a objetos es muy _KISS_. Parece complicada, pero en realidad apuesta por tener pequeños elementos que son muy fáciles de entender aisladamente. La clave es tomar primero la decisión de qué objeto simple deberá realizar un trabajo, en lugar de tener objetos complejos que toman decisiones. 
 
-Lac composición de objetos también es muy _KISS_, porque permite construir comportamientos complejos a base de combinar objetos simples.
+La composición de objetos también es muy _KISS_, porque permite construir comportamientos complejos a base de combinar objetos simples.
 
 Es decir: _KISS_ va de tener elementos que tomados por separados resultan estúpidamente simples, pero combinados desarrollan comportamientos que pueden ser tremendamente complejos.
 
-Al tener componentes muy simples es fácil cambiarlos por otros, es fácil detectar y corregir errores, es fácil entenderlos y razonar sobre ellos, podemos tener todo su código en la cabeza, por así decir, y es muy fácil testearlos unitariamente.
+Al tener componentes muy simples es fácil cambiarlos por otros, es fácil detectar y corregir errores, es fácil entenderlos y razonar sobre ellos, podemos tener todo su código en la cabeza, por así decir, y es muy fácil probarlos unitariamente.
 
 La sencillez es la sofisticación definitiva. Pero hacer cosas sencillas conlleva mucho trabajo.

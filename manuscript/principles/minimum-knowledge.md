@@ -42,7 +42,7 @@ Todos los demás, incluyendo objetos que puedan ser entregados por otros objetos
 
 Por tanto, hay que combinar el principio con otros. Ya hemos mencionado el de sustitución, pero también tendríamos que fijarnos en el de Segregación de Interfaces.
 
-¡Compromisos!¡Compromisos!
+¡Compromisos! ¡Compromisos!
 
 Sin embargo, este principio ayuda mucho a reducir el acoplamiento. Una regla muy práctica para ver si tenemos problemas relacionados con él es la de _un solo punto_ (en PHP sería una sola flecha), referida a la manera de invocar métodos en objetos con la notación `object.method`.
 

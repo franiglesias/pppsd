@@ -16,7 +16,7 @@ Pero no. _DRY_ aplica ni más ni menos que a la duplicación de conocimiento, lo
 
 En cuanto a código, _DRY_ puede ocurrir tanto con fragmentos de código similares, la consabida y duplicación de código, como fragmentos diferentes. Quiero decir que el problema no es la repetición literal de código _per se_, sino la duplicación de conocimiento.
 
-Como tantas otras cosas en código, suele ser más fácil de diagnosticar cuanto tienes que introducir cambios: si dos fragmentos de código tienen que cambiar a la vez es muy posible que tengamos una violación del principio _DRY_.
+Como tantas otras cosas en código, suele ser más fácil de diagnosticar cuando tienes que introducir cambios: si dos fragmentos de código tienen que cambiar a la vez es muy posible que tengamos una violación del principio _DRY_.
 
 ¡Ah! Pero también del principio de cohesión, pues dos cosas que habitualmente cambian juntas deberían estar juntas. Los que nos dice _DRY_, a mayores, es que incluso podrían ser la misma, representando el mismo conocimiento.
 
@@ -28,7 +28,7 @@ Como heurística, puedes aplicar la _regla de los 3_: espera a tener al menos 3 
 2. que no haya una abstracción ahí, pero que sí sea posible reducir la duplicación estructural en ese contexto, posiblemente extrayendo un método.
 3. que las duplicaciones sean casos de una abstracción.
 
-Respecto a 2 podría argumentarse que esa duplicación representa un conocimiento en ese contexto reducido, pero no generalizable a todo el sistema, _no-sé-si-me-explico_. Aquí podemos aplicar la _regla del tres_, que nos dice que no intentemos resolver la duplicación hasta no tener al menos tres casos.
+Respecto a la segunda podría argumentarse que esa duplicación representa un conocimiento en ese contexto reducido, pero no generalizable a todo el sistema, _no-sé-si-me-explico_. Aquí podemos aplicar la _regla del tres_, que nos dice que no intentemos resolver la duplicación hasta no tener al menos tres casos.
 
 Por esa razón, se recomienda evitar las abstracciones prematuras: ¿cambian esos códigos repetidos a la vez o lo hacen por separado? Si no cambian a la vez, posiblemente están representando conocimientos diferentes.
 

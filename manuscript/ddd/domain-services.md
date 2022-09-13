@@ -36,7 +36,7 @@ A ver. La RGE (Respuesta Gallega Estándar) aplica aquí:
 
 – Depende.
 
-¿Es _notificación_ un concepto importante del dominio? La forma de notificación, ¿es relevante de algún modo? Es muy posible que tengas que modelar un servicio de dominio de notificación que pueda atender a las preferencias de la cliente en cuando a la forma de la misma.
+¿Es _notificación_ un concepto importante del dominio? La vía de notificación, ¿es relevante de algún modo? Es muy posible que tengas que modelar un servicio de dominio de notificación que pueda atender a las preferencias de la cliente en cuando a la forma de la misma.
 
 De hecho, el mecanismo (email, WhatsApp, Slack, _whatever_) es una cuestión de la capa de infraestructura. Lo que suele ocurrir es que la notificación se gestiona habitualmente en el caso de uso (capa aplicación) bien sea directamente o mediante un suscriptor al evento interesante.
 

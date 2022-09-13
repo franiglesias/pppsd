@@ -29,9 +29,9 @@ Por ejemplo, es buena idea separar la obtención del contenido de un archivo y s
 
 A su vez, la obtención del archivo puede tener varias razones para cambiar. Por ejemplo, será distinto si usa el sistema de archivos local, S3, FTP... Con _SRP_ en lugar de una clase que _lea_ cualquier tipo de sistema, tendríamos clases diferentes, seleccionables por su consumidor.
 
-Esto es: separo obtención y procesamiento, pero también separo distintas estrategias de obtención. La cuestión es que el principio actúa a la vez sobre distintos niveles de abstracción:
+Esto es: separo obtención y procesamiento, pero también separo distintas estrategias de obtención. La cuestión es que el principio actúa a la vez sobre distintos niveles de abstracción. Por ejemplo:
 
-El servicio que se ocupa de obtener el resultado final tiene la responsabilidad de procesar un archivo. Y para ellos usa como colaboradores un módulo que obtiene archivos y otro que los analiza.
+El servicio que se ocupa de obtener el resultado final tiene la responsabilidad de procesar un archivo, y para ello usa como colaboradores un módulo que obtiene archivos y otro que los analiza.
 
 El módulo de obtención tiene la responsabilidad de obtener una representación procesable del archivo físico, para lo que usa distintos adaptadores y posiblemente una factoría para escoger el adecuado.
 
@@ -43,7 +43,7 @@ Parece como que el servicio tiene muchas razones para cambiar al englobar todos 
 
 La responsabilidad del módulo de obtención es cargar el contenido del archivo y delega el entenderse con el sistema físico al adaptador que toque. Su responsabilidad es entregar el contenido, para lo cual coordina varias cosas: elegir el adaptador y entregar su salida.
 
-La responsabilidad de un adaptador sería entregar el contenido del archivo indicado en la forma que se le pide. Hace varias cosas, como comunicarse con el sistema físico y transformar los datos para el módulo superior los pueda manejar.
+La responsabilidad de un adaptador sería entregar el contenido del archivo indicado en la forma que se le pide. Hace varias cosas, como comunicarse con el sistema físico y transformar los datos para que el módulo superior los pueda manejar.
 
 En resumen: cada nivel de abstracción nos proporciona un contexto en el cual interpretar y aplicar el _SRP_.
 

@@ -4,7 +4,7 @@ La verdad es que explicar los patrones GRASP en tuits es bastante complicado, po
 
 _Controller_ responde a la pregunta: ¿por dónde se entra al sistema? Y básicamente lo hace introduciendo un objeto (el _controller_) que actúa de intermediario entre la capa de interfaz de usuario y la aplicación, vinculando eventos que suceden en UI con casos de uso en la aplicación. Por supuesto, este remite al patrón MVC que nació en las GUI y se usa habitualmente en aplicaciones web. En principio _Controller_ se refiere a un objeto que es capaz de gestionar un determinado evento de la UI y lanzar el caso de uso correspondiente. También cabe la posibilidad de que un solo controller agrupe varios métodos que responden a distintos eventos de la UI que estén estrechamente relacionados, como los verbos de una API REST para un cierto tipo de recursos.
 
-Esto es, por ejemplo: si el usuario envía un formulario, hay un controlador que _captura_ ese evento (en HTTP una request a una URI específica), extrae los datos, instancia un caso de uso y lo ejecuta, provocando un efecto o recuperando info, y devolviendo la respuesta adecuada.
+Esto es, por ejemplo: si el usuario envía un formulario, hay un controlador que _captura_ ese evento (en HTTP una request a una URI específica), extrae los datos, instancia un caso de uso y lo ejecuta, provocando un efecto o recuperando información, y devolviendo la respuesta adecuada.
 
 La tarea del _controller_ es gestionar ese proceso, pero no debe contener lógica de negocio. Tan solo es un traductor entre la intención de la usuaria de la aplicación y el caso de uso que representa esa intención. Si hay lógica de negocio en el controller tienes un problema.
 

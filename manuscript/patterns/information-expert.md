@@ -1,6 +1,6 @@
 # Information Expert
 
-Otro de los patrones GRASP es el Information Expert. Sirve para responder a la pregunta de _¿quién debería ocuparse de esto?_. Y la respuesta es: pues el que sabe de ello: el experto.
+Otro de los patrones GRASP es el Information Expert. Sirve para responder a la pregunta de _¿quién debería ocuparse de esto?_. Y la respuesta es: pues el que sabe de ello, el experto.
 
 Otra forma de verlo: ¿qué objeto debería ser el que responde a este mensaje?
 

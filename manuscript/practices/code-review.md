@@ -14,7 +14,7 @@ El caso de persona junior que pide la review y se le tira casi todo para atrás 
 
 Es injusto porque a la _junior_ le falta información. Ojo, no digo formación, digo información. De hecho, si una _junior_ llega a una _review_ en estas condiciones no es que le falte información, es que no se le ha dado. Se le está ocultando.
 
-Me explico. Típica revisión: _es que no has considerado que nosotros no lo hacemos así porque…_. En primer lugar, si hay condicionantes, compromisos o requisitos para hacer las cosas: ¿por qué no se ha ayudado a la persona _junior_ a conocerlas antes?
+Me explico. Típica revisión: _es que no has considerado que nosotros no lo hacemos así porque…_. En primer lugar, si hay condicionantes, compromisos o requisitos para hacer las cosas: ¿por qué no se ha ayudado a la persona _junior_ a conocer esa información antes?
 
 Por otro lado, está el cambio de contexto al hacer la _review_. Tú estás en otra cosa y tienes que cambiar tu contexto de un problema a otro, y tratar de entender que está pasando en ese otro contexto. _Pero es que en la daily ya coordinamos y sabemos en qué está cada quién_… Ya.
 
@@ -26,7 +26,7 @@ Y eso contando con que no se hayan introducido conflictos, que también puede pa
 
 Sirven para mentorizar a personas con menos experiencia, pueden hacer sus propuestas y se discuten en el momento, incluso probándola. Sirven para descubrir y aprender aquellas cosas que no están documentadas, o que lo están en algún lugar que no se actualiza desde hace años.
 
-¿Pero como puedes tener dos personas (o más) trabajando en lo mismo? Qué pérdida de tiempo. Pues en realidad es un ahorro de tiempo. Esto del tiempo me hace gracia porque nunca (o casi nunca) se cuenta el tiempo que se pierde en la revisión y en el ir y volver con los cambios.
+¿Pero cómo puedes tener dos personas (o más) trabajando en lo mismo? Qué pérdida de tiempo. Pues en realidad es un ahorro de tiempo. Esto del tiempo me hace gracia porque nunca (o casi nunca) se cuenta el tiempo que se pierde en la revisión y en el ir y volver con los cambios.
 
 Es ahorro de tiempo porque en un poco más, y a veces menos, del tiempo en que se completa una historia, se hace con menos problemas y menos frustraciones. Además, todas las personas que participan aprenden más, lo que las hará más productivas en el futuro inmediato.
 
@@ -46,9 +46,11 @@ O por no mencionar el problema de las *code reviews* de muchísimos archivos que
 
 En resumen, para aprender a desarrollar bien lo que hay que hacer es programar juntas.
 
-He debido pinchar en hueso con esto de las *code reviews*. Intentaré contestar algunas de las ideas que han salido y matizar el texto anterior. Prefiero hacerlo así, que es más fácil enlazar un argumento largo. Vamos a ello.
+He debido pinchar en hueso con esto de las *code reviews*[^hilo]. Intentaré contestar algunas de las ideas que han salido y matizar el texto anterior. Prefiero hacerlo así, que es más fácil enlazar un argumento largo. Vamos a ello.
 
-En primer lugar, el punto del hilo es que las _code review_ no sirven para aprender y mucho menos para que alguien junior aprenda. De hecho, ni siquiera son buenas para entender un proyecto grande, necesitas otras estrategias de aprendizaje.
+[^hilo]; El capítulo nace de un hilo de twitter que generó una cierta discusión posterior y quedan algunas referencias.
+
+En primer lugar, el punto del argumento es que las _code review_ no sirven para aprender y mucho menos para que alguien junior aprenda. De hecho, ni siquiera son buenas para entender un proyecto grande, necesitas otras estrategias de aprendizaje.
 
 Dicho esto, las _code review_ se supone que sirven para garantizar la calidad del código, evitar errores, particularmente de integración, y aumentar la confianza en el código que se mezcla y se despliega.
 
@@ -58,7 +60,7 @@ Porque todas las ventajas que se señalan aumentan su eficacia si se hacen antes
 
 La asunción básica que estamos haciendo es que las PR se hacen porque trabajamos individualmente. Hablamos de equipos, pero en muchos casos el trabajo concreto se realiza en soledad y es después de _finalizado_ cuando se hace la review. Esto tiene varios problemas.
 
-Un punto sugerido como positivo es que _alguien que no esté tan metido en el problema como tú ayuda a tener menos bias_. Para empezar: ¿Por qué una persona debería estar trabajando en un problema sola? Si sabemos que va a haber bias, ¿por qué no estar dos o más trabajando y prevenir ese bias desde el inicio?
+Un punto sugerido como positivo es que _alguien que no esté tan metido en el problema como tú ayuda a tener menos bias_. Para empezar: ¿Por qué una persona debería estar trabajando en un problema sola? Si sabemos que va a haber sesgo, ¿por qué no estar dos o más trabajando y prevenir ese _bias_ desde el inicio?
 
 También se menciona la capacidad de la Code Review para abrir debate y llegar a acuerdos sobre como escribir software. Pero en la Code Review el código ya está escrito. ¿Por qué no mover ese tipo de debates al principio de los proyectos y durante el desarrollo?
 

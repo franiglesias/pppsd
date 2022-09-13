@@ -62,4 +62,4 @@ Podríamos decir que `Order` es aquí un agregado, pero me gustaría dedicar un 
 
 Así que ahí tenemos a las entidades, representando conceptos de nuestro dominio con identidad. Como veremos las entidades pueden incluir _Value Objects_. Además, las entidades generan _Eventos de Dominio_. Ya tendrán su capítulo también.
 
-¿Qué como persistimos entidades en un repositorio o cómo las buscamos? Lo hablamos en otro capítulo, porque hacerlo realmente bien, sin acoplarse a la tecnología de persistencia completa da cierto trabajo, pero diría que merece la pena.
+¿Que cómo persistimos entidades en un repositorio o cómo las buscamos? Lo hablamos en otro capítulo, porque hacerlo realmente bien, sin acoplarse a la tecnología de persistencia completa da cierto trabajo, pero diría que merece la pena.

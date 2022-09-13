@@ -16,7 +16,7 @@ La pregunta va totalmente en serio. No estoy preguntando: _¿Es posible hacer so
 
 Ya, bueno... (me parece escuchar) todo el mundo puede tener un mal día y olvidarse de chequear que un divisor pueda ser cero y provocar un error de división por cero.
 
-ajá...
+¡Ajá!...
 
 Dejando aparte los despistes... una cobertura de tests correcta debería detectar esos defectos antes de que lleguen a producción... ¿Cómo es posible no detectar eso? (Obvio: porque no está testeado)
 
@@ -24,13 +24,11 @@ Pero ¿qué es y cómo se consigue que una batería de tests cubra todos los cas
 
 Pues a veces no se consigue, lo que viene siendo demostrado por nuestros abultados backlogs de bugs, incluso eliminando aquellos en los que la _culpa_ es del cha-cha-chá.
 
-Una cobertura suficiente de tests se consigue teniendo una especificación completa de las prestaciones del sistema y que ésta sea _traducida_ a tests.
+Una cobertura suficiente de tests se consigue teniendo una especificación completa de las prestaciones del sistema y que esta sea _traducida_ a tests.
 
-Esto tiene el problema de que no hay forma de hacer esto sin caer en el waterfall o cosas peores. Solo se me ocurre una manera de hacer esto: usar metodología BDD y _TDD_ y desarrollar el producto de manera iterativa.
+Esto tiene el problema de que no hay forma de hacerlo sin caer en el waterfall o cosas peores. Solo se me ocurre una manera de conseguirlo: usar metodología BDD y _TDD_ y desarrollar el producto de manera iterativa.
 
-Pero si haces esto ocurre una cosa curiosa... dejas de tener bugs. Bueno, no exactamente.
-
-Pero los defectos se pueden reconceptualizar como comportamiento no definido. Para resolverlos se escribe un nuevo test que defina el comportamiento que falta, exponiendo el defecto. El código que hace pasar el test, _resuelve el defecto_.
+Pero si lo haces de esta manera ocurre una cosa curiosa... dejas de tener bugs. Bueno, no exactamente. En ese caso, los defectos se pueden reconceptualizar como comportamiento no definido. Para resolverlos se escribe un nuevo test que defina el comportamiento que falta, exponiendo el defecto. El código que hace pasar el test, _resuelve el defecto_.
 
 Yo diría que no es solo una cuestión semántica, sino que también es una cuestión psicológica. Los bugs tienen un componente de _culpa_: alguien ha metido la pata.
 

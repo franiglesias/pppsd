@@ -13,4 +13,4 @@ Además, en esta parte veremos que hay vida más allá de los principios SOLID. 
 
 SOLID es un acrónimo afortunado, muy fácil de recordar y hasta significativo: el software escrito tratando de respetar SOLID parece robusto, confiable y sólido. Y, de hecho, lo es. 
 
-Aunque debe su difusión a las publicaciones de Robert C. Martin, aunque es posible que la primera persona que empezó a usar la expresión fuese Michael Feathers.
+Aunque debe su difusión a las publicaciones de Robert C. Martin, es posible que la primera persona que empezó a usar la expresión fuese Michael Feathers.

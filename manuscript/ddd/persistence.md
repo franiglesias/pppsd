@@ -26,7 +26,7 @@ En fins. Veámoslo ahora desde otro prisma. Con frecuencia usamos alguna librer�
 
 O bien nos van a dar ciertos requisitos para crear nuestras entidades de modo que sean _persistibles_, o que se puedan mapear de alguna manera. Verbigracia, con annotations o mapeos.
 
-Esto presenta algunos problemas bastante gordos. Con Active Record tenemos una violación del SRP: toda entidad tendrá dos responsabilidades/razones para cambiar: la suya propia y las derivadas de saber persistirse esto es porque en Active Record un objeto es como un _proxy_ a una fila de una tabla de una base de datos y a sus relacionadas. Si hay que cambiar algo para la persistencia la entidad tendrá que cambiar. Aparte seguramente no podrás testear estas entidades aisladamente y necesitarás: ¡ta-chan!, una base de datos activa para poder hacer un test. Esto pinta bastante mal.
+Esto presenta algunos problemas bastante gordos. Con Active Record tenemos una violación del SRP: toda entidad tendrá dos responsabilidades/razones para cambiar: la suya propia y las derivadas de saber persistirse esto. Sucede así porque en Active Record un objeto es como un _proxy_ a una fila de una tabla de una base de datos y a sus relacionadas. Si hay que cambiar algo para la persistencia la entidad tendrá que cambiar. Aparte seguramente no podrás testear estas entidades aisladamente y necesitarás: ¡ta-chan!, una base de datos activa para poder hacer un test. Esto pinta bastante mal.
 
 Y con otros patrones la cosa mejora más o menos, porque tus entidades de dominio pueden verse _contaminadas_ por necesidades del ORM, como tener que exponer getters/setters o propiedades públicas. No queremos eso en nuestras entidades de dominio, ¿verdad?... ¿Verdad?
 

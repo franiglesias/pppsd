@@ -24,7 +24,7 @@ Para conseguir esto no basta con saber programar. Es necesario considerar muchas
 
 Desarrollar software es algo más grande que saber programar. Es una profesión apasionante, que estamos construyendo entre todas y todos y en la que estamos constantemente aprendiendo, descubriendo formas nuevas y mejores de hacer cosas. Y también es una gran responsabilidad.
 
-Nuestro trabajo tiene impacto en la vida de muchas personas. Puede facilitar su vida, potenciar sus capacidades, expandir sus relaciones personales, ahorrarles tiempo para dedicarse a lo que les importa de verdad, darles acceso a posibilidades nuevas, ayudarles a disfrutar sus pasiones y un larguísimo etcétera.
+Nuestro trabajo tiene impacto en la vida de muchas personas. Puede facilitar su vida, potenciar sus capacidades, expandir sus relaciones personales, ahorrarles tiempo para dedicarse a lo que les importa de verdad, darles acceso a posibilidades nuevas, ayudarlas a disfrutar sus pasiones y un larguísimo etcétera.
 
 Por eso tenemos que preocuparnos de desarrollar software que no solo funcione, sino que esté bien hecho, que se pueda entender, que sea honesto y fácil de intervenir en él.
 
