@@ -12,7 +12,7 @@ Sin embargo, a veces necesitamos incluir alguna idea que no forma parte del nego
 
 Un repositorio no existe en el mundo real [^repo]. Necesitamos un repositorio para guardar entidades de dominio (pienso en el repositorio DDD) y reproducir su persistencia en el tiempo y su ciclo vital.
 
-[^repo]; Bueno, puede existir, pero no es un concepto de negocio. 
+[^repo]: Bueno, puede existir, pero no es un concepto de negocio. 
 
 En DDD un repositorio busca proporcionar _una ilusión de colección en memoria_ de las entidades, de modo que cuando necesitemos usar alguna tengamos algún lugar de donde obtenerla. Representaría la persistencia o continuidad de las entidades del mundo real.
 

@@ -48,7 +48,7 @@ En resumen, para aprender a desarrollar bien lo que hay que hacer es programar j
 
 He debido pinchar en hueso con esto de las *code reviews*[^hilo]. Intentaré contestar algunas de las ideas que han salido y matizar el texto anterior. Prefiero hacerlo así, que es más fácil enlazar un argumento largo. Vamos a ello.
 
-[^hilo]; El capítulo nace de un hilo de twitter que generó una cierta discusión posterior y quedan algunas referencias.
+[^hilo]: El capítulo nace de un hilo de twitter que generó una cierta discusión posterior y quedan algunas referencias.
 
 En primer lugar, el punto del argumento es que las _code review_ no sirven para aprender y mucho menos para que alguien junior aprenda. De hecho, ni siquiera son buenas para entender un proyecto grande, necesitas otras estrategias de aprendizaje.
 
